@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Trainyourself.Properties
+namespace Trainyourself_Gui.Properties
 {
 
 
