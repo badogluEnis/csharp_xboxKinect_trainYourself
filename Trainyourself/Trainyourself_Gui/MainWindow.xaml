@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Trainyourself_Gui"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        Title="MainWindow" Height="342.391" Width="319.565">
+    <Grid Margin="0,0,136,-5">
+        <Label x:Name="label" Content="Label" HorizontalAlignment="Left" Margin="39,29,0,0" VerticalAlignment="Top"/>
+
     </Grid>
 </Window>
