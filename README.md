@@ -1,11 +1,11 @@
-# Scrum Projekt
+# Trainyourself
 
 Ein Beispielprojekt mit Issues, Meilensteinen und Commits als Beispiel der Verwendung von Scrum mit GitHub und Zenhub.
 
 ## Projektmitabeiter
 
-* [John Doe](https://github.com/jdoe) (Scrum Master, Product Owner, Team Member)
-* [Jane Doe](https://github.com/janedoe) (Product Owner, Team Member)
+* [Altin Hani](https://github.com/xahanix) (Scrum Master , Team Member)
+* [Enis Badoglu](https://github.com/badogluEnis) ( Team Member)
 
 ## Dokumentation
 
@@ -17,12 +17,12 @@ Ein Beispielprojekt mit Issues, Meilensteinen und Commits als Beispiel der Verwe
 
 Hier definiert das Team ab wann ein Issue geclosed werden kann. z.B:
 
-1. Mit Unit Tests getestet
-2. Exception Handling macht Sinn
-3. GUI von anderen Benutzer getestet
-4. GUI Funktionalität von einem Teammitglied getestet
-5. Testprotokolle vorhanden und ausgefüllt
-6. …
+1. Angemessen Dokumentiert
+2. Testprotokolle vorhanden und ausgefüllt
+3. Von einem User, welcher nicht bei uns im team ist, gestestet
+4. Alle Methoden/Funktionen müssen Kommentiert sein.
+
+
 
 ## Fazit
 
@@ -33,10 +33,10 @@ Ein kleines Fazit von jedem der Projektmitarbeiter mit einem Besonderen Augenmer
 * Was würdest du beim nächsten Mal anders machen?
 * etc.
 
-### Johnn Doe
+### Altin Hani
 
-TODO
+Gui
 
-### Jane Doe
+### Enis Badoglu
 
-TODO
+Anmelden und registrieren funktionen.
