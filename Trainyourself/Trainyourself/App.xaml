@@ -1,7 +1,7 @@
-﻿<Application x:Class="Trainyourself_Gui.App"
+﻿<Application x:Class="Trainyourself.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:Trainyourself_Gui"
+             xmlns:local="clr-namespace:Trainyourself"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
          

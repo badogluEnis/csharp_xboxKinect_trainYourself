@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Trainyourself_Gui
+namespace Trainyourself
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
