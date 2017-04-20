@@ -39,4 +39,6 @@
   
   Das aktuelle ERM von unserer Datenbank sehen sie [hier](img/erm_tys.PNG).
   
-  #### <p style="text-align : center;" >[Zurück](../README.md)</p>
+  
+  
+  #### (../README.md)
