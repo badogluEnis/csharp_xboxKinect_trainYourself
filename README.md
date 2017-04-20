@@ -2,7 +2,7 @@
 
 Ein Beispielprojekt mit Issues, Meilensteinen und Commits als Beispiel der Verwendung von Scrum mit GitHub und Zenhub.
 
-Unsere Zeiten für das Daily Scrum findest du [hier](docs/scrum.md)
+### Unsere Zeiten für das Daily Scrum findest du [hier](docs/scrum.md)
 
 ## Projektmitabeiter
 
@@ -16,8 +16,6 @@ Unsere Zeiten für das Daily Scrum findest du [hier](docs/scrum.md)
 * [Testkonzept](docs/testing.md)
 
 ## Definition of Done
-
-Hier definiert das Team ab wann ein Issue geclosed werden kann. z.B:
 
 1. Angemessen Dokumentiert
 2. Testprotokolle vorhanden und ausgefüllt
