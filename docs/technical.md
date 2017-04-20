@@ -19,16 +19,16 @@
   ...
   
   
-  ##Design
+  ## Design
     
   ### Mockups
   Wir haben für unser Projekt folgendes GUI Layout vorgesehen:
-  *[Startscreen](img/start.PNG)
-  *[Anmeldescreen](img/login.PNG)
-  *[Registrierungsscreen](img/register.PNG)
-  *[Hauptmenu](img/mainmenu.PNG)
-  *[Liveview](img/liveview.PNG)
-  *[Profil](img/profile.PNG)
+  * [Startscreen](img/start.PNG)
+  * [Anmeldescreen](img/login.PNG)
+  * [Registrierungsscreen](img/register.PNG)
+  * [Hauptmenu](img/mainmenu.PNG)
+  * [Liveview](img/liveview.PNG)
+  * [Profil](img/profile.PNG)
   
   ### Sequenzdiagramm
   Unser aktuelles Sequenzdiagramm finden sie [hier](img/sd_tys.PNG).
@@ -38,6 +38,3 @@
   Wir brauchen in unserem Projekt Entity Framework (Verison: 6.1.3) mit Code first.
   
   Das aktuelle ERM von unserer Datenbank sehen sie [hier](img/erm_tys.PNG).
-  
-Folgende optional (je nach Projekt)
-* Weitere technisch relevante Aspekte
