@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using DataAccess;
 using Model;
 
 namespace Trainyourself.Pages
@@ -65,8 +66,22 @@ namespace Trainyourself.Pages
             string email = Email1.Text;
             string password = Passwort1.Text;
 
-            User user = new User();
-            user.Createuser(name, lastname, email, password);
+      
+            using (TrainContext context = new TrainContext())
+            {
+               UserRepository  repository = new UserRepository(context);
+                User user = new User
+                {
+                    Name = name,
+                    Lastname = lastname,
+                    Email = email,
+                    Password = password
+                };
+
+               
+                repository.Add(user);
+            }
+            
 
 
 

@@ -21,6 +21,8 @@ namespace Trainyourself.Pages
     /// </summary>
     public partial class MoreinformationPage : Page
     {
+        public User User { get; set; }
+
         public TextBox Weight
         {
             get { return weight; }
@@ -32,13 +34,15 @@ namespace Trainyourself.Pages
             get { return height; }
             set { height = value; }
         }
-        public MoreinformationPage()
+        public MoreinformationPage(User user)
         {
             InitializeComponent();
+            User = user;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            
         }
     }
 }
