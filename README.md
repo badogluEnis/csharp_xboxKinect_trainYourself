@@ -2,6 +2,8 @@
 
 Ein Beispielprojekt mit Issues, Meilensteinen und Commits als Beispiel der Verwendung von Scrum mit GitHub und Zenhub.
 
+Unsere Zeiten für das Daily Scrum findest du [hier](docs/scrum.md)
+
 ## Projektmitabeiter
 
 * [Altin Hani](https://github.com/xahanix) (Scrum Master , Team Member)
