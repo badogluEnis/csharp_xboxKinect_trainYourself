@@ -35,8 +35,8 @@ Ein kleines Fazit von jedem der Projektmitarbeiter mit einem Besonderen Augenmer
 
 ### Altin Hani
 
-Gui
+Guiarbeiten
 
 ### Enis Badoglu
 
-Anmelden und registrieren funktionen.
+Datenbankenhandling
