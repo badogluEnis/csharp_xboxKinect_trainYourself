@@ -12,20 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Trainyourself.Pages;
 
-namespace Trainyourself
+namespace Trainyourself.Pages
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for MoreinformationPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MoreinformationPage : Page
     {
-        public MainWindow()
+        public MoreinformationPage()
         {
             InitializeComponent();
-            MainFrame.NavigationService.Navigate(new SigninPage());
         }
-        
     }
 }

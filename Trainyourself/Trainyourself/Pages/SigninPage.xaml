@@ -1,0 +1,59 @@
+﻿<Page
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Trainyourself.Pages"
+      xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero" x:Class="Trainyourself.Pages.SigninPage"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="500"
+      Title="SigninPage">
+
+    
+
+    <Grid Margin="30">
+        <Grid.Background>
+            <ImageBrush ImageSource="/pictures/fitness.png" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+
+
+        </Grid.RowDefinitions>
+        <Label Content="TrainYourSelf" Grid.Row="0" Grid.Column="1" FontSize="50" Margin="0 0 0 20" />
+
+        <StackPanel Grid.Column="1" Orientation="Vertical" Grid.Row="1">
+            <Label Content="Email" FontSize="25"/>
+            <TextBox Height="25" />
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Margin="0 50 0 0" Orientation="Vertical" Grid.Row="2">
+
+            <Label  Content="Passwort" FontSize="25" />
+            <TextBox  Height="25" />
+
+        </StackPanel>
+
+        <Button HorizontalAlignment="Center"  Grid.Column="1" Grid.Row="3" Height="40" Width="150" Margin="0 50 0 0" Content="Sign in" Click="SignIn_OnClick" />
+
+        <Button HorizontalAlignment="Center" Grid.Column="1" Click="NotRegistered_OnClick" Grid.Row="4">
+            <Button.Template>
+                <ControlTemplate>
+                    <Label Content="Not registered?" Foreground="Black">
+                    </Label>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+    </Grid>
+</Page>

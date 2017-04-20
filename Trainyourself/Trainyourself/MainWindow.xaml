@@ -6,27 +6,9 @@
         xmlns:local="clr-namespace:Trainyourself"
         mc:Ignorable="d"
         Title="Trainyourstyle" Height="690.223" Width="1299.302"
-        WindowStyle="ToolWindow" ResizeMode="NoResize"  
+        
         WindowStartupLocation="CenterOwner" WindowState="Normal">
-    <Grid Margin="30">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <Label Content="TrainYourSelf" Grid.Column="1" Grid.Row="0" FontSize="50" Margin="0 0 0 20" />
-        <Label Content="Email" FontSize="25" Grid.Column="1" Grid.Row="1" Margin="0 0"/>
-        <TextBox Grid.Column="1" Grid.Row="2" Margin="0,0,0,90" Height="25" />
-        <Label Grid.Column="1" Grid.Row="3" Content="Passwort" FontSize="25" />
-        <TextBox Grid.Column="1" Grid.Row="4" Height="25" Margin="0 0 0 270"/>
-        <Button Grid.Column="1" Grid.Row="5" Height="40" Width="150" Content="Sign in" Click="Button_Click"/>
-        <Label FontSize="15" Content="No Account? Sign up now" Grid.Column="1" Grid.Row="4" Margin="59,200,403,68" Grid.ColumnSpan="2" />
+    <Grid>
+       <Frame x:Name="MainFrame"/>
     </Grid>
 </Window>
