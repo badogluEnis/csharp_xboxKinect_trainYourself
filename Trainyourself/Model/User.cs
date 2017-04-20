@@ -39,5 +39,27 @@ namespace Model
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Score> Scores { get; set; }
+
+        /// <summary>
+        /// Createusers the specified name.
+        /// </summary>
+        /// <param name="Name">The name.</param>
+        /// <param name="Lastname">The lastname.</param>
+        /// <param name="Email">The email.</param>
+        /// <param name="Password">The password.</param>
+        /// <param name="Weight">The weight.</param>
+        /// <param name="Height">The height.</param>
+        public void Createuser(string Name, string Lastname, string Email, string Password)
+        {
+            using (TrainContext context = new TrainContext())
+            {
+                User user = new User
+                {
+                    Name = Name , Lastname = Lastname, Email = Email, Password = Password 
+                };
+                context.Users.Add(user);
+                context.SaveChanges();
+            }
+        }
     }
 }

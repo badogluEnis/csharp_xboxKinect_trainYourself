@@ -4,13 +4,15 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Trainyourself.Pages"
-      mc:Ignorable="d" d:DesignWidth="300"
-      Title="RegisterPage" Height="611.607">
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="500"
+      Title="RegisterPage" >
 
     <Grid Margin="30">
         <Grid.Background>
-            <ImageBrush ImageSource="/pictures/fitness.png" Stretch="UniformToFill"/>
+            <ImageBrush ImageSource="/pictures/fitness.jpg" Stretch="UniformToFill"/>
         </Grid.Background>
+        
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="Auto" />
@@ -28,31 +30,31 @@
         </Grid.RowDefinitions>
         <Label Content="Register" FontSize="50" Grid.Column="1" Grid.Row="0"/>
 
-        <StackPanel Grid.Row="1" Grid.Column="1">
+        <StackPanel Style="{StaticResource stackstyle}" Grid.Row="1" Grid.Column="1">
             <Label Content="Vorname" FontSize="25" />
             <TextBox Name="Vornameinput" Height="25"/>
         </StackPanel>
 
-        <StackPanel Grid.Row="2" Grid.Column="1">
+        <StackPanel Style="{StaticResource stackstyle}" Grid.Row="2" Grid.Column="1">
             <Label Content="Nachname" FontSize="25" />
             <TextBox  Name="Nachnameinput" Height="25"/>
         </StackPanel>
-        
-        <StackPanel Grid.Row="3" Grid.Column="1">
+
+        <StackPanel Style="{StaticResource stackstyle}" Grid.Row="3" Grid.Column="1">
             <Label Content="Email" FontSize="25" />
             <TextBox Name="Email" Height="25"/>
         </StackPanel>
-        
-        <StackPanel Grid.Row="4" Grid.Column="1">
+
+        <StackPanel Style="{StaticResource stackstyle}" Grid.Row="4" Grid.Column="1">
             <Label Content="Passwort" FontSize="25" />
             <TextBox Name="Passwort" Height="25"/>
         </StackPanel>
 
-        <StackPanel Grid.Row="6" Grid.Column="1">
+        <StackPanel Style="{StaticResource stackstyle}" Grid.Row="6" Grid.Column="1">
             <Label Content="Passwort repeat" FontSize="25" />
             <TextBox Name="Passwortrep" Height="25"/>
         </StackPanel>
 
-        <Button Grid.Row="7" Grid.Column="1" Height="40" Width="150" Content="Continue" Click="Button_Click" />
+        <Button Style="{StaticResource buttonsize}" Grid.Row="7" Grid.Column="1" Content="Continue" Click="Button_Click" />
     </Grid>
 </Page>

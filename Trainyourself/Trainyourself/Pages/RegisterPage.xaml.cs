@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Model;
 
 namespace Trainyourself.Pages
 {
@@ -20,6 +21,37 @@ namespace Trainyourself.Pages
     /// </summary>
     public partial class RegisterPage : Page
     {
+        public TextBox Vornameinput1
+        {
+            get { return Vornameinput; }
+            set { Vornameinput = value; }
+        }
+
+        public TextBox Nachnameinput1
+        {
+            get { return Nachnameinput; }
+            set { Nachnameinput = value; }
+        }
+
+        public TextBox Email1
+        {
+            get { return Email; }
+            set { Email = value; }
+        }
+
+        public TextBox Passwort1
+        {
+            get { return Passwort; }
+            set { Passwort = value; }
+        }
+
+        public TextBox Passwortrep1
+        {
+            get { return Passwortrep; }
+            set { Passwortrep = value; }
+        }
+
+
         public RegisterPage()
         {
             InitializeComponent();
@@ -27,7 +59,19 @@ namespace Trainyourself.Pages
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+           
+            string name = Vornameinput1.Text;
+            string lastname = Nachnameinput1.Text;
+            string email = Email1.Text;
+            string password = Passwort1.Text;
+
+            User user = new User();
+            user.Createuser(name, lastname, email, password);
+
+
+
             NavigationService.Navigate(new MoreinformationPage());
+
         }
     }
 }

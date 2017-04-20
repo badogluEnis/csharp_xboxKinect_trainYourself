@@ -8,7 +8,10 @@
         Title="Trainyourstyle" Height="690.223" Width="1299.302"
         
         WindowStartupLocation="CenterOwner" WindowState="Normal">
+    
+    
+    
     <Grid>
-       <Frame x:Name="MainFrame"/>
+       <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

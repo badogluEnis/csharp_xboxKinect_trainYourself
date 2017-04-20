@@ -11,10 +11,8 @@
 
     
 
-    <Grid Margin="30">
-        <Grid.Background>
-            <ImageBrush ImageSource="/pictures/fitness.png" Stretch="UniformToFill"/>
-        </Grid.Background>
+    <Grid Style="{StaticResource BackgroundGrid}">
+       
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="Auto"/>
@@ -44,7 +42,7 @@
 
         </StackPanel>
 
-        <Button HorizontalAlignment="Center"  Grid.Column="1" Grid.Row="3" Height="40" Width="150" Margin="0 50 0 0" Content="Sign in" Click="SignIn_OnClick" />
+        <Button Style="{StaticResource buttonsize}" HorizontalAlignment="Center"  Grid.Column="1" Grid.Row="3" Margin="0 50 0 0" Content="Sign in" Click="SignIn_OnClick" />
 
         <Button HorizontalAlignment="Center" Grid.Column="1" Click="NotRegistered_OnClick" Grid.Row="4">
             <Button.Template>

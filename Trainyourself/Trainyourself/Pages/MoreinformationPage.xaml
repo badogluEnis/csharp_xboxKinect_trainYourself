@@ -5,12 +5,12 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Trainyourself.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="300"
+      d:DesignHeight="554.464" d:DesignWidth="848.214"
       Title="MoreinformationPage">
 
     <Grid Margin="30">
         <Grid.Background>
-            <ImageBrush ImageSource="/pictures/fitness.png" Stretch="UniformToFill"/>
+            <ImageBrush ImageSource="/pictures/fitness.jpg" Stretch="UniformToFill"/>
         </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -31,13 +31,13 @@
 
         <StackPanel Grid.Row="1" Grid.Column="1" Margin="0 0 0 15">
             <Label Content="How tall are you? (cm)"/>
-            <TextBox Height="25"/>
+            <TextBox Name="height" Height="25"/>
         </StackPanel>
-        <StackPanel Grid.Row="2" Grid.Column="1" Margin="0 0 0 10">
-              <Label Content="How much do you weight(kg)"/>
-              <TextBox Height="25"/>
+        <StackPanel Grid.Row="2" Grid.Column="1" Margin="0 15 0 10">
+            <Label Content="How much do you weight(kg)"/>
+            <TextBox Name="weight"  Height="25"/>
         </StackPanel>
-        <Button Content="Register" Grid.Row="3" Grid.Column="1" Height="40" Width="150" Margin="0 30 0 0"/>
+        <Button Style="{StaticResource buttonsize}" Content="Register" Grid.Row="3" Grid.Column="1"  Margin="0 30 0 0" Click="Button_Click"/>
 
 
 

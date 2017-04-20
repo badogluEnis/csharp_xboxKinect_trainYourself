@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Model;
 
 namespace Trainyourself.Pages
 {
@@ -20,9 +21,24 @@ namespace Trainyourself.Pages
     /// </summary>
     public partial class MoreinformationPage : Page
     {
+        public TextBox Weight
+        {
+            get { return weight; }
+            set { weight = value; }
+        }
+
+        public TextBox Height1
+        {
+            get { return height; }
+            set { height = value; }
+        }
         public MoreinformationPage()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
         }
     }
 }
