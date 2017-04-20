@@ -23,9 +23,9 @@
     
   ### Mockups
   Wir haben für unser Projekt folgendes GUI Layout vorgesehen:
-  * [Startscreen](img/start.PNG)
-  * [Anmeldescreen](img/login.PNG)
-  * [Registrierungsscreen](img/register.PNG)
+  * [Startscreen und Anmelden](img/start.PNG)
+  * [Registrierungsscreen 1](img/register.PNG)
+  * [Registrierungsscreen 2](img/register2.PNG)
   * [Hauptmenu](img/mainmenu.PNG)
   * [Liveview](img/liveview.PNG)
   * [Profil](img/profile.PNG)
@@ -41,4 +41,4 @@
   
   
   
-  #### (../README.md)
+  #### [Zurück](../README.md)
