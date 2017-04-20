@@ -24,5 +24,14 @@ namespace Trainyourself
         {
             InitializeComponent();
         }
+
+        private void emailinput_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+        }
     }
 }
