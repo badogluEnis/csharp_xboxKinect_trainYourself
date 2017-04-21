@@ -8,10 +8,7 @@
       d:DesignHeight="554.464" d:DesignWidth="848.214"
       Title="MoreinformationPage">
 
-    <Grid Margin="30">
-        <Grid.Background>
-            <ImageBrush ImageSource="/pictures/fitness.jpg" Stretch="UniformToFill"/>
-        </Grid.Background>
+    <Grid Style="{StaticResource BackgroundGrid}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="Auto"/>
@@ -37,7 +34,8 @@
             <Label Content="How much do you weight(kg)"/>
             <TextBox Name="weight"  Height="25"/>
         </StackPanel>
-        <Button Style="{StaticResource buttonsize}" Content="Register" Grid.Row="3" Grid.Column="1"  Margin="0 30 0 0" Click="Button_Click"/>
+        <Label Name="moreinformationserror" Grid.Row="3" Grid.Column="1" Content="" FontSize="25" Foreground="Red" Grid.ColumnSpan="2"/>
+        <Button Style="{StaticResource buttonsize}" Content="Register" Grid.Row="4" Grid.Column="1"  Margin="0 30 0 0" Click="Button_Click"/>
 
 
 

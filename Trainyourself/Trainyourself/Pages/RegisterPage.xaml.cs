@@ -71,7 +71,7 @@ namespace Trainyourself.Pages
             using (TrainContext context = new TrainContext())
             {
 
-                if (Vornameinput1.Text != "" && Nachnameinput1.Text != "" && Email1.Text != "" && Passwort1.Text != "" && Passwortrep1.Text != "" )
+                if (Vornameinput1.Text != "" && Nachnameinput1.Text.Trim() != string.Empty && Email1.Text != "" && Passwort1.Text != "" && Passwortrep1.Text != "" )
                 {
                     if (Passwortrep1.Text == Passwort1.Text)
                     {

@@ -32,7 +32,7 @@
 
         <StackPanel Style="{StaticResource stackstyle}" Grid.Row="1" Grid.Column="1">
             <Label  Content="Vorname" FontSize="25" />
-            <TextBox  Width="175" Name="Vornameinput" Height="25"/>
+            <TextBox Name="Vornameinput" Height="25"/>
         </StackPanel>
 
         <StackPanel Style="{StaticResource stackstyle}" Grid.Row="2" Grid.Column="1">
