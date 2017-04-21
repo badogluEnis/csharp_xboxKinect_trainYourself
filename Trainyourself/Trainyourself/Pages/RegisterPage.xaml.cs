@@ -65,12 +65,13 @@ namespace Trainyourself.Pages
             string lastname = Nachnameinput1.Text;
             string email = Email1.Text;
             string password = Passwort1.Text;
+            User user;
 
-      
+
             using (TrainContext context = new TrainContext())
             {
                UserRepository  repository = new UserRepository(context);
-                User user = new User
+                user = new User
                 {
                     Name = name,
                     Lastname = lastname,
@@ -85,7 +86,7 @@ namespace Trainyourself.Pages
 
 
 
-            NavigationService.Navigate(new MoreinformationPage());
+            NavigationService.Navigate(new MoreinformationPage(user));
 
         }
     }
