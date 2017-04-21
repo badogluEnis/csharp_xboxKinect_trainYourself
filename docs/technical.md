@@ -23,12 +23,12 @@
     
   ### Mockups
   Wir haben für unser Projekt folgendes GUI Layout vorgesehen:
-  * [Startscreen und Anmelden](img/start.PNG)
-  * [Registrierungsscreen 1](img/register.PNG)
-  * [Registrierungsscreen 2](img/register2.PNG)
-  * [Hauptmenu](img/mainmenu.PNG)
-  * [Liveview](img/liveview.PNG)
-  * [Profil](img/profile.PNG)
+  * [Startscreen und Anmelden](img/start.png)
+  * [Registrierungsscreen 1](img/register.png)
+  * [Registrierungsscreen 2](img/register2.png)
+  * [Hauptmenu](img/mainmenu.png)
+  * [Liveview](img/liveview.png)
+  * [Profil](img/profile.png)
   
   ### Sequenzdiagramm
   Unser aktuelles Sequenzdiagramm finden sie [hier](img/sd_tys.PNG).
