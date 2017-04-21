@@ -4,18 +4,18 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Trainyourself.Pages"
-      mc:Ignorable="d" 
-      d:DesignHeight="500" d:DesignWidth="500"
-      Title="RegisterPage" >
+      mc:Ignorable="d"
+      d:DesignHeight="1006.634"  d:DesignWidth="1104.125"
+      Title="RegisterPage">
 
     <Grid Margin="30">
         <Grid.Background>
             <ImageBrush ImageSource="/pictures/fitness.jpg" Stretch="UniformToFill"/>
         </Grid.Background>
-        
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width =" Auto" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
@@ -31,8 +31,8 @@
         <Label Content="Register" FontSize="50" Grid.Column="1" Grid.Row="0"/>
 
         <StackPanel Style="{StaticResource stackstyle}" Grid.Row="1" Grid.Column="1">
-            <Label Content="Vorname" FontSize="25" />
-            <TextBox Name="Vornameinput" Height="25"/>
+            <Label  Content="Vorname" FontSize="25" />
+            <TextBox  Width="175" Name="Vornameinput" Height="25"/>
         </StackPanel>
 
         <StackPanel Style="{StaticResource stackstyle}" Grid.Row="2" Grid.Column="1">
@@ -42,7 +42,7 @@
 
         <StackPanel Style="{StaticResource stackstyle}" Grid.Row="3" Grid.Column="1">
             <Label Content="Email" FontSize="25" />
-            <TextBox Name="Email" Height="25"/>
+            <TextBox Name="Email" Height="25" />
         </StackPanel>
 
         <StackPanel Style="{StaticResource stackstyle}" Grid.Row="4" Grid.Column="1">
@@ -54,6 +54,8 @@
             <Label Content="Passwort repeat" FontSize="25" />
             <TextBox Name="Passwortrep" Height="25"/>
         </StackPanel>
+
+        <Label Name="ErrorMessage" Grid.Row="7" Height="70" Margin="216,52,212,358" Content="" FontSize="25" FontFamily="Arial" Foreground="Red" Grid.ColumnSpan="3" Padding="530 0 0 0"/>
 
         <Button Style="{StaticResource buttonsize}" Grid.Row="7" Grid.Column="1" Content="Continue" Click="Button_Click" />
     </Grid>

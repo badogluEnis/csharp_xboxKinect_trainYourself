@@ -65,12 +65,19 @@ namespace Trainyourself.Pages
             string lastname = Nachnameinput1.Text;
             string email = Email1.Text;
             string password = Passwort1.Text;
-            User user;
+            User user = null;
 
 
             using (TrainContext context = new TrainContext())
             {
-               UserRepository  repository = new UserRepository(context);
+
+                if (Vornameinput1.Text != "" && Nachnameinput1.Text != "" && Email1.Text != "" && Passwort1.Text != "" && Passwortrep1.Text != "" )
+                {
+                    if (Passwortrep1.Text == Passwort1.Text)
+                    {
+                        
+                  
+                UserRepository  repository = new UserRepository(context);
                 user = new User
                 {
                     Name = name,
@@ -81,12 +88,22 @@ namespace Trainyourself.Pages
 
                
                 repository.Add(user);
+                NavigationService.Navigate(new MoreinformationPage(user));
+                    }
+               else
+               {
+                        ErrorMessage.Content = "Passwords are not the same ones";
+               }
+                }
+
+                else
+                {
+                    ErrorMessage.Content = "One or more Inputfields are empty";
+                }
             }
-            
 
 
 
-            NavigationService.Navigate(new MoreinformationPage(user));
 
         }
     }
