@@ -1,11 +1,8 @@
 namespace Model
 {
-    using System;
     using System.Data.Entity;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Linq;
 
-    public partial class TrainContext : DbContext
+    public class TrainContext : DbContext
     {
         public TrainContext()
             : base("name=TrainContext")
@@ -14,7 +11,7 @@ namespace Model
 
         public virtual DbSet<Exercise> Exercises { get; set; }
         public virtual DbSet<Score> Scores { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+        public virtual DbSet<sysdiagram> Sysdiagrams { get; set; }
         public virtual DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

@@ -13,7 +13,7 @@ Abschnitt            | Inhalt
 ID                   | T-2
 Getestete User Story | [#2](https://github.com/ICT-BBC/mod-pr-scrum/issues/2)
 Vorbedingungen       | Der Benutzer ist registriert
-Ablauf               | 1. Der Benutzer klickt auf Registrieren. 2. Der Benutzer Registriert sich.
-Erwartetes Resultat  | Die Anmeldung ist erfolgreich und er kommt ins Hauptmenu.
+Ablauf               | 1. Der Benutzer Meldet sich mit den zuvor angemeldeten Accountdaten an.
+Erwartetes Resultat  | Die Anmeldung ist erfolgreich, weil ihm keine Fehlermeldung angezeigt wird.
 
   #### [Zuück](../README.md)

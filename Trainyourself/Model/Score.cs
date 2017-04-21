@@ -1,13 +1,11 @@
 namespace Model
 {
     using System;
-    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
 
     [Table("Score")]
-    public partial class Score
+    public class Score
     {
         public int Id { get; set; }
 

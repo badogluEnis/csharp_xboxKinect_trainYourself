@@ -8,37 +8,77 @@ namespace Trainyourself.Pages
     /// <summary>
     /// Interaction logic for RegisterPage.xaml
     /// </summary>
+    /// <seealso cref="System.Windows.Controls.Page" />
+    /// <seealso cref="System.Windows.Markup.IComponentConnector" />
     public partial class RegisterPage
     {
+        /// <summary>
+        /// Gets or sets the vornameinput1.
+        /// </summary>
+        /// <value>
+        /// The vornameinput1.
+        /// </value>
         public TextBox Vornameinput1
         {
             get { return Vornameinput; }
             set { Vornameinput = value; }
         }
+        /// <summary>
+        /// Gets or sets the nachnameinput1.
+        /// </summary>
+        /// <value>
+        /// The nachnameinput1.
+        /// </value>
         public TextBox Nachnameinput1
         {
             get { return Nachnameinput; }
             set { Nachnameinput = value; }
         }
+        /// <summary>
+        /// Gets or sets the email1.
+        /// </summary>
+        /// <value>
+        /// The email1.
+        /// </value>
         public TextBox Email1
         {
             get { return Email; }
             set { Email = value; }
         }
+        /// <summary>
+        /// Gets or sets the passwort1.
+        /// </summary>
+        /// <value>
+        /// The passwort1.
+        /// </value>
         public TextBox Passwort1
         {
             get { return Passwort; }
             set { Passwort = value; }
         }
+        /// <summary>
+        /// Gets or sets the passwortrep1.
+        /// </summary>
+        /// <value>
+        /// The passwortrep1.
+        /// </value>
         public TextBox Passwortrep1
         {
             get { return Passwortrep; }
             set { Passwortrep = value; }
         }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="RegisterPage"/> class.
+        /// </summary>
         public RegisterPage()
         {
             InitializeComponent();
         }
+        /// <summary>
+        /// Validates the inputfields if the are empty or null.
+        /// </summary>
+        /// <param name="input">The input.</param>
+        /// <returns></returns>
         private bool ValidateInputfields(string input)
         {
             if (string.IsNullOrEmpty(input.Trim()))
@@ -49,6 +89,11 @@ namespace Trainyourself.Pages
             return true;
 
         }
+        /// <summary>
+        /// Handles the Click event of the Button control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             string name = Vornameinput1.Text;

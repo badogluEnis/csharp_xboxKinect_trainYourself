@@ -9,10 +9,10 @@
       d:DesignHeight="500" d:DesignWidth="500"
       Title="SigninPage">
 
-    
+
 
     <Grid Style="{StaticResource BackgroundGrid}">
-       
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="Auto"/>
@@ -25,6 +25,7 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
 
 
         </Grid.RowDefinitions>
@@ -32,22 +33,25 @@
 
         <StackPanel Grid.Column="1" Orientation="Vertical" Grid.Row="1">
             <Label Content="Email" FontSize="25"/>
-            <TextBox Height="25" />
+            <TextBox Name="Emailsignin" Height="25" />
         </StackPanel>
 
-        <StackPanel Grid.Column="1" Margin="0 50 0 0" Orientation="Vertical" Grid.Row="2">
+        <StackPanel Grid.Column="1" Margin="0 50 0 0" Orientation="Vertical" Grid.Row="2" >
 
             <Label  Content="Passwort" FontSize="25" />
-            <TextBox  Height="25" />
+            <TextBox  Name="Passwordsignin" Height="25" />
 
         </StackPanel>
 
-        <Button Style="{StaticResource buttonsize}" HorizontalAlignment="Center"  Grid.Column="1" Grid.Row="3" Margin="0 50 0 0" Content="Sign in" Click="SignIn_OnClick" />
+        <Button Style="{StaticResource Buttonsize}" HorizontalAlignment="Center"  Grid.Column="1" Grid.Row="3" Margin="0 50 0 0" Content="Sign in" Click="SignIn_OnClick" />
 
-        <Button HorizontalAlignment="Center" Grid.Column="1" Click="NotRegistered_OnClick" Grid.Row="4">
+        <Label Grid.Column="1" Grid.Row="4" Content="" FontSize="25" Margin="5" Name="Signinerror" Foreground="Red"/>
+
+        <Button HorizontalAlignment="Center" Click="NotRegistered_OnClick" Grid.Row="5" Grid.ColumnSpan="3" Margin="82,0,26.333,0" Width="332" >
             <Button.Template>
                 <ControlTemplate>
-                    <Label Content="Not registered?" Foreground="Black">
+                    <Label  Foreground="Wheat" FontSize="25" >
+                        <TextBlock TextDecorations="Underline">Not registered? register now</TextBlock>
                     </Label>
                 </ControlTemplate>
             </Button.Template>

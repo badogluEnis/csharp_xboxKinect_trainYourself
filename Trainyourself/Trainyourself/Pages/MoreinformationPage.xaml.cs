@@ -1,40 +1,53 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using DataAccess;
 using Model;
 
 namespace Trainyourself.Pages
-{       
+{
     /// <summary>
     /// Interaction logic for MoreinformationPage.xaml
     /// </summary>
-    public partial class MoreinformationPage : Page
+    /// <seealso cref="System.Windows.Controls.Page" />
+    /// <seealso cref="System.Windows.Markup.IComponentConnector" />
+    public partial class MoreinformationPage
     {
+        /// <summary>
+        /// Gets or sets the user.
+        /// </summary>
+        /// <value>
+        /// The user.
+        /// </value>
         public User User { get; set; }
 
+        /// <summary>
+        /// Gets or sets the weight from the textbox.
+        /// </summary>
+        /// <value>
+        /// The weight.
+        /// </value>
         public TextBox Weight
         {
             get { return weight; }
             set { weight = value; }
         }
 
+        /// <summary>
+        /// Gets or sets the height1 from the textbox.
+        /// </summary>
+        /// <value>
+        /// The height1.
+        /// </value>
         public TextBox Height1
         {
             get { return height; }
             set { height = value; }
         }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="MoreinformationPage"/> class.
+        /// </summary>
+        /// <param name="user">The user.</param>
         public MoreinformationPage(User user)
         {
             InitializeComponent();
@@ -48,8 +61,8 @@ namespace Trainyourself.Pages
         /// <returns></returns>
         private bool ValidateDoubleInput(string doubleInput)
         {
-            double weight;
-            double height;
+            double weight1;
+            double height1;
 
             if (string.IsNullOrEmpty(doubleInput.Trim()))
             {
@@ -57,14 +70,14 @@ namespace Trainyourself.Pages
                 return false;
             }
 
-            bool isValidWeight = Double.TryParse(Weight.Text, out weight);
+            bool isValidWeight = Double.TryParse(Weight.Text, out weight1);
             if (!isValidWeight)
             {
                 moreinformationserror.Content = "Please type your stats like this in: \"140\" (cm for Height) or \"87.23\" (kg for Wheight)";
                 return false;
             }
 
-            bool isValidHeight = Double.TryParse(Weight.Text, out height);
+            bool isValidHeight = Double.TryParse(Weight.Text, out height1);
             if (!isValidHeight)
             {
                 moreinformationserror.Content = "Please type your stats like this in: \"140\" (cm for Height) or \"87.23\" (kg for Wheight)";
@@ -74,6 +87,11 @@ namespace Trainyourself.Pages
             return true;
         }
 
+        /// <summary>
+        /// Handles the Click event of the Button control and updates the weight and height in the database.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
@@ -92,7 +110,7 @@ namespace Trainyourself.Pages
 
 
                     repository.Update(User);
-                    NavigationService.Navigate(new SigninPage());
+                    if (NavigationService != null) NavigationService.Navigate(new SigninPage());
                 }
 
             }
