@@ -2,10 +2,18 @@
 
 Abschnitt            | Inhalt
 ---------------------|--------
-ID                   | ST-01
-Getestete User Story | [#9](https://github.com/ICT-BBC/mod-pr-scrum/issues/9)
-Vorbedingungen       | Es existiert mindestens eine FGallerie mit mindestens einem Foto.
-Ablauf               | 1. Der Benutzer klickt auf eine Gallerie. 2. Der Benutzer klickt auf ein Foto.
-Erwartetes Resultat  | Das angeklickte Foto erscheint gross als Overlay über dem restlichen Inhalt
+ID                   | T-1
+Getestete User Story | [#1](https://github.com/ICT-BBC/mod-pr-scrum/issues/1)
+Vorbedingungen       | Das Programm kann gestartet werden
+Ablauf               | 1. Der Benutzer klickt auf No Account. 2. Der Benutzer Registriert sich.
+Erwartetes Resultat  | Die Registrierung ist erfolgreich (Das Programm gibt keine Fehlermeldung aus und der User wird in der Datenbank erfasst).
+
+Abschnitt            | Inhalt
+---------------------|--------
+ID                   | T-2
+Getestete User Story | [#2](https://github.com/ICT-BBC/mod-pr-scrum/issues/2)
+Vorbedingungen       | Der Benutzer ist registriert
+Ablauf               | 1. Der Benutzer klickt auf Registrieren. 2. Der Benutzer Registriert sich.
+Erwartetes Resultat  | Die Anmeldung ist erfolgreich und er kommt ins Hauptmenu.
 
   #### [Zuück](../README.md)
