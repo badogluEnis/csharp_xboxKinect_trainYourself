@@ -1,17 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using DataAccess;
 using Model;
 
@@ -27,84 +15,74 @@ namespace Trainyourself.Pages
             get { return Vornameinput; }
             set { Vornameinput = value; }
         }
-
         public TextBox Nachnameinput1
         {
             get { return Nachnameinput; }
             set { Nachnameinput = value; }
         }
-
         public TextBox Email1
         {
             get { return Email; }
             set { Email = value; }
         }
-
         public TextBox Passwort1
         {
             get { return Passwort; }
             set { Passwort = value; }
         }
-
         public TextBox Passwortrep1
         {
             get { return Passwortrep; }
             set { Passwortrep = value; }
         }
-
-
         public RegisterPage()
         {
             InitializeComponent();
         }
+        private bool ValidateInputfields(string input)
+        {
+            if (string.IsNullOrEmpty(input.Trim()))
+            {
+                ErrorMessage.Content = "One or more Inputfields are empty";
+                return false;
+            }
+            return true;
 
+        }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-           
             string name = Vornameinput1.Text;
             string lastname = Nachnameinput1.Text;
             string email = Email1.Text;
             string password = Passwort1.Text;
-            User user = null;
-
-
+            User user;
             using (TrainContext context = new TrainContext())
             {
-
-                if (Vornameinput1.Text != "" && Nachnameinput1.Text.Trim() != string.Empty && Email1.Text != "" && Passwort1.Text != "" && Passwortrep1.Text != "" )
+                if (ValidateInputfields(Vornameinput1.Text) && ValidateInputfields(Nachnameinput1.Text) && ValidateInputfields(Passwort1.Text) && ValidateInputfields(Passwortrep1.Text))
                 {
                     if (Passwortrep1.Text == Passwort1.Text)
                     {
-                        
-                  
-                UserRepository  repository = new UserRepository(context);
-                user = new User
-                {
-                    Name = name,
-                    Lastname = lastname,
-                    Email = email,
-                    Password = password
-                };
-
-               
-                repository.Add(user);
-                NavigationService.Navigate(new MoreinformationPage(user));
+                        UserRepository repository = new UserRepository(context);
+                        user = new User
+                        {
+                            Name = name,
+                            Lastname = lastname,
+                            Email = email,
+                            Password = password
+                        };
+                        repository.Add(user);
+                        NavigationService.Navigate(new MoreinformationPage(user));
                     }
-               else
-               {
+                    else
+                    {
                         ErrorMessage.Content = "Passwords are not the same ones";
-               }
+                    }
                 }
-
                 else
                 {
                     ErrorMessage.Content = "One or more Inputfields are empty";
                 }
             }
-
-
-
-
         }
     }
 }
