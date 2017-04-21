@@ -71,7 +71,7 @@ namespace Trainyourself.Pages
                             Password = password
                         };
                         repository.Add(user);
-                        NavigationService.Navigate(new MoreinformationPage(user));
+                        if (NavigationService != null) NavigationService.Navigate(new MoreinformationPage(user));
                     }
                     else
                     {
