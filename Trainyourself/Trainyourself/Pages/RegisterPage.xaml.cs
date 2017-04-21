@@ -8,7 +8,7 @@ namespace Trainyourself.Pages
     /// <summary>
     /// Interaction logic for RegisterPage.xaml
     /// </summary>
-    public partial class RegisterPage : Page
+    public partial class RegisterPage
     {
         public TextBox Vornameinput1
         {
