@@ -51,9 +51,9 @@
             <PasswordBox Name="Passwortrep" Height="25"/>
         </StackPanel>
 
-        <Label Name="ErrorMessage" Grid.Row="7" Height="70" Margin="216,52,212,358" Content="" FontSize="25" FontFamily="Arial" Foreground="Red" Grid.ColumnSpan="3"
+        <Label Name="ErrorMessage" Grid.Row="7" Height="70" Margin="215,28,213,382" Content="" FontSize="25" FontFamily="Arial" Foreground="Red" Grid.ColumnSpan="3"
                Grid.Column="0" Padding="530 0 0 0"/>
 
-        <Button Style="{StaticResource Buttonsize}" Grid.Row="7" Grid.Column="1" Content="Continue" Click="Button_Click" />
+        <Button Style="{StaticResource Buttonsize}" Grid.Row="7" Grid.Column="1" Content="Continue" Click="Button_Click" Margin="18,103,24,337" />
     </Grid>
 </Page>

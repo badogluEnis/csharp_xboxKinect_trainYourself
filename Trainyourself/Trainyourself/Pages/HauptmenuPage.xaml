@@ -57,9 +57,10 @@
                 </Button.Template>
             </Button>
 
-            <Button Name="Profilbutton" Click="Profilbutton_OnClick" Grid.Column=""/>
         </StackPanel>
 
+        <Button Name="Profilbutton" Click="Profilbutton_OnClick" Grid.Column="2" Grid.Row="4" Style="{StaticResource Buttonsize}" Height="100"  Width="200" Content="My Profile" FontSize="30"/>
+        <Button Name="Logoutbutton" Click="Profilbutton_OnClick" Grid.Column="2" Grid.Row="5" Style="{StaticResource Buttonsize}" Height="100"  Width="200" Content="My Profile" FontSize="30"/>
 
 
     </Grid>

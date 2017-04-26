@@ -36,15 +36,15 @@
             <TextBox Name="Emailsignin" Height="25" MaxWidth="150" MaxHeight="40"/>
         </StackPanel>
 
-        <StackPanel Grid.Column="1" Margin="0 50 0 0" Orientation="Vertical" Grid.Row="2" >
+        <StackPanel Grid.Column="1" Margin="0,25" Orientation="Vertical" Grid.Row="2" >
             <Label  Content="Passwort" FontSize="25" Padding="75 0 0 0"  Background="Transparent" />
-            <PasswordBox  Name="Passwordsignin" Height="25" MaxWidth="150" MaxHeight="40" />
+            <PasswordBox  x:Name="Passwordsignin" Height="25" MaxWidth="150" MaxHeight="40" />
 
         </StackPanel>
 
         <Button Style="{StaticResource Buttonsize}" HorizontalAlignment="Center"  Grid.Column="1" Grid.Row="3" Margin="0 50 0 0" Content="Sign in" Click="SignIn_OnClick" />
 
-        <Label Grid.Column="1" Grid.Row="4" Content="" FontSize="25" Margin="5" Name="Signinerror" Foreground="Red"/>
+        <Label Grid.Column="1" Grid.Row="3" Content="" FontSize="25" Margin="25,0,10,41" Name="Signinerror" Foreground="Red"/>
 
         <Button HorizontalAlignment="Center" Click="NotRegistered_OnClick" Grid.Row="5" Grid.ColumnSpan="3" Margin="82,0,26.333,0" Width="332" >
             <Button.Template>
