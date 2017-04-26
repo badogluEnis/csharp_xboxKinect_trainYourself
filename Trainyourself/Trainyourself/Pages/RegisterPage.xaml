@@ -46,12 +46,12 @@
 
         <StackPanel Style="{StaticResource Stackstyle}" Grid.Row="4" Grid.Column="1">
             <Label Content="Password" FontSize="25" />
-            <TextBox Name="Passwort" Height="25"/>
+            <PasswordBox Name="Passwort" Height="25"/>
         </StackPanel>
 
         <StackPanel Style="{StaticResource Stackstyle}" Grid.Row="6" Grid.Column="1">
             <Label Content="Password repeat" FontSize="25" />
-            <TextBox Name="Passwortrep" Height="25"/>
+            <PasswordBox Name="Passwortrep" Height="25"/>
         </StackPanel>
 
         <Label Name="ErrorMessage" Grid.Row="7" Height="70" Margin="216,52,212,358" Content="" FontSize="25" FontFamily="Arial" Foreground="Red" Grid.ColumnSpan="3"

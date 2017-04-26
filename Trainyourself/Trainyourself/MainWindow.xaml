@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Trainyourself"
         mc:Ignorable="d"
-        Title="Trainyourstyle" Height="690.223" Width="1299.302"
+        Title="Trainyourself" Height="690.223" Width="1299.302"
         
         WindowStartupLocation="CenterOwner" WindowState="Maximized">
     

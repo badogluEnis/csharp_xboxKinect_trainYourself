@@ -19,9 +19,7 @@ namespace Trainyourself.Pages
         {
             InitializeComponent();
         }
-
-
-
+        
         /// <summary>
         /// Handles the OnClick event of the SignIn control and shows the error.
         /// </summary>
@@ -29,21 +27,21 @@ namespace Trainyourself.Pages
         /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void SignIn_OnClick(object sender, RoutedEventArgs e)
         {
-
             using (TrainContext context = new TrainContext())
             { 
                 UserRepository ur = new UserRepository(context);
 
-                if (string.IsNullOrEmpty(Emailsignin.Text) || string.IsNullOrEmpty(Passwordsignin.Text)) 
+                if (string.IsNullOrEmpty(Emailsignin.Text) || string.IsNullOrEmpty(Passwordsignin.Password)) 
                 {
                     Signinerror.Content = "Fields cant't be empty";
                 }
                 else
                 {
-                    if (ur.CheckLogin(Emailsignin.Text, Passwordsignin.Text))
+                    if (ur.CheckLogin(Emailsignin.Text, Passwordsignin.Password))
                     {
                         Signinerror.Content = "Login erfolgreich";
                         Signinerror.Foreground = Brushes.Green;
+                        if (NavigationService != null) NavigationService.Navigate(new HauptmenuPage());
                     }
                     else
                     {
@@ -51,8 +49,8 @@ namespace Trainyourself.Pages
                     }
                 }
             }
-          }
-
+          
+        }
         /// <summary>
         /// Handles the OnClick event of the NotRegistered control.
         /// </summary>

@@ -51,7 +51,7 @@ namespace Trainyourself.Pages
         /// <value>
         /// The passwort1.
         /// </value>
-        public TextBox Passwort1
+        public PasswordBox Passwort1
         {
             get { return Passwort; }
             set { Passwort = value; }
@@ -62,7 +62,7 @@ namespace Trainyourself.Pages
         /// <value>
         /// The passwortrep1.
         /// </value>
-        public TextBox Passwortrep1
+        public PasswordBox Passwortrep1
         {
             get { return Passwortrep; }
             set { Passwortrep = value; }
@@ -99,13 +99,13 @@ namespace Trainyourself.Pages
             string name = Vornameinput1.Text;
             string lastname = Nachnameinput1.Text;
             string email = Email1.Text;
-            string password = Passwort1.Text;
+            string password = Passwort1.Password;
             User user;
             using (TrainContext context = new TrainContext())
             {
-                if (ValidateInputfields(Vornameinput1.Text) && ValidateInputfields(Nachnameinput1.Text) && ValidateInputfields(Passwort1.Text) && ValidateInputfields(Passwortrep1.Text))
+                if (ValidateInputfields(Vornameinput1.Text) && ValidateInputfields(Nachnameinput1.Text) && ValidateInputfields(Passwort1.Password) && ValidateInputfields(Passwortrep1.Password))
                 {
-                    if (Passwortrep1.Text == Passwort1.Text)
+                    if (Passwortrep1.Password == Passwort1.Password)
                     {
                         UserRepository repository = new UserRepository(context);
                         user = new User
