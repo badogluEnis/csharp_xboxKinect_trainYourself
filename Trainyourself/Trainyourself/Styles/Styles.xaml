@@ -24,5 +24,17 @@
 <Style TargetType="Label" x:Key="Labelmargin">
     <Setter Property="Margin" Value=""></Setter>
 </Style>
-
+<Style TargetType="Label" x:Key="inputlabelsize">
+    <Setter Property="FontSize" Value="25"/>
+</Style>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </ResourceDictionary>

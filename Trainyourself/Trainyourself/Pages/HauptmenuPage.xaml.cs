@@ -24,5 +24,20 @@ namespace Trainyourself.Pages
         {
             InitializeComponent();
         }
+
+        private void situp_OnClick(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new SigninPage());
+        }
+
+        private void Buttonpushups_OnClick(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new SigninPage());
+        }
+
+        private void Profilbutton_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

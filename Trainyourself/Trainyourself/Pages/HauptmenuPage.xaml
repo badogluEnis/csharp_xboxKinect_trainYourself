@@ -2,13 +2,68 @@
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:Trainyourself.Pages"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:webControls="clr-namespace:System.Web.UI.WebControls;assembly=System.Web"
       mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="300"
+      d:DesignHeight="1506.634"  d:DesignWidth="1804.125"
       Title="HauptmenuPage">
 
-    <Grid>
-        
+    <Grid Style="{StaticResource BackgroundGrid}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Column="2" Grid.Row="0" Content="Hey Altin" FontSize="70" Height="100"/>
+        <Label Grid.Row="1" Grid.ColumnSpan="5" Content="Which exercise do you want to do today" FontSize="70" Width="1250" Margin="273,0,221,0"/>
+
+        <StackPanel  Grid.Row="3" Grid.Column="1">
+            <Label Content="Sit-Ups" FontSize="45" Margin="15 0 0 0"/>
+            <Button x:Name="situpsbutton" Height="252" Margin="0,0,10,0" Click="situp_OnClick" >
+                <Button.Template>
+                    <ControlTemplate>
+                        <Border HorizontalAlignment="Center" VerticalAlignment="Center" >
+                            <Image Source="../pictures/situps.jpg" 
+                                   Width="333" 
+                                   Height="264" RenderTransformOrigin="0.135,0.413" Stretch="Fill"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+        </StackPanel>
+        <StackPanel  Grid.Row="3" Grid.Column="3">
+            <Label Content="Push-Ups" FontSize="45" Margin="15 0 0 0"/>
+            <Button x:Name="buttonpushups" Height="252" Margin="0,0,10,0" Click="Buttonpushups_OnClick" >
+                <Button.Template>
+                    <ControlTemplate>
+                        <Border HorizontalAlignment="Center" VerticalAlignment="Center" >
+                            <Image Source="../pictures/situps.jpg" 
+                                   Width="333" 
+                                   Height="264" RenderTransformOrigin="0.135,0.413" Stretch="Fill"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+            <Button Name="Profilbutton" Click="Profilbutton_OnClick" Grid.Column=""/>
+        </StackPanel>
+
+
+
     </Grid>
+
+
+
 </Page>

@@ -7,10 +7,7 @@
       d:DesignHeight="1006.634"  d:DesignWidth="1104.125"
       Title="RegisterPage">
 
-    <Grid Margin="30">
-        <Grid.Background>
-            <ImageBrush ImageSource="/pictures/fitness.jpg" Stretch="UniformToFill"/>
-        </Grid.Background>
+    <Grid Style="{StaticResource BackgroundGrid}">
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
@@ -30,27 +27,27 @@
         <Label Content="Register" FontSize="50" Grid.Column="1" Grid.Row="0"/>
 
         <StackPanel Style="{StaticResource Stackstyle}" Grid.Row="1" Grid.Column="1">
-            <Label  Content="Prename" FontSize="25" />
+            <Label  Content="Prename" Style="{StaticResource inputlabelsize}"/>
             <TextBox Name="Vornameinput" Height="25"/>
         </StackPanel>
 
         <StackPanel Style="{StaticResource Stackstyle}" Grid.Row="2" Grid.Column="1">
-            <Label Content="Lastname" FontSize="25" />
+            <Label Content="Lastname" Style="{StaticResource inputlabelsize}" />
             <TextBox  Name="Nachnameinput" Height="25"/>
         </StackPanel>
 
         <StackPanel Style="{StaticResource Stackstyle}" Grid.Row="3" Grid.Column="1">
-            <Label Content="Email" FontSize="25" />
+            <Label Content="Email" Style="{StaticResource inputlabelsize}"/>
             <TextBox Name="Email" Height="25" />
         </StackPanel>
 
         <StackPanel Style="{StaticResource Stackstyle}" Grid.Row="4" Grid.Column="1">
-            <Label Content="Password" FontSize="25" />
+            <Label Content="Password" Style="{StaticResource inputlabelsize}" />
             <PasswordBox Name="Passwort" Height="25"/>
         </StackPanel>
 
         <StackPanel Style="{StaticResource Stackstyle}" Grid.Row="6" Grid.Column="1">
-            <Label Content="Password repeat" FontSize="25" />
+            <Label Content="Password repeat" Style="{StaticResource inputlabelsize}" />
             <PasswordBox Name="Passwortrep" Height="25"/>
         </StackPanel>
 
