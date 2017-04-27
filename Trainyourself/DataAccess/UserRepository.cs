@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using Model;
 
 namespace DataAccess
@@ -13,7 +14,6 @@ namespace DataAccess
         {
             return Context.Users.Any(u => u.Password == password && u.Email == email);
         }
-
   
     }
 }

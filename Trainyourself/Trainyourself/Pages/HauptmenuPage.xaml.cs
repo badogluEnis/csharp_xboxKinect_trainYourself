@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Model;
 
 namespace Trainyourself.Pages
 {
@@ -37,7 +38,7 @@ namespace Trainyourself.Pages
 
         private void Profilbutton_OnClick(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            NavigationService.Navigate(new ProfilePage());
         }
     }
 }
