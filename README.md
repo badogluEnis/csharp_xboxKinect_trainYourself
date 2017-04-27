@@ -7,7 +7,7 @@ Ein Beispielprojekt mit Issues, Meilensteinen und Commits als Beispiel der Verwe
 ## Projektmitabeiter
 
 * [Altin Hani](https://github.com/xahanix) (Scrum Master , Team Member)
-* [Enis Badoglu](https://github.com/badogluEnis) ( Team Member)
+* [Enis Badoglu](https://github.com/badogluEnis) (Team Member)
 
 ## Dokumentation
 
@@ -35,8 +35,8 @@ Ein kleines Fazit von jedem der Projektmitarbeiter mit einem Besonderen Augenmer
 
 ### Altin Hani
 
-Guiarbeiten
+Guiarbeiten, Logik
 
 ### Enis Badoglu
 
-Datenbankenhandling
+Datenbankenhandling, Logik
