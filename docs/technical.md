@@ -37,6 +37,10 @@
   In unserem Projekt haben wir auch eine Datenbank integriert. Um Userdaten sowie auch Trainingsfortschritte zu speichern.
   Wir brauchen in unserem Projekt Entity Framework (Verison: 6.1.3) mit Code first.
   
+  In unserem Projekt haben wir folgende zwei Tabellen: User und Score. 
+  In der User Tabelle werden Daten gespeichert welche jeder User nur ein Mal hat, zum Bespiel: Highscore, Name, Email usw... 
+  Hingegen bei der Score Tabelle werden alle Scores vom User gespeichert, dass heisst, jeder User hat mehrere Scores.
+  
   Das aktuelle ERM von unserer Datenbank sehen sie [hier](img/erm_tys.PNG).
   
   
