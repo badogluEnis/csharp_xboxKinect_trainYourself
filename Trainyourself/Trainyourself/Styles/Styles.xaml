@@ -2,10 +2,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     
  <Style TargetType="Grid" x:Key="BackgroundGrid">
-     <Setter Property="Background">
-         <Setter.Value>
-             <ImageBrush ImageSource="/pictures/fitness.jpg" Stretch="UniformToFill"/>
-           </Setter.Value>
+     <Setter Property="Background" Value="AliceBlue">
      </Setter>
      <Setter Property="Margin" Value="30"/>
  </Style>

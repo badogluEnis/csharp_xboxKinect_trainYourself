@@ -40,5 +40,10 @@ namespace Trainyourself.Pages
         {
             NavigationService.Navigate(new ProfilePage());
         }
+
+        private void Logoutbutton_OnClick_OnClick(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }

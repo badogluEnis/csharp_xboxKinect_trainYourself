@@ -42,7 +42,7 @@
 
         </StackPanel>
 
-        <Button Style="{StaticResource Buttonsize}" HorizontalAlignment="Center"  Grid.Column="1" Grid.Row="3" Margin="0 50 0 0" Content="Sign in" Click="SignIn_OnClick" />
+        <Button Style="{StaticResource Buttonsize}" HorizontalAlignment="Center"  Grid.Column="1" Grid.Row="3" Margin="76,50,77,0" Content="Sign in" Click="SignIn_OnClick" VerticalAlignment="Top" />
 
         <Label Grid.Column="1" Grid.Row="3" Content="" FontSize="25" Margin="25,0,10,41" Name="Signinerror" Foreground="Red"/>
 

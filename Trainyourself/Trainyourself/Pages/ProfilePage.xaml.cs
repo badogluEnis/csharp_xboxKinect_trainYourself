@@ -1,4 +1,8 @@
-﻿using Model;
+﻿using System;
+using System.Configuration;
+using System.Windows;
+using DataAccess;
+using Model;
 
 namespace Trainyourself.Pages
 {
@@ -10,31 +14,32 @@ namespace Trainyourself.Pages
         public ProfilePage()
         {
             InitializeComponent();
+            Setemptylabels();
         }
 
-        public string Name { get; set; }
-        public string Lastname { get; set; }
-
-        public string GetName(User user)
+        public void Setemptylabels()
         {
-            return Name = user.Name;
+            using (TrainContext context = new TrainContext())
+            {
+                UserRepository userRepository = new UserRepository(context);
+
+               User us =  userRepository.GetById(Int16.Parse(ConfigurationManager.AppSettings["LoggedUserId"]));
+               
+               Name.Text = us.Name + " "+ us.Lastname;
+               YourHeightLabel.Content = us.Height;
+               YourHeightLabel.FontSize = 23;
+               YourWeightLabel.Content = us.Weight;
+               YourWeightLabel.FontSize  = 23;
+               float bmi =  float.Parse(us.Weight.ToString()) / (float.Parse(us.Height.ToString()) * float.Parse(us.Height.ToString())) ;
+               BMIOutput.Content = bmi;
+               BMIOutput.FontSize = 23;
+
+            }
         }
 
-        public string GetLastname(User user)
+        private void Backbutton_OnClick(object sender, RoutedEventArgs e)
         {
-            return Lastname = user.Lastname;
+            NavigationService.Navigate(new HauptmenuPage());
         }
-
-        public void GetHeight(User user)
-        {
-            YourHeightLabel.Content = user.Height.ToString();
-        }
-
-        public void GetWeight(User user)
-        {
-            YourWeightLabel.Content = user.Weight.ToString();
-        }
-       
-
     }
 }

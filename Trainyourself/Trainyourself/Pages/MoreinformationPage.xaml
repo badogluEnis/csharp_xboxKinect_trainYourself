@@ -27,12 +27,12 @@
         <Label Content="More Information" Grid.Row="0" Grid.Column="1" FontSize="50" Margin="0 0 0 15"/>
 
         <StackPanel Grid.Row="1" Grid.Column="1" Margin="0 0 0 15">
-            <Label Style="{StaticResource inputlabelsize}" Content="How tall are you? (cm)"/>
-            <TextBox Name="height" Height="25"/>
+            <Label Style="{StaticResource inputlabelsize}" Content="How tall are you? (m)" Padding="95 0 0 0"/>
+            <TextBox Name="height" Height="25" Width="180"/>
         </StackPanel>
         <StackPanel Grid.Row="2" Grid.Column="1" Margin="0 15 0 10">
-            <Label Style="{StaticResource inputlabelsize}" Content="How much do you weight(kg)"/>
-            <TextBox Name="weight"  Height="25"/>
+            <Label Style="{StaticResource inputlabelsize}" Content="How much do you weight(kg)" Padding="45 0 0 0"/>
+            <TextBox Name="weight"  Height="25" Width="180"/>
         </StackPanel>
         <Label Name="moreinformationserror" Grid.Row="3" Grid.Column="1" Content="" FontSize="25" Foreground="Red" Grid.ColumnSpan="2"/>
         <Button Style="{StaticResource Buttonsize}" Content="Register" Grid.Row="4" Grid.Column="1"  Margin="0 30 0 0" Click="Button_Click"/>

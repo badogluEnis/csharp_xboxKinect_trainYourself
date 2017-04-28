@@ -108,15 +108,23 @@ namespace Trainyourself.Pages
                     if (Passwortrep1.Password == Passwort1.Password)
                     {
                         UserRepository repository = new UserRepository(context);
-                        user = new User
+                        if (repository.CheckIfEmailexist(Email1.Text))
                         {
-                            Name = name,
-                            Lastname = lastname,
-                            Email = email,
-                            Password = password
-                        };
-                        repository.Add(user);
-                        if (NavigationService != null) NavigationService.Navigate(new MoreinformationPage(user));
+                            ErrorMessage.Content = "This E-Mail already exists. Take another";
+                        }
+                        else
+                        {
+                            user = new User
+                            {
+                                Name = name,
+                                Lastname = lastname,
+                                Email = email,
+                                Password = password
+                            };
+                            repository.Add(user);
+                            if (NavigationService != null) NavigationService.Navigate(new MoreinformationPage(user));
+                        }
+
                     }
                     else
                     {

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Model;
 
@@ -14,6 +15,16 @@ namespace DataAccess
         {
             return Context.Users.Any(u => u.Password == password && u.Email == email);
         }
-  
+
+        public int GetUserIdByMail(string mail)
+        {
+
+            return Context.Users.Single(u => u.Email == mail).Id;
+        }
+
+        public bool CheckIfEmailexist(string mail)
+        {
+            return Context.Users.Any(u => u.Email == mail);
+        }
     }
 }

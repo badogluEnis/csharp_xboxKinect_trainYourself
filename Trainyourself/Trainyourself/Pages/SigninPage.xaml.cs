@@ -1,7 +1,10 @@
-﻿using System.Windows;
+﻿using System;
+using System.Configuration;
+using System.Windows;
 using System.Windows.Media;
 using DataAccess;
 using Model;
+using Trainyourself.Properties;
 
 namespace Trainyourself.Pages
 {
@@ -39,6 +42,10 @@ namespace Trainyourself.Pages
                 {
                     if (ur.CheckLogin(Emailsignin.Text, Passwordsignin.Password))
                     {
+                        int userId = ur.GetUserIdByMail(Emailsignin.Text);
+
+                        ConfigurationManager.AppSettings["LoggedUserId"] = userId.ToString();
+                      
                         Signinerror.Content = "Login erfolgreich";
                         Signinerror.Foreground = Brushes.Green;
                         if (NavigationService != null) NavigationService.Navigate(new HauptmenuPage());
@@ -52,7 +59,7 @@ namespace Trainyourself.Pages
           
         }
         /// <summary>
-        /// Handles the OnClick event of the NotRegistered control.
+        /// Handles the OnClick event of the NotRegistered control and navigate to the register page.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
         /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>

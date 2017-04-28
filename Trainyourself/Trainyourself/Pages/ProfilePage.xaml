@@ -9,8 +9,8 @@
 
     <Grid Style="{StaticResource BackgroundGrid}">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
@@ -20,21 +20,22 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
-
         </Grid.RowDefinitions>
-        <Label Grid.Column="1" Grid.Row="0" Margin="0 100 0 0" FontSize="30" Content="Vorname Nachname"/>
-
-        <StackPanel Grid.Column="1" Grid.Row="1">
-            <Label FontSize="18" Content="Your Height"/>
-            <Label Name="YourHeightLabel"/>
-        </StackPanel>
+        <Label Grid.Column="0" Grid.Row="1" Content="Your Name" FontSize="45" Padding="0 90 0 0" />
+        <TextBox Grid.Column="1"  Grid.Row="1" FontSize="45" Text="" Name="Name" Padding="0 90 0 0" Height="120"/>
+        
+            <Label FontSize="60" Content="Your Height" Padding="200 0 0 0" FontStyle="Italic"/>
+            <Label Name="YourHeightLabel" Padding="300 0 0 0" FontWeight="Bold"/>
+        
         <StackPanel Grid.Column="1" Grid.Row="2">
-            <Label FontSize="18" Content="Your Weight"/>
-            <Label Name="YourWeightLabel" />
+            <Label FontSize="60" Content="Your Weight" Padding="200 0 0 0" />
+            <Label Name="YourWeightLabel" Padding="315 0 0 0" FontWeight="Bold"/>
         </StackPanel>
         <StackPanel Grid.Column="1" Grid.Row="3">
-            <Label FontSize="18" Content="Your Body Mass Index"/>
-            <Label Name="BMIOutput"/>
+            <Label FontSize="60" Padding="60  0 0 0" Content="Your Body Mass Index"/>
+            <Label Name="BMIOutput" Padding="250 0 0 0" FontWeight="Bold"/>
         </StackPanel>
+        <Button Name="backbutton" Style="{StaticResource Buttonsize}" Grid.Column="1" Grid.Row="4" Click="Backbutton_OnClick" Content="Back" FontSize="12"/>
+        <TextBox IsReadOnly="True" x:Name="textBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="248,185,0,0" Grid.Row="3" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
     </Grid>
 </Page>
