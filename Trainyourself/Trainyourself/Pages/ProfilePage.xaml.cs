@@ -26,12 +26,12 @@ namespace Trainyourself.Pages
                User us =  userRepository.GetById(Int16.Parse(ConfigurationManager.AppSettings["LoggedUserId"]));
                
                Name.Text = us.Name + " "+ us.Lastname;
-               YourHeightLabel.Content = us.Height;
+               YourHeightLabel.Text = Convert.ToString(us.Height);
                YourHeightLabel.FontSize = 23;
-               YourWeightLabel.Content = us.Weight;
+               YourWeightLabel.Text = Convert.ToString(us.Weight);
                YourWeightLabel.FontSize  = 23;
                float bmi =  float.Parse(us.Weight.ToString()) / (float.Parse(us.Height.ToString()) * float.Parse(us.Height.ToString())) ;
-               BMIOutput.Content = bmi;
+               BMIOutput.Text = Convert.ToString(bmi);
                BMIOutput.FontSize = 23;
 
             }
@@ -40,6 +40,11 @@ namespace Trainyourself.Pages
         private void Backbutton_OnClick(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new HauptmenuPage());
+        }
+
+        private void YourHeightEdit_OnClick(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }
