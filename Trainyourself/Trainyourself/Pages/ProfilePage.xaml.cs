@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Configuration;
 using System.Windows;
+using System.Windows.Media;
 using DataAccess;
 using Model;
 
@@ -30,8 +31,9 @@ namespace Trainyourself.Pages
                YourHeightLabel.FontSize = 23;
                YourWeightLabel.Text = Convert.ToString(us.Weight);
                YourWeightLabel.FontSize  = 23;
-               float bmi =  float.Parse(us.Weight.ToString()) / (float.Parse(us.Height.ToString()) * float.Parse(us.Height.ToString())) ;
-               BMIOutput.Text = Convert.ToString(bmi);
+               double bmi =  double.Parse(us.Weight.ToString()) / (double.Parse(us.Height.ToString()) * double.Parse(us.Height.ToString())) ;
+               double Round =  Math.Round(bmi, 2);
+               BMIOutput.Text = Convert.ToString(Round);
                BMIOutput.FontSize = 23;
 
             }
@@ -44,7 +46,44 @@ namespace Trainyourself.Pages
 
         private void YourHeightEdit_OnClick(object sender, RoutedEventArgs e)
         {
-            
+            YourHeightLabel.IsReadOnly = false;
+            YourHeightLabel.BorderBrush = Brushes.Blue;
+        }
+
+        private void YourWeightEdit_OnClicknClick(object sender, RoutedEventArgs e)
+        {
+            YourWeightLabel.IsReadOnly = false;
+            YourWeightLabel.BorderBrush = Brushes.Blue;
+        }
+
+        private void SavebuttonHeight_OnClick(object sender, RoutedEventArgs e)
+        {
+            using (TrainContext context = new TrainContext())
+            {
+                UserRepository userRepository = new UserRepository(context);
+                User us = userRepository.GetById(Int16.Parse(ConfigurationManager.AppSettings["LoggedUserId"]));
+                us.Height = Convert.ToDouble(YourHeightLabel.Text);
+                userRepository.Update(us);
+
+            }
+            YourHeightLabel.IsReadOnly = true;
+            YourHeightLabel.BorderBrush = Brushes.Green;
+        }
+
+        private void SavebuttonWeight_OnClickttonWeight_OnClick(object sender, RoutedEventArgs e)
+        {
+            using (TrainContext context = new TrainContext())
+            {
+                UserRepository userRepository = new UserRepository(context);
+                User us = userRepository.GetById(Int16.Parse(ConfigurationManager.AppSettings["LoggedUserId"]));
+                if (us != null)
+                {
+                    us.Weight = Convert.ToDouble(YourWeightLabel.Text);
+                    userRepository.Update(us);
+                }
+            }
+            YourWeightLabel.IsReadOnly = true;
+            YourWeightLabel.BorderBrush = Brushes.Green;
         }
     }
 }
