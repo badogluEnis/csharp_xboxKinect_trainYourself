@@ -40,6 +40,12 @@ Vorbedingungen       | Der Benutzer hat das Programm offen.
 Ablauf               | 1. Der Benutzer versucht sich anzumelden ohne sich vorher angemeldet zu haben.
 Erwartetes Resultat  | Es wird eine Fehlermeldung ausgegeben, welche aussagt dass entweder das Passwort oder die Email falsch ist. 
 
-
+Abschnitt            | Inhalt
+---------------------|--------
+ID                   | T-3
+Getestete User Story | [#26](https://github.com/ICT-BBC/mod-pr-scrum/issues/26)
+Vorbedingungen       | Der Benutzer hat das Programm offen, hat sich registriert und ist angemeldet.
+Ablauf               | 1. Der Benutzer geht im Hauptmenu auf My Profile und drückt dort auf den editier button, gibt seine neuen Daten ein und drückt dann auf den Speichern button.
+Erwartetes Resultat  | Die neu eingegebenen Daten werden in der Datebank aktualisiert. 
 
   #### [Zuück](../README.md)
