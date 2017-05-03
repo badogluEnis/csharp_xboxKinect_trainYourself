@@ -1,4 +1,6 @@
-﻿using System.Windows;
+﻿using System;
+using System.Net.Mail;
+using System.Windows;
 using System.Windows.Controls;
 using DataAccess;
 using Model;
@@ -89,6 +91,22 @@ namespace Trainyourself.Pages
             return true;
 
         }
+
+        public bool IsEmailValid(string emailaddress)
+        {
+            try
+            {
+                MailAddress m = new MailAddress(emailaddress);
+
+                return true;
+            }
+            catch (FormatException e)
+            {
+                return false;
+            }
+        }
+
+
         /// <summary>
         /// Handles the Click event of the Button control.
         /// </summary>
@@ -114,17 +132,23 @@ namespace Trainyourself.Pages
                         }
                         else
                         {
-                            user = new User
+                            if (IsEmailValid(Email1.Text))
                             {
-                                Name = name,
-                                Lastname = lastname,
-                                Email = email,
-                                Password = password
-                            };
-                            repository.Add(user);
-                            if (NavigationService != null) NavigationService.Navigate(new MoreinformationPage(user));
+                                user = new User
+                                {
+                                    Name = name,
+                                    Lastname = lastname,
+                                    Email = email,
+                                    Password = password
+                                };
+                                repository.Add(user);
+                                if (NavigationService != null) NavigationService.Navigate(new MoreinformationPage(user));
+                            }
+                            else
+                            {
+                                ErrorMessage.Content = "This isn't an Email adress";
+                            }
                         }
-
                     }
                     else
                     {

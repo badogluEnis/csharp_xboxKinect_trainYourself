@@ -83,6 +83,9 @@ namespace Trainyourself.Pages
                 moreinformationserror.Content = "Please type your stats like this in: \"140\" (cm for Height) or \"87.23\" (kg for Wheight)";
                 return false;
             }
+            //if ()
+            //{
+            //}
 
             return true;
         }
