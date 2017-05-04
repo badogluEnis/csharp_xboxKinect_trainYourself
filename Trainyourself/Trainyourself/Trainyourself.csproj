@@ -43,6 +43,7 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.Kinect, Version=1.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="PresentationFramework.Aero" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -87,6 +88,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\Liveview.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\MoreinformationPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -111,6 +116,9 @@
   <ItemGroup>
     <Compile Include="Pages\HauptmenuPage.xaml.cs">
       <DependentUpon>HauptmenuPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Liveview.xaml.cs">
+      <DependentUpon>Liveview.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\MoreinformationPage.xaml.cs">
       <DependentUpon>MoreinformationPage.xaml</DependentUpon>
@@ -155,6 +163,10 @@
     <ProjectReference Include="..\DataAccess\DataAccess.csproj">
       <Project>{CD44298B-DF63-4ECA-B75F-BC6FED3D8F19}</Project>
       <Name>DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KinectConnection\KinectConnection.csproj">
+      <Project>{da5ad8fd-84a6-4b24-b7db-76022592bf19}</Project>
+      <Name>KinectConnection</Name>
     </ProjectReference>
     <ProjectReference Include="..\Model\Model.csproj">
       <Project>{3e3cd127-dc4b-4630-804b-e59bb5f563c0}</Project>

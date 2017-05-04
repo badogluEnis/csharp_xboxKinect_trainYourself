@@ -1,19 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using Microsoft.Kinect;
 
 namespace KinectConnection
 {
-    public class KinectPositionTracker
+    public class KinectProvider
     {
         private KinectSensor _sensor;
         private const int SKELETON_COUNT = 6;
         private readonly Skeleton[] _allSkeletons = new Skeleton[SKELETON_COUNT];
-
         private bool _isInitialized;
-
         public delegate void PositionChangedEventHandler(object sender, Skeleton s);
         public event PositionChangedEventHandler PositionChanged;
 
@@ -22,7 +25,7 @@ namespace KinectConnection
         /// <summary>
         /// Initializes a new instance of the <see cref="KinectPositionTracker"/> class.
         /// </summary>
-        public KinectPositionTracker()
+        public KinectProvider()
         {
             Init();
         }
@@ -37,7 +40,7 @@ namespace KinectConnection
 
             if (_sensor == null)
             {
-                throw new KinectNotConnectedException();
+
             }
 
             //Smooth parameters
@@ -50,6 +53,7 @@ namespace KinectConnection
             //};
 
             _sensor.SkeletonStream.Enable(); // optional smooth parameters could be passed
+            _sensor.ColorStream.Enable();
             _sensor.AllFramesReady += KinectAllFramesReady;
             _sensor.Start();
         }
@@ -85,6 +89,8 @@ namespace KinectConnection
         {
             Skeleton skeleton = GetFirstSkeleton(e);
 
+
+
             if (skeleton == null)
             {
                 return;
@@ -97,8 +103,7 @@ namespace KinectConnection
             }
 
 
-
-            if (PositionChanged != null) PositionChanged(this, skeleton);
+            PositionChanged?.Invoke(this, skeleton);
         }
 
 
@@ -125,5 +130,5 @@ namespace KinectConnection
             }
         }
     }
-
 }
+

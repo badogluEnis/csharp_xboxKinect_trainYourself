@@ -32,7 +32,7 @@ namespace Trainyourself.Pages
 
         private void situp_OnClick(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new SigninPage());
+            NavigationService.Navigate(new Liveview());
         }
 
         private void Buttonpushups_OnClick(object sender, RoutedEventArgs e)
