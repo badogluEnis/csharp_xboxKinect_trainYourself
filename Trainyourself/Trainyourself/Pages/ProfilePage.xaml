@@ -119,17 +119,8 @@
                 <Label Margin="110 0 0 0" Padding="25 0 0 0" Content="over 40" FontSize="25"/>
             </StackPanel>
         </StackPanel>
-
-
-
-
-
-
-
-
-
-
-
-
+       
+        <Button Style="{StaticResource Buttonsize}" Content="Back" Click="Button_Click" MaxHeight="40"  MaxWidth="150" Grid.Column="1" Height="Auto" Grid.Row="5" Margin="330,0,20,0" />
+    
     </Grid>
 </Page>
