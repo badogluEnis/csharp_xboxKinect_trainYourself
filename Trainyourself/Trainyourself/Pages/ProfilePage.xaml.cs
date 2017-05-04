@@ -71,7 +71,7 @@ namespace Trainyourself.Pages
                 BMIOutput.FontSize = 23;
             }
             YourHeightLabel.IsReadOnly = true;
-            YourHeightLabel.BorderBrush = Brushes.Green;
+            YourHeightLabel.BorderBrush = Brushes.ForestGreen;
         }
 
         private void SavebuttonWeight_OnClickttonWeight_OnClick(object sender, RoutedEventArgs e)
@@ -91,7 +91,7 @@ namespace Trainyourself.Pages
                 }
             }
             YourWeightLabel.IsReadOnly = true;
-            YourWeightLabel.BorderBrush = Brushes.Green;
+            YourWeightLabel.BorderBrush = Brushes.ForestGreen;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

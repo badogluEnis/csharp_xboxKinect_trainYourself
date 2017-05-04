@@ -3,7 +3,6 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:Trainyourself.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="554.464" d:DesignWidth="848.214"
       Title="MoreinformationPage">
@@ -35,10 +34,9 @@
             <TextBox Name="weight"  Height="25" Width="180"/>
         </StackPanel>
 
-        <Label Name="moreinformationserror" Grid.Row="3" Content="" FontSize="25" Foreground="Red" Grid.ColumnSpan="2" Margin="0,0,83,0" Grid.Column="1"/>
+        <Label Name="Moreinformationserror" Grid.Row="3" Content="" FontSize="25" Foreground="Red" Grid.ColumnSpan="2" Margin="0,0,83,0" Grid.Column="1"/>
         <Button Style="{StaticResource Buttonsize}" Content="Register" Grid.Row="4" Grid.Column="1"  Margin="0 0 0 0" Click="Button_Click"/>
         
         <Button Style="{StaticResource Buttonsize}" Name="Quit" Grid.Column="1" Grid.Row="4" Margin="0 120 0 0" Content="Quit" Click="Quit_OnClick"/>
-
     </Grid>
 </Page>

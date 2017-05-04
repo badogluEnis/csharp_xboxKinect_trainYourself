@@ -68,21 +68,21 @@ namespace Trainyourself.Pages
 
             if (string.IsNullOrEmpty(doubleInput.Trim()))
             {
-                moreinformationserror.Content = "Input fields can't be empty";
+                Moreinformationserror.Content = "Input fields can't be empty";
                 return false;
             }
 
             bool isValidWeight = Double.TryParse(Weight.Text, out weight1);
             if (!isValidWeight)
             {
-                moreinformationserror.Content = "Please type your stats like this in: \"140\" (cm for Height) or \"87.23\" (kg for Wheight)";
+                Moreinformationserror.Content = "Please type your stats like this in: \"140\" (cm for Height) or \"87.23\" (kg for Wheight)";
                 return false;
             }
 
             bool isValidHeight = Double.TryParse(Weight.Text, out height1);
             if (!isValidHeight)
             {
-                moreinformationserror.Content = "Please type your stats like this in: \"140\" (cm for Height) or \"87.23\" (kg for Wheight)";
+                Moreinformationserror.Content = "Please type your stats like this in: \"140\" (cm for Height) or \"87.23\" (kg for Wheight)";
                 return false;
             }
 
@@ -128,7 +128,7 @@ namespace Trainyourself.Pages
 
                     else
                     {
-                        moreinformationserror.Content = "Use a point(.) instead of a comma(,)";
+                        Moreinformationserror.Content = "Use a point(.) instead of a comma(,)";
                     }
 
                    
