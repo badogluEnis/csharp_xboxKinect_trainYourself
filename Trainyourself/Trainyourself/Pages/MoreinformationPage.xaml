@@ -34,7 +34,7 @@
             <Label Style="{StaticResource inputlabelsize}" Content="How much do you weight(kg)" Padding="45 0 0 0"/>
             <TextBox Name="weight"  Height="25" Width="180"/>
         </StackPanel>
-        <Label Name="moreinformationserror" Grid.Row="3" Content="" FontSize="25" Foreground="Red" Grid.ColumnSpan="3" Margin="132,0,145,0"/>
+        <Label Name="moreinformationserror" Grid.Row="3" Content="" FontSize="25" Foreground="Red" Grid.ColumnSpan="3" Margin="400,0,99,0"/>
         <Button Style="{StaticResource Buttonsize}" Content="Register" Grid.Row="4" Grid.Column="1"  Margin="0 30 0 0" Click="Button_Click"/>
 
 
