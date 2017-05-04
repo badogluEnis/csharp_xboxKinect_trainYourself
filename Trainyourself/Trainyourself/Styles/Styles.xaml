@@ -2,8 +2,11 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     
  <Style TargetType="Grid" x:Key="BackgroundGrid">
-     <Setter Property="Background" Value="AliceBlue">
-     </Setter>
+        <Setter Property="Background"  >
+            <Setter.Value>
+             <ImageBrush ImageSource="../pictures/Hintergrund.jpg"/>
+         </Setter.Value>
+        </Setter>
      <Setter Property="Margin" Value="30"/>
  </Style>
 <Style TargetType="Button" x:Key="Buttonsize">

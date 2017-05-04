@@ -24,17 +24,17 @@ namespace Trainyourself.Pages
             {
                 UserRepository userRepository = new UserRepository(context);
 
-               User us =  userRepository.GetById(Int16.Parse(ConfigurationManager.AppSettings["LoggedUserId"]));
-               
-               Name.Text = us.Name + " "+ us.Lastname;
-               YourHeightLabel.Text = Convert.ToString(us.Height);
-               YourHeightLabel.FontSize = 23;
-               YourWeightLabel.Text = Convert.ToString(us.Weight);
-               YourWeightLabel.FontSize  = 23;
-               double bmi =  double.Parse(us.Weight.ToString()) / (double.Parse(us.Height.ToString()) * double.Parse(us.Height.ToString())) ;
-               double Round =  Math.Round(bmi, 2);
-               BMIOutput.Text = Convert.ToString(Round);
-               BMIOutput.FontSize = 23;
+                User us = userRepository.GetById(Int16.Parse(ConfigurationManager.AppSettings["LoggedUserId"]));
+
+                Name.Text = us.Name + " " + us.Lastname;
+                YourHeightLabel.Text = Convert.ToString(us.Height);
+                YourHeightLabel.FontSize = 23;
+                YourWeightLabel.Text = Convert.ToString(us.Weight);
+                YourWeightLabel.FontSize = 23;
+                double bmi = double.Parse(us.Weight.ToString()) / (double.Parse(us.Height.ToString()) * double.Parse(us.Height.ToString()));
+                double Round = Math.Round(bmi, 2);
+                BMIOutput.Text = Convert.ToString(Round);
+                BMIOutput.FontSize = 23;
 
             }
         }
@@ -65,6 +65,10 @@ namespace Trainyourself.Pages
                 us.Height = Convert.ToDouble(YourHeightLabel.Text);
                 userRepository.Update(us);
 
+                double bmi = double.Parse(us.Weight.ToString()) / (double.Parse(us.Height.ToString()) * double.Parse(us.Height.ToString()));
+                double Round = Math.Round(bmi, 2);
+                BMIOutput.Text = Convert.ToString(Round);
+                BMIOutput.FontSize = 23;
             }
             YourHeightLabel.IsReadOnly = true;
             YourHeightLabel.BorderBrush = Brushes.Green;
@@ -80,6 +84,10 @@ namespace Trainyourself.Pages
                 {
                     us.Weight = Convert.ToDouble(YourWeightLabel.Text);
                     userRepository.Update(us);
+                    double bmi = double.Parse(us.Weight.ToString()) / (double.Parse(us.Height.ToString()) * double.Parse(us.Height.ToString()));
+                    double Round = Math.Round(bmi, 2);
+                    BMIOutput.Text = Convert.ToString(Round);
+                    BMIOutput.FontSize = 23;
                 }
             }
             YourWeightLabel.IsReadOnly = true;
