@@ -34,11 +34,11 @@
             <Label Style="{StaticResource inputlabelsize}" Content="How much do you weight(kg)" Padding="45 0 0 0"/>
             <TextBox Name="weight"  Height="25" Width="180"/>
         </StackPanel>
+
         <Label Name="moreinformationserror" Grid.Row="3" Content="" FontSize="25" Foreground="Red" Grid.ColumnSpan="2" Margin="0,0,83,0" Grid.Column="1"/>
         <Button Style="{StaticResource Buttonsize}" Content="Register" Grid.Row="4" Grid.Column="1"  Margin="0 0 0 0" Click="Button_Click"/>
         
         <Button Style="{StaticResource Buttonsize}" Name="Quit" Grid.Column="1" Grid.Row="4" Margin="0 120 0 0" Content="Quit" Click="Quit_OnClick"/>
-
 
     </Grid>
 </Page>

@@ -93,5 +93,10 @@ namespace Trainyourself.Pages
             YourWeightLabel.IsReadOnly = true;
             YourWeightLabel.BorderBrush = Brushes.Green;
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (NavigationService != null) NavigationService.Navigate(new HauptmenuPage());
+        }
     }
 }

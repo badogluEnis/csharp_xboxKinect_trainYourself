@@ -62,6 +62,7 @@ namespace Trainyourself.Pages
         /// <returns></returns>
         private bool ValidateDoubleInput(string doubleInput)
         {
+
             double weight1;
             double height1;
 
@@ -84,7 +85,17 @@ namespace Trainyourself.Pages
                 moreinformationserror.Content = "Please type your stats like this in: \"140\" (cm for Height) or \"87.23\" (kg for Wheight)";
                 return false;
             }
+
+            string weight2 = Convert.ToString(weight1);
+            string height2 = Convert.ToString(height1);
+
+            
             return true;
+        }
+
+        public bool ContainsComma(string String)
+        {
+            return String.Contains(",");
         }
 
         /// <summary>
@@ -104,21 +115,26 @@ namespace Trainyourself.Pages
             {
                 using (TrainContext context = new TrainContext())
                 {
-                    UserRepository repository = new UserRepository(context);
-                    User.Weight = Convert.ToDouble(Weight.Text);
-                    User.Height = Convert.ToDouble(Height1.Text);
+                    
 
+                    if (!ContainsComma(Weight.Text) && !ContainsComma(Height1.Text))
+                    {
+                        UserRepository repository = new UserRepository(context);
+                        User.Weight = Convert.ToDouble(Weight.Text);
+                        User.Height = Convert.ToDouble(Height1.Text);
+                        repository.Update(User);
+                        if (NavigationService != null) NavigationService.Navigate(new SigninPage());
+                    }
 
-                    repository.Update(User);
-                    if (NavigationService != null) NavigationService.Navigate(new SigninPage());
+                    else
+                    {
+                        moreinformationserror.Content = "Use a point(.) instead of a comma(,)";
+                    }
+
+                   
                 }
 
             }
-
-            
-
-
-           
 
         }
 
