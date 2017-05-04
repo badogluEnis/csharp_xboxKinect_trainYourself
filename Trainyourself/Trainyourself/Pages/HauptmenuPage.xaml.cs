@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml.Serialization;
+using DataAccess;
 using Model;
 
 namespace Trainyourself.Pages
@@ -24,6 +27,7 @@ namespace Trainyourself.Pages
         public HauptmenuPage()
         {
             InitializeComponent();
+            SetTitel();
         }
 
         private void situp_OnClick(object sender, RoutedEventArgs e)
@@ -33,7 +37,7 @@ namespace Trainyourself.Pages
 
         private void Buttonpushups_OnClick(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new SigninPage());
+
         }
 
         private void Profilbutton_OnClick(object sender, RoutedEventArgs e)
@@ -43,7 +47,19 @@ namespace Trainyourself.Pages
 
         private void Logoutbutton_OnClick_OnClick(object sender, RoutedEventArgs e)
         {
-            
+            NavigationService.Navigate(new SigninPage());
+        }
+
+        public void SetTitel()
+        {
+            using (TrainContext context = new TrainContext())
+            {
+                UserRepository userr = new UserRepository(context);
+
+                User us = userr.GetById(Int32.Parse(ConfigurationManager.AppSettings["LoggedUserId"]));
+
+                TitelName.Content = "Hey " + us.Name;
+            }
         }
     }
 }

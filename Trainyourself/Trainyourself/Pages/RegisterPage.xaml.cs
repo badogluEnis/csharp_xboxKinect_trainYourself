@@ -97,10 +97,9 @@ namespace Trainyourself.Pages
             try
             {
                 MailAddress m = new MailAddress(emailaddress);
-
                 return true;
             }
-            catch (FormatException e)
+            catch (FormatException )
             {
                 return false;
             }
@@ -118,7 +117,6 @@ namespace Trainyourself.Pages
             string lastname = Nachnameinput1.Text;
             string email = Email1.Text;
             string password = Passwort1.Password;
-            User user;
             using (TrainContext context = new TrainContext())
             {
                 if (ValidateInputfields(Vornameinput1.Text) && ValidateInputfields(Nachnameinput1.Text) && ValidateInputfields(Passwort1.Password) && ValidateInputfields(Passwortrep1.Password))
@@ -134,7 +132,7 @@ namespace Trainyourself.Pages
                         {
                             if (IsEmailValid(Email1.Text))
                             {
-                                user = new User
+                                var user = new User
                                 {
                                     Name = name,
                                     Lastname = lastname,
@@ -142,7 +140,7 @@ namespace Trainyourself.Pages
                                     Password = password
                                 };
                                 repository.Add(user);
-                                if (NavigationService != null) NavigationService.Navigate(new MoreinformationPage(user));
+                                NavigationService?.Navigate(new MoreinformationPage(user));
                             }
                             else
                             {
@@ -160,6 +158,11 @@ namespace Trainyourself.Pages
                     ErrorMessage.Content = "One or more Inputfields are empty";
                 }
             }
+        }
+
+        private void QuitButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }

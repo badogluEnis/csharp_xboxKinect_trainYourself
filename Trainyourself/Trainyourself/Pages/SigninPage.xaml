@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:Trainyourself.Pages"
       xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero" x:Class="Trainyourself.Pages.SigninPage"
       mc:Ignorable="d" 
-      d:DesignHeight="500" d:DesignWidth="500"
+      d:DesignHeight="1500" d:DesignWidth="1500"
       Title="SigninPage">
 
 
@@ -45,11 +45,13 @@
         <Button Style="{StaticResource Buttonsize}" HorizontalAlignment="Center"  Grid.Column="1" Grid.Row="3" Margin="76,50,77,0" Content="Sign in" Click="SignIn_OnClick" VerticalAlignment="Top" />
 
         <Label Grid.Column="1" Grid.Row="3" Content="" FontSize="25" Margin="25,0,10,41" Name="Signinerror" Foreground="Red"/>
-
-        <Button HorizontalAlignment="Center" Click="NotRegistered_OnClick" Grid.Row="5" Grid.ColumnSpan="3" Margin="82,0,26.333,0" Width="332" >
+        
+        <Button Content="Quit" Name="QuitButton" Click="QuitButton_OnClick" Style="{StaticResource Buttonsize}" Grid.Column="1" Grid.Row="4" Margin="0 60 0 0"/>
+        
+        <Button HorizontalAlignment="Center" Click="NotRegistered_OnClick" Grid.Row="5" Grid.ColumnSpan="3" Margin="82, 60,26.333,0" Width="332" >
             <Button.Template>
                 <ControlTemplate>
-                    <Label  Foreground="Wheat" FontSize="25" >
+                    <Label  Foreground="Black" FontSize="25" >
                         <TextBlock TextDecorations="Underline">Not registered? register now</TextBlock>
                     </Label>
                 </ControlTemplate>

@@ -67,5 +67,10 @@ namespace Trainyourself.Pages
         {
             if (NavigationService != null) NavigationService.Navigate(new RegisterPage());
         }
+
+        private void QuitButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }

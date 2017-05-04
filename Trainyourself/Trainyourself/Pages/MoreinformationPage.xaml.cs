@@ -121,5 +121,10 @@ namespace Trainyourself.Pages
            
 
         }
+
+        private void Quit_OnClick(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }

@@ -6,7 +6,7 @@
       xmlns:webControls="clr-namespace:System.Web.UI.WebControls;assembly=System.Web"
       mc:Ignorable="d" 
       d:DesignHeight="1506.634"  d:DesignWidth="1804.125"
-      Title="HauptmenuPage">
+      Title="HauptmenuPage" >
 
     <Grid Style="{StaticResource BackgroundGrid}">
         <Grid.ColumnDefinitions>
@@ -25,7 +25,7 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Label Grid.Column="2" Grid.Row="0" Content="Hey Altin" FontSize="70" Height="100"/>
+        <Label Grid.Column="2" Grid.Row="0" Content="" FontSize="70" Height="100" Name="TitelName"/>
         <Label Grid.Row="1" Grid.ColumnSpan="5" Content="Which exercise do you want to do today" FontSize="70" Width="1250" Margin="273,0,221,0"/>
 
         <StackPanel  Grid.Row="3" Grid.Column="1">
