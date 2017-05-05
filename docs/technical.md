@@ -27,7 +27,8 @@
   * [Registrierungsscreen 1](img/register.png)
   * [Registrierungsscreen 2](img/register2.png)
   * [Hauptmenu](img/mainmenu.png)
-  * [Liveview](img/liveview.png)
+  * [Liveview Push-Ups](img/liveview.png)
+  * [Liveview Sit-Ups](img/liveview2.png)
   * [Profil](img/profile.png)
   
   ### Sequenzdiagramm
