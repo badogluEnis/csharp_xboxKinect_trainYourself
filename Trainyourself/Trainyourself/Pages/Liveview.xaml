@@ -3,7 +3,6 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:Trainyourself.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="1300" d:DesignWidth="1300"
       Title="Liveview">
@@ -20,13 +19,12 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Label Content="Rumpfbeugen" Grid.Column="1" FontSize="85"/>
-
-        <Viewbox Name="Viewbox" Grid.Row="2" Grid.Column="0" Stretch="Uniform" HorizontalAlignment="Center" Width="242" Grid.ColumnSpan="2" Margin="-122,0,40,0" >
-            <Image Name="Image" Width="640" />
-        </Viewbox>
+        
+        <Image Name="Image" Grid.Column="0" Grid.Row="2" Width="1020" Grid.ColumnSpan="3"/>
+        
         <StackPanel Orientation="Vertical" Grid.Row="1" Margin="0 105 0 0">
-            <Label Content="Record: " FontSize="65"/>
-            <Label Content="Current Run: " FontSize="65"/>
+            <Label Content="Record: " FontSize="65" Width="auto" Margin="0,0,195,0"/>
+            <Label Content="Current Run: " FontSize="65" Margin="0,0,44,0"/>
         </StackPanel>
     </Grid>
 </Page>
