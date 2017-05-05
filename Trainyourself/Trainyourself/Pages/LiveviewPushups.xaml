@@ -8,23 +8,17 @@
       Title="Liveview">
 
     <Grid Style="{StaticResource BackgroundGrid}">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Label Content="Pushups" Grid.Column="1" FontSize="85"/>
+        <Label Style="{StaticResource FontColor}"  Content="Push-Ups" Grid.Column="0" Margin="650 0 0 0"  FontSize="85"/>
 
-        <Image Name="Image" Grid.Column="0" Grid.Row="2" Width="1020" Grid.ColumnSpan="3"/>
+        <Image Name="Image" Grid.Column="1" Grid.Row="0" Margin="0 150 0 0" Width="1120"/>
 
         <StackPanel Orientation="Vertical" Grid.Row="1" Margin="0 105 0 0">
-            <Label Content="Record: " FontSize="65" Width="auto" Margin="0,0,195,0"/>
-            <Label Content="Current Run: " FontSize="65" Margin="0,0,44,0"/>
+            <Label Style="{StaticResource FontColor}"  Content="Record: " FontSize="65" Width="auto" Margin="0,0,195,0"/>
+            <Label Style="{StaticResource FontColor}"  Content="Current Run: " FontSize="65" Margin="0,0,44,0"/>
         </StackPanel>
     </Grid>
 </Page>
