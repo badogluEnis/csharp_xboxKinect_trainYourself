@@ -46,7 +46,7 @@ namespace Trainyourself.Pages
                       
                         Signinerror.Content = "Login erfolgreich";
                         Signinerror.Foreground = Brushes.Green;
-                        if (NavigationService != null) NavigationService.Navigate(new HauptmenuPage());
+                        NavigationService?.Navigate(new HauptmenuPage());
                     }
                     else
                     {
