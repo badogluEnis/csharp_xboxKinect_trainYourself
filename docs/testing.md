@@ -61,7 +61,7 @@ Abschnitt            | Inhalt
 ID                   | NT-4
 Getestete User Story | [#32](https://github.com/ICT-BBC/mod-pr-scrum/issues/32)
 Vorbedingungen       | Der Benutzer hat das Programm offen.
-Ablauf               | 1. Der Benutzer klickt auf "Sign p" 2. Der Benutzer füllt die erste Seite der Registrierung aus. der Benutzer gibt erst(Im ersten eingabefeld) eine mit Punkt getrennte Zahl eine und dann(Im zweiten eingabefeld) eine mit Komma getrennte Zahl ein.
+Ablauf               | 1. Der Benutzer klickt auf "Sign in" 2. Der Benutzer füllt die erste Seite der Registrierung aus. der Benutzer gibt erst(Im ersten eingabefeld) eine mit Punkt getrennte Zahl eine und dann(Im zweiten eingabefeld) eine mit Komma getrennte Zahl ein.
 Erwartetes Resultat  |  
 
   #### [Zuück](../README.md)
