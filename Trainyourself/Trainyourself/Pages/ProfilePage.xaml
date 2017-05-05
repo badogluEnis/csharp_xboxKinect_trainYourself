@@ -22,18 +22,18 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <Label Grid.Column="1" Grid.Row="0" Content="Your Profile" FontSize="80" Padding="280 0 0 20" Grid.ColumnSpan="2"/>
+        <Label Style="{StaticResource FontColor}"  Grid.Column="1" Grid.Row="0" Content="Your Profile" FontSize="80" Padding="280 0 0 20" Grid.ColumnSpan="2"/>
 
-        <Label Padding="0 40 0 0" Grid.Column="0" Grid.Row="1" Content="Your Name" FontSize="45" />
+        <Label Style="{StaticResource FontColor}"  Padding="0 40 0 0" Grid.Column="0" Grid.Row="1" Content="Your Name" FontSize="45" />
         <TextBox Margin="0 40 0 0" IsReadOnly="True" Grid.Column="1"  Grid.Row="1" Text="" FontSize="20" FontWeight="Bold"  Style="{StaticResource Textboxsize}" Name="Name" Height="60"/>
 
-        <Label Padding="0 60 0 0" FontSize="45" Content="Your Height" Grid.Column="0" Grid.Row="2" />
+        <Label Style="{StaticResource FontColor}"  Padding="0 60 0 0" FontSize="45" Content="Your Height" Grid.Column="0" Grid.Row="2" />
         <TextBox Margin="0 40 0 0" IsReadOnly="True" Grid.Row="2" Grid.Column="1" BorderThickness="5"  Name ="YourHeightLabel" Style="{StaticResource Textboxsize}" Height="60" FontWeight="Bold"/>
 
-        <Label Padding="0 60 0 0" FontSize="45" Content="Your Weight" Grid.Column="0" Grid.Row="3" />
+        <Label Style="{StaticResource FontColor}"  Padding="0 60 0 0" FontSize="45" Content="Your Weight" Grid.Column="0" Grid.Row="3" />
         <TextBox Margin="0 40 0 0" IsReadOnly="True" Name="YourWeightLabel" FontWeight="Bold" Grid.Column="1" BorderThickness="5" Grid.Row="3" Style="{StaticResource Textboxsize}" Height="60"/>
 
-        <Label Padding="0 40 0 0" FontSize="45" Content="Your Body Mass Index" Grid.Column="0" Grid.Row="4"/>
+        <Label Style="{StaticResource FontColor}"  Padding="0 40 0 0" FontSize="45" Content="Your Body Mass Index" Grid.Column="0" Grid.Row="4"/>
         <TextBox Margin="0 40 0 0" IsReadOnly="True" Name="BMIOutput" FontWeight="Bold" Style="{StaticResource Textboxsize}" Height="60" Grid.Column="1" Grid.Row="4"/>
 
         <Button Name="backbutton" Style="{StaticResource Buttonsize}" Click="Backbutton_OnClick" Content="Back" FontSize="22" Grid.Column="1" Grid.Row="5" Margin="187,253,163,621"/>
@@ -88,35 +88,35 @@
             </Button.Template>
         </Button>
 
-        <Label Grid.Column="2" Grid.Row="1" Content="BMI-Table" FontSize="45" Padding="125 0 0 0"/>
+        <Label Style="{StaticResource FontColor}"  Grid.Column="2" Grid.Row="1" Content="BMI-Table" FontSize="45" Padding="125 0 0 0"/>
 
 
         <StackPanel Grid.Column="2" Grid.Row="2">
             <StackPanel Orientation="Horizontal" Margin="0 0 0 15">
-                <Label Padding="15 0 0 0" Content="Underweight" FontSize="25"/>
-                <Label Margin="110 0 0 0" Padding="25 0 0 0" Content="under 18.5" FontSize="25"/>
+                <Label Style="{StaticResource FontColor}"  Padding="15 0 0 0" Content="Underweight" FontSize="25"/>
+                <Label Style="{StaticResource FontColor}"  Margin="110 0 0 0" Padding="25 0 0 0" Content="under 18.5" FontSize="25"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="0 0 0 15" >
-                <Label Padding="15 0 0 0" Content="Healthy Weight" FontSize="25"/>
-                <Label Margin="95 0 0 0" Padding="10 0 0 0" Content="18.5 - 24.9" FontSize="25"/>
+                <Label Style="{StaticResource FontColor}"  Padding="15 0 0 0" Content="Healthy Weight" FontSize="25"/>
+                <Label Style="{StaticResource FontColor}"  Margin="95 0 0 0" Padding="10 0 0 0" Content="18.5 - 24.9" FontSize="25"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="0 0 0 15" >
-                <Label Padding="15 0 0 0" Content="Overweight" FontSize="25"/>
-                <Label Margin="110 0 0 0" Padding="40 0 0 0" Content="25.0 - 29.9" FontSize="25"/>
+                <Label Style="{StaticResource FontColor}"  Padding="15 0 0 0" Content="Overweight" FontSize="25"/>
+                <Label Style="{StaticResource FontColor}"  Margin="110 0 0 0" Padding="40 0 0 0" Content="25.0 - 29.9" FontSize="25"/>
             </StackPanel>
         </StackPanel>
         <StackPanel Grid.Column="2" Grid.Row="3">
             <StackPanel Orientation="Horizontal" Margin="0 0 0 15">
-                <Label Padding="15 0 0 0" Content="Obese" FontSize="25"/>
-                <Label Margin="206 0 0 0" Padding=" 0 0 0 0" Content="30 - 34.9" FontSize="25"/>
+                <Label Style="{StaticResource FontColor}"  Padding="15 0 0 0" Content="Obese" FontSize="25"/>
+                <Label Style="{StaticResource FontColor}"  Margin="206 0 0 0" Padding=" 0 0 0 0" Content="30 - 34.9" FontSize="25"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="0 0 0 15">
-                <Label Padding="15 0 0 0" Content="Severely Obese" FontSize="25"/>
-                <Label Margin="85 0 0 0" Padding="25 0 0 0" Content="35 - 39.9" FontSize="25"/>
+                <Label Style="{StaticResource FontColor}"  Padding="15 0 0 0" Content="Severely Obese" FontSize="25"/>
+                <Label Style="{StaticResource FontColor}"  Margin="85 0 0 0" Padding="25 0 0 0" Content="35 - 39.9" FontSize="25"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="0 0 0 15">
-                <Label Padding="15 0 0 0" Content="Underweight" FontSize="25"/>
-                <Label Margin="110 0 0 0" Padding="25 0 0 0" Content="over 40" FontSize="25"/>
+                <Label Style="{StaticResource FontColor}"  Padding="15 0 0 0" Content="Underweight" FontSize="25"/>
+                <Label Style="{StaticResource FontColor}"  Margin="110 0 0 0" Padding="25 0 0 0" Content="over 40" FontSize="25"/>
             </StackPanel>
         </StackPanel>
        

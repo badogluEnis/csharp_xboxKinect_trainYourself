@@ -27,27 +27,27 @@
         <Label Content="Register" FontSize="50" Grid.Column="1" Grid.Row="0"/>
 
         <StackPanel Style="{StaticResource Stackstyle}" Grid.Row="1" Grid.Column="1">
-            <Label  Content="Prename" Style="{StaticResource inputlabelsize}"/>
+            <Label Foreground="White"  Content="Prename" Style="{StaticResource inputlabelsize}"/>
             <TextBox Name="Vornameinput" Height="25"/>
         </StackPanel>
 
         <StackPanel Style="{StaticResource Stackstyle}" Grid.Row="2" Grid.Column="1">
-            <Label Content="Lastname" Style="{StaticResource inputlabelsize}" />
+            <Label Foreground="White" Content="Lastname" Style="{StaticResource inputlabelsize}" />
             <TextBox  Name="Nachnameinput" Height="25"/>
         </StackPanel>
 
         <StackPanel Style="{StaticResource Stackstyle}" Grid.Row="3" Grid.Column="1">
-            <Label Content="Email" Style="{StaticResource inputlabelsize}"/>
+            <Label Foreground="White" Content="Email" Style="{StaticResource inputlabelsize}"/>
             <TextBox Name="Email" Height="25" />
         </StackPanel>
 
         <StackPanel Style="{StaticResource Stackstyle}" Grid.Row="4" Grid.Column="1">
-            <Label Content="Password" Style="{StaticResource inputlabelsize}" />
+            <Label Foreground="White" Content="Password" Style="{StaticResource inputlabelsize}" />
             <PasswordBox Name="Passwort" Height="25"/>
         </StackPanel>
 
         <StackPanel Style="{StaticResource Stackstyle}" Grid.Row="6" Grid.Column="1">
-            <Label Content="Password repeat" Style="{StaticResource inputlabelsize}" />
+            <Label Foreground="White" Content="Password repeat" Style="{StaticResource inputlabelsize}" />
             <PasswordBox Name="Passwortrep" Height="25"/>
         </StackPanel>
 

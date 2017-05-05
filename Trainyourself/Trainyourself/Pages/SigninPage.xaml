@@ -29,15 +29,15 @@
 
 
         </Grid.RowDefinitions>
-        <Label Content="TrainYourSelf" Grid.Row="0" Grid.Column="1" FontSize="50" Margin="0 0 0 20" />
+        <Label Style="{StaticResource FontColor}" Content="TrainYourSelf" Grid.Row="0" Grid.Column="1" FontSize="50" Margin="0 0 0 20" />
 
         <StackPanel Grid.Column="1" Orientation="Vertical" Grid.Row="1">
-            <Label Content="Email" FontSize="25"  Padding="75 0 0 0 " Background="Transparent"/>
+            <Label Style="{StaticResource FontColor}" Content="Email" FontSize="25"  Padding="75 0 0 0 " Background="Transparent"/>
             <TextBox Name="Emailsignin" Height="25" MaxWidth="150" MaxHeight="40"/>
         </StackPanel>
 
         <StackPanel Grid.Column="1" Margin="0,25" Orientation="Vertical" Grid.Row="2" >
-            <Label  Content="Passwort" FontSize="25" Padding="75 0 0 0"  Background="Transparent" />
+            <Label Style="{StaticResource FontColor}" Content="Passwort" FontSize="25" Padding="75 0 0 0"  Background="Transparent" />
             <PasswordBox  x:Name="Passwordsignin" Height="25" MaxWidth="150" MaxHeight="40" />
 
         </StackPanel>
@@ -51,8 +51,8 @@
         <Button HorizontalAlignment="Center" Click="NotRegistered_OnClick" Grid.Row="5" Grid.ColumnSpan="3" Margin="82, 60,26.333,0" Width="332" >
             <Button.Template>
                 <ControlTemplate>
-                    <Label  Foreground="Black" FontSize="25" >
-                        <TextBlock TextDecorations="Underline">Not registered? register now</TextBlock>
+                    <Label Foreground="Black" FontSize="25" >
+                        <TextBlock Foreground="White" TextDecorations="Underline">Not registered? register now</TextBlock>
                     </Label>
                 </ControlTemplate>
             </Button.Template>

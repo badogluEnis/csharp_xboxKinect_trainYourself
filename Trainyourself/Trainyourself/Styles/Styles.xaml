@@ -27,7 +27,9 @@
     <Style TargetType="Label" x:Key="inputlabelsize">
         <Setter Property="FontSize" Value="25"/>
     </Style>
-
+    <Style TargetType="Label" x:Key="FontColor">
+        <Setter Property="Foreground" Value="White"/>        
+    </Style>
 
 
 

@@ -31,6 +31,7 @@ namespace Trainyourself.Pages
         {
             InitializeComponent();
             WindowLoaded(sensor , null);
+
         }
         private void WindowLoaded(object sender, RoutedEventArgs e)
         {
