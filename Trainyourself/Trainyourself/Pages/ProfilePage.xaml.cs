@@ -68,21 +68,23 @@ namespace Trainyourself.Pages
                 bool isValidWeight = double.TryParse(us.Weight.ToString(), out height1);
                 if (!isValidWeight)
                 {
-                    error.Content = "Please only use numbers and instead of a comma(,) use a point(.)";
-                    return false;
+                    us.Height = Convert.ToDouble(YourHeightLabel.Text);
+                    userRepository.Update(us);
+
+                    double bmi = double.Parse(us.Weight.ToString()) / (double.Parse(us.Height.ToString()) * double.Parse(us.Height.ToString()));
+                    double Round = Math.Round(bmi, 2);
+                    BMIOutput.Text = Convert.ToString(Round);
+                    BMIOutput.FontSize = 23;
+                    YourHeightLabel.IsReadOnly = true;
+                    YourHeightLabel.BorderBrush = Brushes.ForestGreen;
                 }
-
-                us.Height = Convert.ToDouble(YourHeightLabel.Text);
-                userRepository.Update(us);
-
-                double bmi = double.Parse(us.Weight.ToString()) / (double.Parse(us.Height.ToString()) * double.Parse(us.Height.ToString()));
-                double Round = Math.Round(bmi, 2);
-                BMIOutput.Text = Convert.ToString(Round);
-                BMIOutput.FontSize = 23;
+                else
+                {
+                    errorWeight.Content = "Please only use numbers and instead of a comma(,) use a point(.)";
+                    return;
+                }           
             }
-            YourHeightLabel.IsReadOnly = true;
-            YourHeightLabel.BorderBrush = Brushes.ForestGreen;
-        }
+  }
 
         private void SavebuttonWeight_OnClickttonWeight_OnClick(object sender, RoutedEventArgs e)
         {
@@ -95,8 +97,8 @@ namespace Trainyourself.Pages
                 bool isValidWeight = double.TryParse(us.Weight.ToString(), out weight1);
                 if (!isValidWeight)
                 {
-                    error.Content = "Please only use numbers and instead of a comma(,) use a point(.)";
-                    return false;
+                    errorHeight.Content = "Please only use numbers and instead of a comma(,) use a point(.)";
+                    return;
                 }
 
                 if (us != null)
