@@ -37,15 +37,32 @@ Abschnitt            | Inhalt
 ID                   | NT-3
 Getestete User Story | [#2](https://github.com/ICT-BBC/mod-pr-scrum/issues/2)
 Vorbedingungen       | Der Benutzer hat das Programm offen.
-Ablauf               | 1. Der Benutzer versucht sich anzumelden ohne sich vorher angemeldet zu haben.
-Erwartetes Resultat  | Es wird eine Fehlermeldung ausgegeben, welche aussagt dass entweder das Passwort oder die Email falsch ist. 
+Ablauf               | 1. Der Benutzer versucht sich anzumelden ohne sich vorher registriert zu haben.
+Erwartetes Resultat  | Es wird eine Fehlermeldung ausgegeben, welche aussagt dass entweder das Passwort oder die Email-Adresse welche der User angegeben hat falsch ist. 
 
 Abschnitt            | Inhalt
 ---------------------|--------
 ID                   | T-3
 Getestete User Story | [#26](https://github.com/ICT-BBC/mod-pr-scrum/issues/26)
 Vorbedingungen       | Der Benutzer hat das Programm offen, hat sich registriert und ist angemeldet.
-Ablauf               | 1. Der Benutzer geht im Hauptmenu auf My Profile und drückt dort auf den editier button, gibt seine neuen Daten ein und drückt dann auf den Speichern button.
+Ablauf               | 1. Der Benutzer geht im Hauptmenu auf My Profile und drückt dort auf den edit button, gibt seine neuen Daten ein und drückt dann auf den Speichern button.
 Erwartetes Resultat  | Die neu eingegebenen Daten werden in der Datebank aktualisiert. 
 
+Abschnitt            | Inhalt
+---------------------|--------
+ID                   | T-4
+Getestete User Story | [#34](https://github.com/ICT-BBC/mod-pr-scrum/issues/34)
+Vorbedingungen       | Der Benutzer hat sich angemeldet und befindet sich im Hauptmenu.
+Ablauf               | 1. Der Benutzer klickt Hauptmenu auf Sit-Ups
+Erwartetes Resultat  | Das Programm öffnet die Sit-Up page und es wird die [Liveview](img/liveview.png) dargestellt.
+
+Abschnitt            | Inhalt
+---------------------|--------
+ID                   | NT-4
+Getestete User Story | [#32](https://github.com/ICT-BBC/mod-pr-scrum/issues/32)
+Vorbedingungen       | Der Benutzer hat das Programm offen.
+Ablauf               | 1. Der Benutzer klickt auf "Sign p" 2. Der Benutzer füllt die erste Seite der Registrierung aus. der Benutzer gibt erst(Im ersten eingabefeld) eine mit Punkt getrennte Zahl eine und dann(Im zweiten eingabefeld) eine mit Komma getrennte Zahl ein.
+Erwartetes Resultat  |  
+
   #### [Zuück](../README.md)
+u

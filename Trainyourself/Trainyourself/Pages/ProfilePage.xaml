@@ -31,7 +31,7 @@
         <TextBox Margin="0 40 0 0" IsReadOnly="True" Grid.Row="2" Grid.Column="1" BorderThickness="5"  Name ="YourHeightLabel" Style="{StaticResource Textboxsize}" Height="60" FontWeight="Bold"/>
 
         <Label Style="{StaticResource FontColor}"  Padding="0 60 0 0" FontSize="45" Content="Your Weight" Grid.Column="0" Grid.Row="3" />
-        <TextBox Margin="0 40 0 0" IsReadOnly="True" Name="YourWeightLabel" FontWeight="Bold" Grid.Column="1" BorderThickness="5" Grid.Row="3" Style="{StaticResource Textboxsize}" Height="60"/>
+        <TextBox Margin="0 40 0 0" IsReadOnly="True" Name="YourWeightLabel" FontWeight="Bold" Grid.Column="1" BorderThickness="5" Grid.Row="3" Style="{StaticResource Textboxsize}" Height="60" TextChanged="YourWeightLabel_TextChanged"/>
 
         <Label Style="{StaticResource FontColor}"  Padding="0 40 0 0" FontSize="45" Content="Your Body Mass Index" Grid.Column="0" Grid.Row="4"/>
         <TextBox Margin="0 40 0 0" IsReadOnly="True" Name="BMIOutput" FontWeight="Bold" Style="{StaticResource Textboxsize}" Height="60" Grid.Column="1" Grid.Row="4"/>
