@@ -1,19 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.IO;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using KinectConnection;
 using Microsoft.Kinect;
 
 namespace Trainyourself.Pages
@@ -21,13 +10,13 @@ namespace Trainyourself.Pages
     /// <summary>
     /// Interaction logic for Liveview.xaml
     /// </summary>
-    public partial class Liveview : Page
+    public partial class LiveviewSitups
     {
         private KinectSensor sensor;
         private byte[] colorPixels;
         private WriteableBitmap colorBitmap;
 
-        public Liveview()
+        public LiveviewSitups()
         {
             InitializeComponent();
             WindowLoaded(sensor , null);
