@@ -88,7 +88,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Liveview.xaml">
+    <Page Include="Pages\LiveviewSitups.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\LiveviewPushups.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -117,8 +121,11 @@
     <Compile Include="Pages\HauptmenuPage.xaml.cs">
       <DependentUpon>HauptmenuPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Liveview.xaml.cs">
-      <DependentUpon>Liveview.xaml</DependentUpon>
+    <Compile Include="Pages\LiveviewSitups.xaml.cs">
+      <DependentUpon>LiveviewSitups.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\LiveviewPushups.xaml.cs">
+      <DependentUpon>LiveviewPushups.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\MoreinformationPage.xaml.cs">
       <DependentUpon>MoreinformationPage.xaml</DependentUpon>
