@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Configuration;
+using System.Globalization;
 using System.Windows;
 using System.Windows.Media;
 using DataAccess;
@@ -24,7 +25,7 @@ namespace Trainyourself.Pages
             {
                 UserRepository userRepository = new UserRepository(context);
 
-                User us = userRepository.GetById(Int16.Parse(ConfigurationManager.AppSettings["LoggedUserId"]));
+                User us = userRepository.GetById(short.Parse(ConfigurationManager.AppSettings["LoggedUserId"]));
 
                 Name.Text = us.Name + " " + us.Lastname;
                 YourHeightLabel.Text = Convert.ToString(us.Height);
@@ -32,8 +33,8 @@ namespace Trainyourself.Pages
                 YourWeightLabel.Text = Convert.ToString(us.Weight);
                 YourWeightLabel.FontSize = 23;
                 double bmi = double.Parse(us.Weight.ToString()) / (double.Parse(us.Height.ToString()) * double.Parse(us.Height.ToString()));
-                double Round = Math.Round(bmi, 2);
-                BMIOutput.Text = Convert.ToString(Round);
+                double round = Math.Round(bmi, 2);
+                BMIOutput.Text = Convert.ToString(round, CultureInfo.InvariantCulture);
                 BMIOutput.FontSize = 23;
 
             }
@@ -41,7 +42,7 @@ namespace Trainyourself.Pages
 
         private void Backbutton_OnClick(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new HauptmenuPage());
+            NavigationService?.Navigate(new HauptmenuPage());
         }
 
         private void YourHeightEdit_OnClick(object sender, RoutedEventArgs e)
@@ -66,8 +67,8 @@ namespace Trainyourself.Pages
                 userRepository.Update(us);
 
                 double bmi = double.Parse(us.Weight.ToString()) / (double.Parse(us.Height.ToString()) * double.Parse(us.Height.ToString()));
-                double Round = Math.Round(bmi, 2);
-                BMIOutput.Text = Convert.ToString(Round);
+                double round = Math.Round(bmi, 2);
+                BMIOutput.Text = Convert.ToString(round, CultureInfo.InvariantCulture);
                 BMIOutput.FontSize = 23;
             }
             YourHeightLabel.IsReadOnly = true;
@@ -85,8 +86,8 @@ namespace Trainyourself.Pages
                     us.Weight = Convert.ToDouble(YourWeightLabel.Text);
                     userRepository.Update(us);
                     double bmi = double.Parse(us.Weight.ToString()) / (double.Parse(us.Height.ToString()) * double.Parse(us.Height.ToString()));
-                    double Round = Math.Round(bmi, 2);
-                    BMIOutput.Text = Convert.ToString(Round);
+                    double round = Math.Round(bmi, 2);
+                    BMIOutput.Text = Convert.ToString(round, CultureInfo.InvariantCulture);
                     BMIOutput.FontSize = 23;
                 }
             }

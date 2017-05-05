@@ -1,6 +1,5 @@
 ﻿using System.IO;
 using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using Microsoft.Kinect;
@@ -12,17 +11,17 @@ namespace Trainyourself.Pages
     /// </summary>
     public partial class LiveviewSitups
     {
-        private KinectSensor sensor;
-        private byte[] colorPixels;
-        private WriteableBitmap colorBitmap;
+        private KinectSensor _sensor;
+        private byte[] _colorPixels;
+        private WriteableBitmap _colorBitmap;
 
         public LiveviewSitups()
         {
             InitializeComponent();
-            WindowLoaded(sensor , null);
+            WindowLoaded();
 
         }
-        private void WindowLoaded(object sender, RoutedEventArgs e)
+        private void WindowLoaded()
         {
             // Look through all sensors and start the first connected one.
             // This requires that a Kinect is connected at the time of app startup.
@@ -32,36 +31,36 @@ namespace Trainyourself.Pages
             {
                 if (potentialSensor.Status == KinectStatus.Connected)
                 {
-                    this.sensor = potentialSensor;
+                    _sensor = potentialSensor;
                     break;
                 }
             }
 
-            if (null != this.sensor)
+            if (null != _sensor)
             {
                 // Turn on the color stream to receive color frames
-                this.sensor.ColorStream.Enable(ColorImageFormat.RgbResolution640x480Fps30);
+                _sensor.ColorStream.Enable(ColorImageFormat.RgbResolution640x480Fps30);
 
                 // Allocate space to put the pixels we'll receive
-                this.colorPixels = new byte[this.sensor.ColorStream.FramePixelDataLength];
+                _colorPixels = new byte[_sensor.ColorStream.FramePixelDataLength];
 
                 // This is the bitmap we'll display on-screen
-                this.colorBitmap = new WriteableBitmap(this.sensor.ColorStream.FrameWidth, this.sensor.ColorStream.FrameHeight, 96.0, 96.0, PixelFormats.Bgr32, null);
+                _colorBitmap = new WriteableBitmap(_sensor.ColorStream.FrameWidth, _sensor.ColorStream.FrameHeight, 96.0, 96.0, PixelFormats.Bgr32, null);
 
                 // Set the image we display to point to the bitmap where we'll put the image data
-                this.Image.Source = this.colorBitmap;
+                Image.Source = _colorBitmap;
 
                 // Add an event handler to be called whenever there is new color frame data
-                this.sensor.ColorFrameReady += this.SensorColorFrameReady;
+                _sensor.ColorFrameReady += SensorColorFrameReady;
 
                 // Start the sensor!
                 try
                 {
-                    this.sensor.Start();
+                    _sensor.Start();
                 }
                 catch (IOException)
                 {
-                    this.sensor = null;
+                    _sensor = null;
                 }
             }
         }
@@ -72,13 +71,13 @@ namespace Trainyourself.Pages
                 if (colorFrame != null)
                 {
                     // Copy the pixel data from the image to a temporary array
-                    colorFrame.CopyPixelDataTo(this.colorPixels);
+                    colorFrame.CopyPixelDataTo(_colorPixels);
 
                     // Write the pixel data into our bitmap
-                    this.colorBitmap.WritePixels(
-                        new Int32Rect(0, 0, this.colorBitmap.PixelWidth, this.colorBitmap.PixelHeight),
-                        this.colorPixels,
-                        this.colorBitmap.PixelWidth * sizeof(int),
+                    _colorBitmap.WritePixels(
+                        new Int32Rect(0, 0, _colorBitmap.PixelWidth, _colorBitmap.PixelHeight),
+                        _colorPixels,
+                        _colorBitmap.PixelWidth * sizeof(int),
                         0);
                 }
             }

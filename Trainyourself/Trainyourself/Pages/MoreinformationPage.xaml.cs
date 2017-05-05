@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Text.RegularExpressions;
+using System.Globalization;
 using System.Windows;
 using System.Windows.Controls;
 using DataAccess;
@@ -72,22 +72,22 @@ namespace Trainyourself.Pages
                 return false;
             }
 
-            bool isValidWeight = Double.TryParse(Weight.Text, out weight1);
+            bool isValidWeight = double.TryParse(Weight.Text, out weight1);
             if (!isValidWeight)
             {
                 Moreinformationserror.Content = "Please type your stats in like this: \"1.4\" (m for Height) or \"87.23\" (kg for Wheight)";
                 return false;
             }
 
-            bool isValidHeight = Double.TryParse(Weight.Text, out height1);
+            bool isValidHeight = double.TryParse(Weight.Text, out height1);
             if (!isValidHeight)
             {
                 Moreinformationserror.Content = "Please type your stats in like this: \"1.4\" (m for Height) or \"87.23\" (kg for Wheight)";
                 return false;
             }
 
-            string weight2 = Convert.ToString(weight1);
-            string height2 = Convert.ToString(height1);
+            string weight2 = Convert.ToString(weight1, CultureInfo.InvariantCulture);
+            string height2 = Convert.ToString(height1, CultureInfo.InvariantCulture);
 
             
             return true;

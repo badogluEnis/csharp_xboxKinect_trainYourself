@@ -1,10 +1,8 @@
-﻿using System;
-using System.Configuration;
+﻿using System.Configuration;
 using System.Windows;
 using System.Windows.Media;
 using DataAccess;
 using Model;
-using Trainyourself.Properties;
 
 namespace Trainyourself.Pages
 {
