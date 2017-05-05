@@ -27,12 +27,12 @@
         <Label Content="Register" FontSize="50" Grid.Column="1" Grid.Row="0"/>
 
         <StackPanel Style="{StaticResource Stackstyle}" Grid.Row="1" Grid.Column="1">
-            <Label Foreground="White"  Content="Prename" Style="{StaticResource inputlabelsize}"/>
+            <Label Foreground="White"  Content="First Name" Style="{StaticResource inputlabelsize}"/>
             <TextBox Name="Vornameinput" Height="25"/>
         </StackPanel>
 
         <StackPanel Style="{StaticResource Stackstyle}" Grid.Row="2" Grid.Column="1">
-            <Label Foreground="White" Content="Lastname" Style="{StaticResource inputlabelsize}" />
+            <Label Foreground="White" Content="Last Name" Style="{StaticResource inputlabelsize}" />
             <TextBox  Name="Nachnameinput" Height="25"/>
         </StackPanel>
 
@@ -47,7 +47,7 @@
         </StackPanel>
 
         <StackPanel Style="{StaticResource Stackstyle}" Grid.Row="6" Grid.Column="1">
-            <Label Foreground="White" Content="Password repeat" Style="{StaticResource inputlabelsize}" />
+            <Label Foreground="White" Content="Repeat Password" Style="{StaticResource inputlabelsize}" Margin="0,0,-102,0" />
             <PasswordBox Name="Passwortrep" Height="25"/>
         </StackPanel>
 

@@ -75,14 +75,14 @@ namespace Trainyourself.Pages
             bool isValidWeight = Double.TryParse(Weight.Text, out weight1);
             if (!isValidWeight)
             {
-                Moreinformationserror.Content = "Please type your stats like this in: \"140\" (cm for Height) or \"87.23\" (kg for Wheight)";
+                Moreinformationserror.Content = "Please type your stats in like this: \"1.4\" (m for Height) or \"87.23\" (kg for Wheight)";
                 return false;
             }
 
             bool isValidHeight = Double.TryParse(Weight.Text, out height1);
             if (!isValidHeight)
             {
-                Moreinformationserror.Content = "Please type your stats like this in: \"140\" (cm for Height) or \"87.23\" (kg for Wheight)";
+                Moreinformationserror.Content = "Please type your stats in like this: \"1.4\" (m for Height) or \"87.23\" (kg for Wheight)";
                 return false;
             }
 
