@@ -5,12 +5,12 @@ Abschnitt            | Inhalt
 ID                   | T-1
 Getestete User Story | [#1](https://github.com/ICT-BBC/stu-inf-2016-be-trainyourself/issues/1)
 Vorbedingungen       | Das Programm kann gestartet werden
-Ablauf               | 1. Der Benutzer klickt auf No Account. 2. Der Benutzer Registriert sich.
+Ablauf               | 1. Der Benutzer klickt auf "sign in now". 2. Der Benutzer Registriert sich.
 Erwartetes Resultat  | Die Registrierung ist erfolgreich (Das Programm gibt keine Fehlermeldung aus und der User wird in der Datenbank erfasst)
-Testperson           |
-Getestet am          |
-Resultat             |
-Kommentar |
+Testperson           | Enis Badoglu
+Getestet am          | 04. Mai 2017
+Resultat             | Der Test war erfolgreich, dass erwartete Resultat trifft zu.
+Kommentar | -
 
 Abschnitt            | Inhalt
 ---------------------|--------
