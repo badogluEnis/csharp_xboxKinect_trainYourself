@@ -22,7 +22,7 @@ Erwartetes Resultat  | Es wird eine Fehlermeldung kommen die sagt, dass diese Em
 Testperson           |
 Getestet am          |
 Resultat             |
-Beschreibung vom Resultat / Kommentar |
+Kommentar |
 
 Abschnitt            | Inhalt
 ---------------------|--------
@@ -34,7 +34,7 @@ Erwartetes Resultat  | Es wird eine Fehlermeldung ausgegeben, welche aussagt das
 Testperson           |
 Getestet am          |
 Resultat             |
-Beschreibung vom Resultat / Kommentar |
+Kommentar |
 
 Abschnitt            | Inhalt
 ---------------------|--------
@@ -46,7 +46,7 @@ Erwartetes Resultat  | Die Anmeldung ist erfolgreich, weil ihm keine Fehlermeldu
 Testperson           |
 Getestet am          |
 Resultat             |
-Beschreibung vom Resultat / Kommentar |
+Kommentar |
 
 Abschnitt            | Inhalt
 ---------------------|--------
@@ -58,7 +58,7 @@ Erwartetes Resultat  | Es wird eine Fehlermeldung ausgegeben, welche aussagt das
 Testperson           |
 Getestet am          |
 Resultat             |
-Beschreibung vom Resultat / Kommentar |
+Kommentar |
 
 Abschnitt            | Inhalt
 ---------------------|--------
@@ -70,7 +70,7 @@ Erwartetes Resultat  | Die neu eingegebenen Daten werden in der Datebank aktuali
 Testperson           |
 Getestet am          |
 Resultat             |
-Beschreibung vom Resultat / Kommentar |
+Kommentar |
 
 Abschnitt            | Inhalt
 ---------------------|--------
@@ -82,7 +82,7 @@ Erwartetes Resultat  | Das Programm öffnet die Sit-Up page und es wird die [Liv
 Testperson           |
 Getestet am          |
 Resultat             |
-Beschreibung vom Resultat / Kommentar |
+Kommentar |
 
 Abschnitt            | Inhalt
 ---------------------|--------
@@ -94,7 +94,7 @@ Erwartetes Resultat  |
 Testperson           |
 Getestet am          |
 Resultat             |
-Beschreibung vom Resultat / Kommentar |
+Kommentar |
                     
 
   #### [Zuück](../README.md)
