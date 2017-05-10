@@ -58,61 +58,92 @@ namespace Trainyourself.Pages
 
         private void SavebuttonHeight_OnClick(object sender, RoutedEventArgs e)
         {
-            using (TrainContext context = new TrainContext())
+            if (string.IsNullOrEmpty(YourHeightLabel.Text.Trim()))
             {
-
-                UserRepository userRepository = new UserRepository(context);
-                User us = userRepository.GetById(Int16.Parse(ConfigurationManager.AppSettings["LoggedUserId"]));
-
-                double height1;
-                bool isValidWeight = double.TryParse(us.Weight.ToString(), out height1);
-                if (!isValidWeight)
+                errorHeight.Content = "Field can't be empty";
+            }
+            else
+            {
+                if (YourHeightLabel.Text.Contains(","))
                 {
-                    us.Height = Convert.ToDouble(YourHeightLabel.Text);
-                    userRepository.Update(us);
+                    var replace = YourHeightLabel.Text.Replace(",", ".");
+                    YourHeightLabel.Text = replace;
+                }
+                double height1;
+                bool isValidHeight = double.TryParse(YourHeightLabel.Text, out height1);
 
-                    double bmi = double.Parse(us.Weight.ToString()) / (double.Parse(us.Height.ToString()) * double.Parse(us.Height.ToString()));
-                    double Round = Math.Round(bmi, 2);
-                    BMIOutput.Text = Convert.ToString(Round);
-                    BMIOutput.FontSize = 23;
-                    YourHeightLabel.IsReadOnly = true;
-                    YourHeightLabel.BorderBrush = Brushes.ForestGreen;
+                if (!isValidHeight)
+                {
+                    errorHeight.Content = "Use only nummbers";
                 }
                 else
                 {
-                    errorWeight.Content = "Please only use numbers and instead of a comma(,) use a point(.)";
-                    return;
-                }           
+                    using (TrainContext context = new TrainContext())
+                    {
+
+                        UserRepository userRepository = new UserRepository(context);
+                        User us = userRepository.GetById(Int16.Parse(ConfigurationManager.AppSettings["LoggedUserId"]));
+
+                        {
+                            us.Height = Convert.ToDouble(YourHeightLabel.Text);
+                            userRepository.Update(us);
+
+                            double bmi = double.Parse(us.Weight.ToString()) /
+                                         (double.Parse(us.Height.ToString()) * double.Parse(us.Height.ToString()));
+                            double Round = Math.Round(bmi, 2);
+                            BMIOutput.Text = Convert.ToString(Round);
+                            BMIOutput.FontSize = 23;
+                            YourHeightLabel.IsReadOnly = true;
+                            YourHeightLabel.BorderBrush = Brushes.ForestGreen;
+
+                        }
+                    }
+                }
             }
-  }
+        }
 
         private void SavebuttonWeight_OnClickttonWeight_OnClick(object sender, RoutedEventArgs e)
         {
-            using (TrainContext context = new TrainContext())
+            if (string.IsNullOrEmpty(YourWeightLabel.Text.Trim()))
             {
-                UserRepository userRepository = new UserRepository(context);
-                User us = userRepository.GetById(Int16.Parse(ConfigurationManager.AppSettings["LoggedUserId"]));
-
+                errorWeight.Content = "Field can't be empty";
+            }
+            else
+            {
+                if (YourWeightLabel.Text.Contains(","))
+                {
+                    var replace = YourWeightLabel.Text.Replace(",", ".");
+                    YourWeightLabel.Text = replace;
+                }
                 double weight1;
-                bool isValidWeight = double.TryParse(us.Weight.ToString(), out weight1);
+                bool isValidWeight = double.TryParse(YourWeightLabel.Text, out weight1);
+
                 if (!isValidWeight)
                 {
-                    errorHeight.Content = "Please only use numbers and instead of a comma(,) use a point(.)";
-                    return;
+                    errorWeight.Content = "Use only numbers";
                 }
-
-                if (us != null)
+                else
                 {
-                    us.Weight = Convert.ToDouble(YourWeightLabel.Text);
-                    userRepository.Update(us);
-                    double bmi = double.Parse(us.Weight.ToString()) / (double.Parse(us.Height.ToString()) * double.Parse(us.Height.ToString()));
-                    double Round = Math.Round(bmi, 2);
-                    BMIOutput.Text = Convert.ToString(Round);
-                    BMIOutput.FontSize = 23;
+                    using (TrainContext context = new TrainContext())
+                    {
+                        UserRepository userRepository = new UserRepository(context);
+                        User us = userRepository.GetById(Int16.Parse(ConfigurationManager.AppSettings["LoggedUserId"]));
+
+                        if (us != null)
+                        {
+                            us.Weight = Convert.ToDouble(YourWeightLabel.Text);
+                            userRepository.Update(us);
+                            double bmi = double.Parse(us.Weight.ToString()) / (double.Parse(us.Height.ToString()) * double.Parse(us.Height.ToString()));
+                            double Round = Math.Round(bmi, 2);
+                            BMIOutput.Text = Convert.ToString(Round);
+                            BMIOutput.FontSize = 23;
+                        }
+                    }
+                    YourWeightLabel.IsReadOnly = true;
+                    YourWeightLabel.BorderBrush = Brushes.ForestGreen;
+
                 }
             }
-            YourWeightLabel.IsReadOnly = true;
-            YourWeightLabel.BorderBrush = Brushes.ForestGreen;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

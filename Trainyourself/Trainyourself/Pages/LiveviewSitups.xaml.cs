@@ -1,7 +1,9 @@
-﻿using System.IO;
+﻿using System.Diagnostics;
+using System.IO;
 using System.Windows;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using KinectConnection;
 using Microsoft.Kinect;
 
 namespace Trainyourself.Pages
@@ -14,12 +16,13 @@ namespace Trainyourself.Pages
         private KinectSensor _sensor;
         private byte[] _colorPixels;
         private WriteableBitmap _colorBitmap;
+        KinectProvider KP = new KinectProvider();
 
         public LiveviewSitups()
         {
             InitializeComponent();
             WindowLoaded();
-
+            Debug.WriteLine(KP.Init());
         }
         private void WindowLoaded()
         {
@@ -81,6 +84,11 @@ namespace Trainyourself.Pages
                         0);
                 }
             }
+        }
+
+        private void QuitButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new HauptmenuPage());
         }
     }
 }

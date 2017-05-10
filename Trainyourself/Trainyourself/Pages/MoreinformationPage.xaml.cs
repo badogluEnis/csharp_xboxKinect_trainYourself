@@ -71,25 +71,36 @@ namespace Trainyourself.Pages
                 Moreinformationserror.Content = "Input fields can't be empty";
                 return false;
             }
-
-            bool isValidWeight = double.TryParse(Weight.Text, out weight1);
+            if (weight.Text.Contains(","))
+            {
+                var replace = weight.Text.Replace(",", ".");
+                weight.Text = replace;
+                Tini.Content = replace;
+            }
+            if (height.Text.Contains(","))
+            {
+                var replace = height.Text.Replace(",", ".");
+                height.Text = replace;
+                Tini.Content = replace;
+            }
+           bool isValidWeight = double.TryParse(Weight.Text, out weight1);
             if (!isValidWeight)
             {
-                Moreinformationserror.Content = "Please type your stats in like this: \"1.4\" (m for Height) or \"87.23\" (kg for Wheight)";
+                Moreinformationserror.Content = "Please use numbers";
                 return false;
             }
 
             bool isValidHeight = double.TryParse(Weight.Text, out height1);
             if (!isValidHeight)
             {
-                Moreinformationserror.Content = "Please type your stats in like this: \"1.4\" (m for Height) or \"87.23\" (kg for Wheight)";
+                Moreinformationserror.Content = "Please use numbers";
                 return false;
             }
 
             string weight2 = Convert.ToString(weight1, CultureInfo.InvariantCulture);
             string height2 = Convert.ToString(height1, CultureInfo.InvariantCulture);
 
-            
+
             return true;
         }
 
@@ -109,29 +120,18 @@ namespace Trainyourself.Pages
             //double weight = Convert.ToDouble(Weight.Text);
             //double height = Convert.ToDouble(Height1.Text);
 
-           
+
 
             if (ValidateDoubleInput(Weight.Text) && ValidateDoubleInput(Height1.Text))
             {
                 using (TrainContext context = new TrainContext())
                 {
-                    
 
-                    if (!ContainsComma(Weight.Text) && !ContainsComma(Height1.Text))
-                    {
-                        UserRepository repository = new UserRepository(context);
-                        User.Weight = Convert.ToDouble(Weight.Text);
-                        User.Height = Convert.ToDouble(Height1.Text);
-                        repository.Update(User);
-                        if (NavigationService != null) NavigationService.Navigate(new SigninPage());
-                    }
-
-                    else
-                    {
-                        Moreinformationserror.Content = "Use a point(.) instead of a comma(,)";
-                    }
-
-                   
+                    UserRepository repository = new UserRepository(context);
+                    User.Weight = Convert.ToDouble(Weight.Text);
+                    User.Height = Convert.ToDouble(Height1.Text);
+                    repository.Update(User);
+                    if (NavigationService != null) NavigationService.Navigate(new SigninPage());
                 }
 
             }
