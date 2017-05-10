@@ -54,7 +54,7 @@
   #### Die Kamera in der Liveview
   In der Liveview zeigen wir das akuelle Bild der Kamera, dass man sich selbst sehen kann. Dies dient der User-Expirience und der User kann sehen, dass die Kinect ihn "sieht".
   
- ##### Wie haben wir es gemacht?
+ Wie haben wir es gemacht?
  Wie im benutzerhandbuch erklärt, sollte man die Kinect angeschlossen und den Treiber für die Kinect installiert haben.
  Danach rufen wir einfach im teil wo wir die Kamera einblenden wollen, die Kamera auf.
   
