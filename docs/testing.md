@@ -10,7 +10,7 @@ Erwartetes Resultat  | Die Registrierung ist erfolgreich (Das Programm gibt kein
 Testperson           |
 Getestet am          |
 Resultat             |
-Beschreibung vom Resultat / Kommentar |
+Kommentar |
 
 Abschnitt            | Inhalt
 ---------------------|--------
