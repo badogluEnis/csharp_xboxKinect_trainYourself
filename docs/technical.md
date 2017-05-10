@@ -51,10 +51,10 @@
   ## Handling der Kinect
   Wie vorher in der Dokumentation erwähnt, haben wir in unserem Projekt eine Kinect eingebaut. In diesem Teil der Doku werden wir alles was in unserem Projekt mit der Kinect zu tun hat, dokumentieren und festhalten.
   
-  #### Die Kamera in der Liveview
+  ### Die Kamera in der Liveview
   In der Liveview zeigen wir das akuelle Bild der Kamera, dass man sich selbst sehen kann. Dies dient der User-Expirience und der User kann sehen, dass die Kinect ihn "sieht".
   
- Wie haben wir es gemacht?
+ ##### Wie haben wir es gemacht?
  Wie im benutzerhandbuch erklärt, sollte man die Kinect angeschlossen und den Treiber für die Kinect installiert haben.
  Danach rufen wir einfach im teil wo wir die Kamera einblenden wollen, die Kamera auf.
   
