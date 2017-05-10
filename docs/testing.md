@@ -67,9 +67,9 @@ Getestete User Story | [#26](https://github.com/ICT-BBC/stu-inf-2016-be-trainyou
 Vorbedingungen       | Der Benutzer hat das Programm offen, hat sich registriert und ist angemeldet.
 Ablauf               | 1. Der Benutzer geht im Hauptmenu auf My Profile und drückt dort auf den edit button, gibt seine neuen Daten ein und drückt dann auf den Speichern button.
 Erwartetes Resultat  | Die neu eingegebenen Daten werden in der Datebank aktualisiert. 
-Testperson           |
-Getestet am          |
-Resultat             |
+Testperson           | Flavio Lang
+Getestet am          | 10. Mai 2017
+Resultat             | Der Test war erfolgreich.
 Kommentar (Optional) |
 
 Abschnitt            | Inhalt
@@ -84,17 +84,5 @@ Getestet am          |
 Resultat             |
 Kommentar (Optional) |
 
-Abschnitt            | Inhalt
----------------------|--------
-ID                   | NT-4
-Getestete User Story | [#32](https://github.com/ICT-BBC/stu-inf-2016-be-trainyourself/issues/32)
-Vorbedingungen       | Der Benutzer hat das Programm offen.
-Ablauf               | 1. Der Benutzer klickt auf "Sign in" 2. Der Benutzer füllt die erste Seite der Registrierung aus. der Benutzer gibt erst(Im ersten eingabefeld) eine mit Punkt getrennte Zahl eine und dann(Im zweiten eingabefeld) eine mit Komma getrennte Zahl ein.
-Erwartetes Resultat  |  
-Testperson           |
-Getestet am          |
-Resultat             |
-Kommentar (Optional) |
-                    
 
   #### [Zuück](../README.md)
