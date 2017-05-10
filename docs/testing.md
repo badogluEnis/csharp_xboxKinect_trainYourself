@@ -84,5 +84,17 @@ Getestet am          |
 Resultat             |
 Kommentar (Optional) |
 
+Abschnitt            | Inhalt
+---------------------|--------
+ID                   | NT-4
+Getestete User Story | [#14](https://github.com/ICT-BBC/stu-inf-2016-be-trainyourself/issues/14)
+Vorbedingungen       | Der Benutzer hat das Programm gestartet
+Ablauf               | 1. Der Benutzer klickt im startscreen auf den "Quit" Button
+Erwartetes Resultat  | Das Programm öffnet die Sit-Up page und es wird die [Liveview](img/liveview.png) dargestellt.
+Testperson           |
+Getestet am          |
+Resultat             |
+Kommentar (Optional) |
+
 
   #### [Zuück](../README.md)
