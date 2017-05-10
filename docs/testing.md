@@ -22,7 +22,7 @@ Erwartetes Resultat  | Es wird eine Fehlermeldung kommen die sagt, dass diese Em
 Testperson           | Enis Badoglu
 Getestet am          | 10. Mai 2017
 Resultat             | Der Test ist erfolgreich ausgefallen. Das erwartete Resultat hat zugetroffen
-Kommentar (Optional) |
+Kommentar (Optional) | 
 
 Abschnitt            | Inhalt
 ---------------------|--------
@@ -31,10 +31,10 @@ Getestete User Story | [#2](https://github.com/ICT-BBC/stu-inf-2016-be-trainyour
 Vorbedingungen       | Der Benutzer hat das Programm offen und hat auf den Button "Sign in now" gedrückt 
 Ablauf               | 1. Der Benutzer gibt bei "Password repeat" nicht das selbe ein wie bei "Password"
 Erwartetes Resultat  | Es wird eine Fehlermeldung ausgegeben, welche aussagt dass die beiden Passwort boxen identisch sein müssen. 
-Testperson           |
-Getestet am          |
-Resultat             |
-Kommentar (Optional) |
+Testperson           | Flavio Lang
+Getestet am          | 10.Mai 2017
+Resultat             | Der Test war erfolgreich.
+Kommentar (Optional) | 
 
 Abschnitt            | Inhalt
 ---------------------|--------
