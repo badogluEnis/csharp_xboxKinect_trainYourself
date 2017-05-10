@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using System.Windows;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -17,10 +12,10 @@ namespace KinectConnection
         private const int SKELETON_COUNT = 6;
         private readonly Skeleton[] _allSkeletons = new Skeleton[SKELETON_COUNT];
         private bool _isInitialized;
+        private byte[] _colorPixels;
         public delegate void PositionChangedEventHandler(object sender, Skeleton s);
         public event PositionChangedEventHandler PositionChanged;
-
-
+        public WriteableBitmap _colorBitmap;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="KinectPositionTracker"/> class.
@@ -40,7 +35,7 @@ namespace KinectConnection
 
             if (_sensor == null)
             {
-
+                throw new KinectNotConnectedException();
             }
 
             //Smooth parameters
@@ -53,7 +48,11 @@ namespace KinectConnection
             //};
 
             _sensor.SkeletonStream.Enable(); // optional smooth parameters could be passed
-            _sensor.ColorStream.Enable();
+            _sensor.ColorStream.Enable(ColorImageFormat.RgbResolution640x480Fps30);
+            _colorPixels = new byte[_sensor.ColorStream.FramePixelDataLength];
+            _colorBitmap = new WriteableBitmap(_sensor.ColorStream.FrameWidth, _sensor.ColorStream.FrameHeight,
+                96.0, 96.0, PixelFormats.Bgr32, null);
+            _sensor.ColorFrameReady += SensorColorFrameReady;
             _sensor.AllFramesReady += KinectAllFramesReady;
             _sensor.Start();
         }
@@ -88,9 +87,7 @@ namespace KinectConnection
         private void KinectAllFramesReady(object sender, AllFramesReadyEventArgs e)
         {
             Skeleton skeleton = GetFirstSkeleton(e);
-
-
-
+   
             if (skeleton == null)
             {
                 return;
@@ -127,6 +124,24 @@ namespace KinectConnection
 
 
                 return first;
+            }
+        }
+        private void SensorColorFrameReady(object sender, ColorImageFrameReadyEventArgs e)
+        {
+            using (ColorImageFrame colorFrame = e.OpenColorImageFrame())
+            {
+                if (colorFrame != null)
+                {
+                    // Copy the pixel data from the image to a temporary array
+                    colorFrame.CopyPixelDataTo(_colorPixels);
+
+                    // Write the pixel data into our bitmap
+                    _colorBitmap.WritePixels(
+                        new Int32Rect(0, 0, _colorBitmap.PixelWidth, _colorBitmap.PixelHeight),
+                        _colorPixels,
+                        _colorBitmap.PixelWidth * sizeof(int),
+                        0);
+                }
             }
         }
     }
