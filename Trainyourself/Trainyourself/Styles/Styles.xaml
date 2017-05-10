@@ -24,19 +24,11 @@
     <Style TargetType="Label" x:Key="Labelmargin">
         <Setter Property="Margin" Value=""></Setter>
     </Style>
-    <Style TargetType="Label" x:Key="inputlabelsize">
+    <Style TargetType="Label" x:Key="Inputlabelsize">
         <Setter Property="FontSize" Value="25"/>
     </Style>
     <Style TargetType="Label" x:Key="FontColor">
         <Setter Property="Foreground" Value="White"/>        
     </Style>
-
-
-
-
-
-
-
-
 
 </ResourceDictionary>
