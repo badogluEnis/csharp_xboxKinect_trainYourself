@@ -10,7 +10,7 @@ Erwartetes Resultat  | Die Registrierung ist erfolgreich (Das Programm gibt kein
 Testperson           | Enis Badoglu
 Getestet am          | 10. Mai 2017
 Resultat             | Der Test war erfolgreich, dass erwartete Resultat trifft zu.
-Kommentar | -
+Kommentar (Optional) | -
 
 Abschnitt            | Inhalt
 ---------------------|--------
@@ -22,7 +22,7 @@ Erwartetes Resultat  | Es wird eine Fehlermeldung kommen die sagt, dass diese Em
 Testperson           | Enis Badoglu
 Getestet am          | 10. Mai 2017
 Resultat             | Der Test ist erfolgreich ausgefallen. Das erwartete Resultat hat zugetroffen
-Kommentar (Optional) | 
+Kommentar (Optional) | -
 
 Abschnitt            | Inhalt
 ---------------------|--------
@@ -34,7 +34,7 @@ Erwartetes Resultat  | Es wird eine Fehlermeldung ausgegeben, welche aussagt das
 Testperson           | Flavio Lang
 Getestet am          | 10.Mai 2017
 Resultat             | Der Test war erfolgreich.
-Kommentar (Optional) | 
+Kommentar (Optional) | -
 
 Abschnitt            | Inhalt
 ---------------------|--------
@@ -46,7 +46,7 @@ Erwartetes Resultat  | Die Anmeldung ist erfolgreich, weil ihm keine Fehlermeldu
 Testperson           | Altin Hani 
 Getestet am          | 10.Mai.2017
 Resultat             | Ich konnte mich problemlos anmelden
-Kommentar (Optional) |
+Kommentar (Optional) | -
 
 Abschnitt            | Inhalt
 ---------------------|--------
@@ -58,7 +58,7 @@ Erwartetes Resultat  | Es wird eine Fehlermeldung ausgegeben, welche aussagt das
 Testperson           | Altin Hani
 Getestet am          | 10.Mai.2017
 Resultat             | Als ich mich anmleden wollte ohne mich vorher registriert zu haen kam eine Fehlermeldung.
-Kommentar (Optional) |
+Kommentar (Optional) | -
 
 Abschnitt            | Inhalt
 ---------------------|--------
@@ -70,7 +70,7 @@ Erwartetes Resultat  | Die neu eingegebenen Daten werden in der Datebank aktuali
 Testperson           | Flavio Lang
 Getestet am          | 10. Mai 2017
 Resultat             | Der Test war erfolgreich.
-Kommentar (Optional) |
+Kommentar (Optional) | -
 
 Abschnitt            | Inhalt
 ---------------------|--------
@@ -90,11 +90,11 @@ ID                   | NT-4
 Getestete User Story | [#14](https://github.com/ICT-BBC/stu-inf-2016-be-trainyourself/issues/14)
 Vorbedingungen       | Der Benutzer hat das Programm gestartet
 Ablauf               | 1. Der Benutzer klickt im startscreen auf den "Quit" Button
-Erwartetes Resultat  | Das Programm öffnet die Sit-Up page und es wird die [Liveview](img/liveview.png) dargestellt.
-Testperson           |
-Getestet am          |
-Resultat             |
-Kommentar (Optional) |
+Erwartetes Resultat  | Das Programm schliesst sich ohne eine Fehlermeldung auszugeben.
+Testperson           | Flavio Lang
+Getestet am          | 10. Mai 2017
+Resultat             | Der Test war erfolgreich.
+Kommentar (Optional) | -
 
 
   #### [Zuück](../README.md)
