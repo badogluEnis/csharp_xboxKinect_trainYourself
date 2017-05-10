@@ -43,9 +43,9 @@ Getestete User Story | [#2](https://github.com/ICT-BBC/stu-inf-2016-be-trainyour
 Vorbedingungen       | Der Benutzer ist registriert
 Ablauf               | 1. Der Benutzer Meldet sich mit den zuvor registrierten Accountdaten an.
 Erwartetes Resultat  | Die Anmeldung ist erfolgreich, weil ihm keine Fehlermeldung angezeigt wird.
-Testperson           |
-Getestet am          |
-Resultat             |
+Testperson           | Altin Hani 
+Getestet am          | 10.Mai.2017
+Resultat             | Ich konnte mich problemlos anmelden
 Kommentar (Optional) |
 
 Abschnitt            | Inhalt
@@ -55,9 +55,9 @@ Getestete User Story | [#2](https://github.com/ICT-BBC/stu-inf-2016-be-trainyour
 Vorbedingungen       | Der Benutzer hat das Programm offen.
 Ablauf               | 1. Der Benutzer versucht sich anzumelden ohne sich vorher registriert zu haben.
 Erwartetes Resultat  | Es wird eine Fehlermeldung ausgegeben, welche aussagt dass entweder das Passwort oder die Email-Adresse welche der User angegeben hat falsch ist. 
-Testperson           |
-Getestet am          |
-Resultat             |
+Testperson           | Altin Hani
+Getestet am          | 10.Mai.2017
+Resultat             | Als ich mich anmleden wollte ohne mich vorher registriert zu haen kam eine Fehlermeldung.
 Kommentar (Optional) |
 
 Abschnitt            | Inhalt
