@@ -35,8 +35,8 @@ Ein kleines Fazit von jedem der Projektmitarbeiter mit einem Besonderen Augenmer
 
 ### Altin Hani
 
-Guiarbeiten, Logik
+Guiarbeiten, Logik, Datenaustausch mit Kinect
 
 ### Enis Badoglu
 
-Datenbankenhandling, Logik
+Datenbankenhandling, Logik, Tracking des Skellets
