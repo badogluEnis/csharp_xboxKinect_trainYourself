@@ -8,7 +8,7 @@ Vorbedingungen       | Das Programm kann gestartet werden
 Ablauf               | 1. Der Benutzer klickt auf "sign in now". 2. Der Benutzer Registriert sich.
 Erwartetes Resultat  | Die Registrierung ist erfolgreich (Das Programm gibt keine Fehlermeldung aus und der User wird in der Datenbank erfasst)
 Testperson           | Enis Badoglu
-Getestet am          | 04. Mai 2017
+Getestet am          | 10. Mai 2017
 Resultat             | Der Test war erfolgreich, dass erwartete Resultat trifft zu.
 Kommentar | -
 
@@ -20,7 +20,7 @@ Vorbedingungen       | Der Benutzer hat das Programm offen und hat auf den Butto
 Ablauf               | 1. Der Benutzer versucht sich ein 2. mal mit der selben Email zu registrieren 
 Erwartetes Resultat  | Es wird eine Fehlermeldung kommen die sagt, dass diese Email schon existiert.
 Testperson           | Enis Badoglu
-Getestet am          | 04. Mai 2017
+Getestet am          | 10. Mai 2017
 Resultat             | Der Test ist erfolgreich ausgefallen. Das erwartete Resultat hat zugetroffen
 Kommentar (Optional) |
 
