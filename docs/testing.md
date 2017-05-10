@@ -19,10 +19,10 @@ Getestete User Story | [#1](https://github.com/ICT-BBC/stu-inf-2016-be-trainyour
 Vorbedingungen       | Der Benutzer hat das Programm offen und hat auf den Button "Sign in now" gedrückt 
 Ablauf               | 1. Der Benutzer versucht sich ein 2. mal mit der selben Email zu registrieren 
 Erwartetes Resultat  | Es wird eine Fehlermeldung kommen die sagt, dass diese Email schon existiert.
-Testperson           |
-Getestet am          |
-Resultat             |
-Kommentar |
+Testperson           | Enis Badoglu
+Getestet am          | 04. Mai 2017
+Resultat             | Der Test ist erfolgreich ausgefallen. Das erwartete Resultat hat zugetroffen
+Kommentar (Optional) |
 
 Abschnitt            | Inhalt
 ---------------------|--------
@@ -34,7 +34,7 @@ Erwartetes Resultat  | Es wird eine Fehlermeldung ausgegeben, welche aussagt das
 Testperson           |
 Getestet am          |
 Resultat             |
-Kommentar |
+Kommentar (Optional) |
 
 Abschnitt            | Inhalt
 ---------------------|--------
@@ -46,7 +46,7 @@ Erwartetes Resultat  | Die Anmeldung ist erfolgreich, weil ihm keine Fehlermeldu
 Testperson           |
 Getestet am          |
 Resultat             |
-Kommentar |
+Kommentar (Optional) |
 
 Abschnitt            | Inhalt
 ---------------------|--------
@@ -58,7 +58,7 @@ Erwartetes Resultat  | Es wird eine Fehlermeldung ausgegeben, welche aussagt das
 Testperson           |
 Getestet am          |
 Resultat             |
-Kommentar |
+Kommentar (Optional) |
 
 Abschnitt            | Inhalt
 ---------------------|--------
@@ -70,7 +70,7 @@ Erwartetes Resultat  | Die neu eingegebenen Daten werden in der Datebank aktuali
 Testperson           |
 Getestet am          |
 Resultat             |
-Kommentar |
+Kommentar (Optional) |
 
 Abschnitt            | Inhalt
 ---------------------|--------
@@ -82,7 +82,7 @@ Erwartetes Resultat  | Das Programm öffnet die Sit-Up page und es wird die [Liv
 Testperson           |
 Getestet am          |
 Resultat             |
-Kommentar |
+Kommentar (Optional) |
 
 Abschnitt            | Inhalt
 ---------------------|--------
@@ -94,7 +94,7 @@ Erwartetes Resultat  |
 Testperson           |
 Getestet am          |
 Resultat             |
-Kommentar |
+Kommentar (Optional) |
                     
 
   #### [Zuück](../README.md)
