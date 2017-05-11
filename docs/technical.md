@@ -2,11 +2,13 @@
   
   ## Entwicklungumgebung
   
+  
   ### Setup
   Dieses Projekt wurde auf Windows 7 Enterprise Service Pack 1 mit Visual Studio 2015 Professional (Verison 14.0.25431.01 Update 3) programmiert. 
   
   Folgende Gadgets werden verwendet:
   Kinect v1
+  
   
   ### Code Style
   ...
@@ -34,6 +36,7 @@
   * [Liveview Sit-Ups](img/liveview2.png)
   * [Profil](img/profile.png)
   
+  
   ### Sequenzdiagramm
   Unser aktuelles Sequenzdiagramm finden sie [hier](img/sd_tys.PNG).
   
@@ -49,14 +52,13 @@
   
   
   ## Handling der Kinect
-  Wie vorher in der Dokumentation erwähnt, haben wir in unserem Projekt eine Kinect eingebaut. In diesem Teil der Doku werden wir alles was in unserem Projekt mit der Kinect zu tun hat, dokumentieren und festhalten.
+  Wie vorher in der Dokumentation erwähnt, haben wir in unserem Projekt eine Kinect eingebaut. In diesem Teil der Doku werden wir alles   was in unserem Projekt mit der Kinect zu tun hat, dokumentieren und festhalten.
   
   ### Die Kamera in der Liveview
-  In der Liveview zeigen wir das akuelle Bild der Kamera, dass man sich selbst sehen kann. Dies dient der User-Expirience und der User kann sehen, dass die Kinect ihn "sieht".
+  In der Live View sieht man einen Livestrem von sich selber beim Übungen machen.
   
  ##### Wie haben wir es gemacht?
- Wie im benutzerhandbuch erklärt, sollte man die Kinect angeschlossen und den Treiber für die Kinect installiert haben.
- Danach rufen wir einfach im teil wo wir die Kamera einblenden wollen, die Kamera auf.
+  Wir haben im Designer ein Image Paltziert welches wir im Code behind per Namen ansprechen. Wir bekommen von der Kineckt ein Bild in    Binär, dieser Binärcode wird in einem Array abgespeichert. Danach wird eine Writable Bitmap hergestellt und in diese der verher   gefüllte Array übertragen. Vorher wird noch der "Zeilenumbruch" festegelegt, damit das Programm weiss wo es den Binär Code trennen muss. Es wird immer wieder diese Writable Bitmap in unser Image geladen. 
   
   
   
