@@ -17,8 +17,8 @@
         <Image Name="Image" Grid.Column="1" Grid.Row="0" Margin="0 150 0 0" Width="1120"/>
 
         <StackPanel Orientation="Vertical" Grid.Row="1" Margin="0 105 0 0">
-            <Label Style="{StaticResource FontColor}"  Content="Record: " FontSize="65" Width="auto" Margin="0,0,195,0"/>
-            <Label Style="{StaticResource FontColor}"  Content="Current Run: " FontSize="65" Margin="0,0,44,0"/>
+            <Label Style="{StaticResource FontColor}" Name="Record" Content="" FontSize="65" Width="auto" Margin="0,0,195,0"/>
+            <Label Style="{StaticResource FontColor}" Name="Currentrun"  Content="" FontSize="65" Margin="0,0,44,0"/>
         </StackPanel>
         <Button Style="{StaticResource Buttonsize}" Name="QuitButton" Grid.Row="1" Content="Quit" Click="QuitButton_OnClick"/>
     </Grid>
