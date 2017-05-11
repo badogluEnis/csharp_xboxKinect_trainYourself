@@ -19,6 +19,8 @@ namespace Trainyourself.Pages
         public float ShoulderLeftY;
         public float ShoulderRightX;
         public float ShoulderRightY;
+        public float ShoulderRightZ;
+        public float ShoulderLeftZ;
 
         public float CalibrateLeftShoulderTopY;
         public float CalibrateRightShoulderTopY;
@@ -47,6 +49,7 @@ namespace Trainyourself.Pages
         private void TimerOnTick(object sender, EventArgs eventArgs)
         {
             Debug.WriteLine($"Right Shoulder x: {ShoulderRightX} y: {ShoulderRightY} | Left Shoulder x: {ShoulderLeftX} y: {ShoulderLeftY}");
+            Debug.WriteLine($"Entfernung rechte Schulter: {ShoulderRightZ} | Entfernung linke Schulter: {ShoulderLeftZ}");
         }
 
 
@@ -54,9 +57,11 @@ namespace Trainyourself.Pages
         {
             ShoulderLeftX = skeleton.Joints[JointType.ShoulderLeft].Position.X;
             ShoulderLeftY = skeleton.Joints[JointType.ShoulderLeft].Position.Y;
+            ShoulderLeftZ = skeleton.Joints[JointType.ShoulderLeft].Position.Z;
             ShoulderRightX = skeleton.Joints[JointType.ShoulderRight].Position.X;
             ShoulderRightY = skeleton.Joints[JointType.ShoulderRight].Position.Y;
-           
+            ShoulderRightZ = skeleton.Joints[JointType.ShoulderRight].Position.Z;
+
             CheckCount();
             CheckUp();
         }
@@ -83,7 +88,7 @@ namespace Trainyourself.Pages
         {
             if (ShoulderRightY > 0.4 && ShoulderLeftY > 0.4)
             {
-                Debug.WriteLine("Mueter");
+                Debug.WriteLine("Meer");
                 WarUnten = false;
             }
         }
