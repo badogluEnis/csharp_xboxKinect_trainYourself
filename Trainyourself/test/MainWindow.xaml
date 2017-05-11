@@ -7,8 +7,11 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <Label x:Name="LabelX" Content="X" HorizontalAlignment="Left" Margin="116,110,0,0" VerticalAlignment="Top" Width="245"/>
-        <Label x:Name="LabelY" Content="Y" HorizontalAlignment="Left" Margin="116,79,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.306,1.056" Width="245"/>
-        <Label x:Name="LabelZ" Content="Z" HorizontalAlignment="Left" Margin="116,53,0,0" VerticalAlignment="Top" Width="245"/>
+        <Label x:Name="LabelLeftX" Content="X" HorizontalAlignment="Left" Margin="10,67,0,0" VerticalAlignment="Top" Width="245"/>
+        <Label x:Name="LabelLeftY" Content="Y" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.306,1.056" Width="245"/>
+        <Label x:Name="LabelLeftZ" Content="Z" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="245"/>
+        <Label x:Name="LabelRightX" Content="X" HorizontalAlignment="Left" Margin="262,67,0,0" VerticalAlignment="Top" Width="245"/>
+        <Label x:Name="LabelRightY" Content="Y" HorizontalAlignment="Left" Margin="262,36,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.306,1.056" Width="245"/>
+        <Label x:Name="LabelRightZ" Content="Z" HorizontalAlignment="Left" Margin="262,10,0,0" VerticalAlignment="Top" Width="245"/>
     </Grid>
 </Window>

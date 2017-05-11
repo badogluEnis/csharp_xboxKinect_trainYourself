@@ -55,6 +55,14 @@ namespace test
             Debug.WriteLine($"X: {ShoulderRightX}");
             Debug.WriteLine($"Y: {ShoulderRightY}");
             Debug.WriteLine($"Z: {ShoulderRightZ}");
+
+            LabelRightX.Content = ($"Right X: {ShoulderRightX}");
+            LabelRightY.Content = ($"Right Y: {ShoulderRightY}");
+            LabelRightZ.Content = ($"Right Z: {ShoulderRightZ}");
+
+            LabelRightX.Content = ($"Left X: {ShoulderLeftX}");
+            LabelRightX.Content = ($"Left Y: {ShoulderLeftY}");
+            LabelRightX.Content = ($"Left Z: {ShoulderLeftZ}");
         }
     }
 }
