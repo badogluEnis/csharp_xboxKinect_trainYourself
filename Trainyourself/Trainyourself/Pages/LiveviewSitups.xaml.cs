@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Diagnostics;
+using System.Windows;
 using KinectConnection;
 using Microsoft.Kinect;
 
@@ -24,6 +25,8 @@ namespace Trainyourself.Pages
             float ShoulderLeftY = skeleton.Joints[JointType.ShoulderLeft].Position.Y;
             float ShoulderRightX = skeleton.Joints[JointType.ShoulderRight].Position.X;
             float ShoulderRightY = skeleton.Joints[JointType.ShoulderRight].Position.Y;
+
+            Debug.WriteLine($"Right Shoulder x: {ShoulderRightX} y: {ShoulderRightY} \n Left Shoulder x: {ShoulderLeftX} y: {ShoulderLeftY}");
         }
 
         private void QuitButton_OnClick(object sender, RoutedEventArgs e)

@@ -20,5 +20,6 @@
             <Label Style="{StaticResource FontColor}"  Content="Record: " FontSize="65" Width="auto" Margin="0,0,195,0"/>
             <Label Style="{StaticResource FontColor}"  Content="Current Run: " FontSize="65" Margin="0,0,44,0"/>
         </StackPanel>
+        <Button Style="{StaticResource Buttonsize}" Name="QuitButton" Grid.Row="1" Content="Quit" Click="QuitButton_OnClick"/>
     </Grid>
 </Page>
