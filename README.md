@@ -2,7 +2,7 @@
 
 Ein Beispielprojekt mit Issues, Meilensteinen und Commits als Beispiel der Verwendung von Scrum mit GitHub und Zenhub.
 
-### Unsere Zeiten für das Daily Scrum findest du [hier](docs/scrum.md)
+### Unser Daily Scrum findet täglich um 08:45 statt.
 
 ## Projektmitabeiter
 
