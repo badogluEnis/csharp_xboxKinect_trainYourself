@@ -1,13 +1,8 @@
 ﻿using System;
 using System.Diagnostics;
-using System.Runtime.CompilerServices;
-using System.Timers;
 using System.Windows;
-using System.Windows.Forms;
-using System.Windows.Media.Animation;
 using KinectConnection;
 using Microsoft.Kinect;
-using Timer = System.Timers.Timer;
 
 namespace Trainyourself.Pages
 {
@@ -64,10 +59,12 @@ namespace Trainyourself.Pages
             ShoulderRightY = skeleton.Joints[JointType.ShoulderRight].Position.Y;
             ShoulderRightZ = skeleton.Joints[JointType.ShoulderRight].Position.Z;
 
+            cal.Calibrate(skeleton);
+
+           
+
             CheckCount();
             CheckUp();
-
-            cal.FillArray(skeleton);
         }
 
         private void QuitButton_OnClick(object sender, RoutedEventArgs e)
@@ -90,9 +87,9 @@ namespace Trainyourself.Pages
 
         public void CheckUp()
         {
+            Debug.WriteLine("Meer");
             if (ShoulderRightY > 0.4 && ShoulderLeftY > 0.4)
             {
-                Debug.WriteLine("Meer");
                 WarUnten = false;
             }
           
