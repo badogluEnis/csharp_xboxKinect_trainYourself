@@ -6,7 +6,7 @@ namespace Trainyourself
     {
         private const int ARRAY_LENGTH = 101;
         private const float TOLLERANCE = 0.2f;
-        private const int ARRAY_LENGHT_HALF = 75;
+        private const int ARRAY_LENGHT_HALF = 50;
         private float[] ShoulderRightY = new float[ARRAY_LENGTH];
         private float[] ShoulderLeftY = new float[ARRAY_LENGTH];
         private float[] HandRightY = new float[ARRAY_LENGTH];
@@ -52,10 +52,10 @@ namespace Trainyourself
         private bool CheckArraysForMoves()
         {
 
-            float referenceShoulderRight = ShoulderRightY[0];
-            float referenceShoulderLeft = ShoulderLeftY[0];
-            float referenceHandRight = HandRightY[0];
-            float referenceHandLeft = HandLeftY[0];
+            float referenceShoulderRight = ShoulderRightY[ARRAY_LENGHT_HALF];
+            float referenceShoulderLeft = ShoulderLeftY[ARRAY_LENGHT_HALF];
+            float referenceHandRight = HandRightY[ARRAY_LENGHT_HALF];
+            float referenceHandLeft = HandLeftY[ARRAY_LENGHT_HALF];
             for (int i = 0; i < ARRAY_LENGTH; i++)
             {
                 if (!(ShoulderRightY[i] < referenceShoulderRight + TOLLERANCE && ShoulderRightY[i] > referenceShoulderRight - TOLLERANCE))

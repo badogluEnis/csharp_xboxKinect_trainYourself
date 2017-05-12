@@ -61,8 +61,6 @@ namespace Trainyourself.Pages
 
             cal.Calibrate(skeleton);
 
-           
-
             CheckCount();
             CheckUp();
         }
@@ -78,7 +76,6 @@ namespace Trainyourself.Pages
         {
             if (ShoulderRightY < 0.3 && ShoulderLeftY < 0.3 && !WarUnten)
             {
-                Debug.WriteLine("Peer");
                 counter = counter + 1;
                 Currentrun.Content = $"Current Run: {counter}";
                 WarUnten = true;
@@ -87,7 +84,6 @@ namespace Trainyourself.Pages
 
         public void CheckUp()
         {
-            Debug.WriteLine("Meer");
             if (ShoulderRightY > 0.4 && ShoulderLeftY > 0.4)
             {
                 WarUnten = false;

@@ -55,7 +55,7 @@
                Grid.Column="0" Padding="530 0 0 0"/>
 
         <Button Style="{StaticResource Buttonsize}" Grid.Row="7" Grid.Column="1" Content="Continue" Click="Button_Click" Margin="18,103,24,337" />
-        <Button Content="Quit" Name="QuitButton" Click="QuitButton_OnClick" Style="{StaticResource Buttonsize}" Grid.Column="1" Grid.Row="7" />
+        <Button Content="Back" Name="BackButton" Click="QuitButton_OnClick" Style="{StaticResource Buttonsize}" Grid.Column="1" Grid.Row="7" />
 
     </Grid>
 </Page>
