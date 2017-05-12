@@ -26,6 +26,7 @@ namespace Trainyourself.Pages
         public float CalibrateRightShoulderTopY;
         public float CalibrateRightShoulderBottomY;
         public float CalibrateLeftShoulderBottomY;
+        Calibration c = new Calibration();
 
         public int counter;
         public bool WarUnten = false;
@@ -63,7 +64,12 @@ namespace Trainyourself.Pages
             ShoulderRightZ = skeleton.Joints[JointType.ShoulderRight].Position.Z;
 
             CheckCount();
-            CheckUp();
+            CheckUp(skeleton);
+            int i = 0;
+            if (i <= 400)
+            {
+                
+            }
         }
 
         private void QuitButton_OnClick(object sender, RoutedEventArgs e)
@@ -84,16 +90,25 @@ namespace Trainyourself.Pages
             }
         }
 
-        public void CheckUp()
+        public void CheckUp(Skeleton skeleton)
         {
             if (ShoulderRightY > 0.4 && ShoulderLeftY > 0.4)
             {
                 Debug.WriteLine("Meer");
                 WarUnten = false;
             }
+            if (c.IsNotMoving(skeleton))
+            {
+                Debug.WriteLine("true");
+            }
+            else
+            {
+                Debug.WriteLine("Ton Peerererere");
+            }
         }
-
-        public void CalibrateTop(Skeleton skeleton)
+        
+                
+/*        public void CalibrateTop(Skeleton skeleton)
         {
             CalibrateLeftShoulderTopY = skeleton.Joints[JointType.ShoulderLeft].Position.Y;
             CalibrateRightShoulderTopY = skeleton.Joints[JointType.ShoulderRight].Position.Y;
@@ -104,6 +119,6 @@ namespace Trainyourself.Pages
             CalibrateLeftShoulderBottomY = skeleton.Joints[JointType.ShoulderLeft].Position.Y;
             CalibrateRightShoulderBottomY = skeleton.Joints[JointType.ShoulderRight].Position.Y;
         }
-
+*/
     }
 }

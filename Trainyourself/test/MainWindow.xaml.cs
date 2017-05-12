@@ -45,7 +45,7 @@ namespace test
             ShoulderRightX = skeleton.Joints[JointType.ShoulderRight].Position.X;
             ShoulderRightY = skeleton.Joints[JointType.ShoulderRight].Position.Y;
             ShoulderRightZ = skeleton.Joints[JointType.ShoulderRight].Position.Z;
-
+            
             Debug.WriteLine($"Schoulder Left:");
             Debug.WriteLine($"X: {ShoulderLeftX}");
             Debug.WriteLine($"Y: {ShoulderLeftY}");
@@ -56,13 +56,13 @@ namespace test
             Debug.WriteLine($"Y: {ShoulderRightY}");
             Debug.WriteLine($"Z: {ShoulderRightZ}");
 
-            LabelRightX.Content = ($"Right X: {ShoulderRightX}");
-            LabelRightY.Content = ($"Right Y: {ShoulderRightY}");
-            LabelRightZ.Content = ($"Right Z: {ShoulderRightZ}");
+            LabelRightX.Content = $"Right X: {ShoulderRightX}";
+            LabelRightY.Content = $"Right Y: {ShoulderRightY}";
+            LabelRightZ.Content = $"Right Z: {ShoulderRightZ}";
 
-            LabelRightX.Content = ($"Left X: {ShoulderLeftX}");
-            LabelRightX.Content = ($"Left Y: {ShoulderLeftY}");
-            LabelRightX.Content = ($"Left Z: {ShoulderLeftZ}");
+            LabelLeftX.Content = $"Left X: {ShoulderLeftX}";
+            LabelLeftY.Content = $"Left Y: {ShoulderLeftY}";
+            LabelLeftZ.Content = $"Left Z: {ShoulderLeftZ}";
         }
     }
 }

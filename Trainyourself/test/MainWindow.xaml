@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:test"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="1000" Width="1000">
     <Grid>
-        <Label x:Name="LabelLeftX" Content="X" HorizontalAlignment="Left" Margin="10,67,0,0" VerticalAlignment="Top" Width="245"/>
-        <Label x:Name="LabelLeftY" Content="Y" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.306,1.056" Width="245"/>
-        <Label x:Name="LabelLeftZ" Content="Z" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="245"/>
-        <Label x:Name="LabelRightX" Content="X" HorizontalAlignment="Left" Margin="262,67,0,0" VerticalAlignment="Top" Width="245"/>
-        <Label x:Name="LabelRightY" Content="Y" HorizontalAlignment="Left" Margin="262,36,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.306,1.056" Width="245"/>
-        <Label x:Name="LabelRightZ" Content="Z" HorizontalAlignment="Left" Margin="262,10,0,0" VerticalAlignment="Top" Width="245"/>
+        <Label x:Name="LabelLeftX" Content="X" FontSize="30" HorizontalAlignment="Left" Margin="10,155,0,0" VerticalAlignment="Top" Width="245"/>
+        <Label x:Name="LabelLeftY" Content="Y" FontSize="30" HorizontalAlignment="Left" Margin="10,83,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.306,1.056" Width="245"/>
+        <Label x:Name="LabelLeftZ" Content="Z" FontSize="30" HorizontalAlignment="Left" Margin="10,18,0,0" VerticalAlignment="Top" Width="245"/>
+        <Label x:Name="LabelRightX" Content="X" FontSize="30" HorizontalAlignment="Left" Margin="670,155,0,0" VerticalAlignment="Top" Width="245"/>
+        <Label x:Name="LabelRightY" Content="Y" FontSize="30" HorizontalAlignment="Left" Margin="670,75,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.306,1.056" Width="245"/>
+        <Label x:Name="LabelRightZ" Content="Z" FontSize="30" HorizontalAlignment="Left" Margin="670,18,0,0" VerticalAlignment="Top" Width="245"/>
     </Grid>
 </Window>
