@@ -4,6 +4,7 @@ using System.Runtime.CompilerServices;
 using System.Timers;
 using System.Windows;
 using System.Windows.Forms;
+using System.Windows.Media.Animation;
 using KinectConnection;
 using Microsoft.Kinect;
 using Timer = System.Timers.Timer;
@@ -26,7 +27,7 @@ namespace Trainyourself.Pages
         public float CalibrateRightShoulderTopY;
         public float CalibrateRightShoulderBottomY;
         public float CalibrateLeftShoulderBottomY;
-        Calibration c = new Calibration();
+        Calibration cal = new Calibration();
 
         public int counter;
         public bool WarUnten = false;
@@ -64,12 +65,9 @@ namespace Trainyourself.Pages
             ShoulderRightZ = skeleton.Joints[JointType.ShoulderRight].Position.Z;
 
             CheckCount();
-            CheckUp(skeleton);
-            int i = 0;
-            if (i <= 400)
-            {
-                
-            }
+            CheckUp();
+
+            cal.FillArray(skeleton);
         }
 
         private void QuitButton_OnClick(object sender, RoutedEventArgs e)
@@ -90,24 +88,16 @@ namespace Trainyourself.Pages
             }
         }
 
-        public void CheckUp(Skeleton skeleton)
+        public void CheckUp()
         {
             if (ShoulderRightY > 0.4 && ShoulderLeftY > 0.4)
             {
                 Debug.WriteLine("Meer");
                 WarUnten = false;
             }
-            if (c.IsNotMoving(skeleton))
-            {
-                Debug.WriteLine("true");
-            }
-            else
-            {
-                Debug.WriteLine("Ton Peerererere");
-            }
-        }
-        
-                
+          
+        }      
+               
 /*        public void CalibrateTop(Skeleton skeleton)
         {
             CalibrateLeftShoulderTopY = skeleton.Joints[JointType.ShoulderLeft].Position.Y;

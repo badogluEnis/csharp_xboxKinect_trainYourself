@@ -87,7 +87,7 @@ namespace KinectConnection
         private void KinectAllFramesReady(object sender, AllFramesReadyEventArgs e)
         {
             Skeleton skeleton = GetFirstSkeleton(e);
-   
+
             if (skeleton == null)
             {
                 return;
@@ -96,7 +96,6 @@ namespace KinectConnection
             if (!_isInitialized)
             {
                 _isInitialized = true;
-                // Here you can add start reference points
             }
 
 
