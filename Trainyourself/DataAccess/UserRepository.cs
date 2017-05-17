@@ -37,5 +37,8 @@ namespace DataAccess
                 context.SaveChanges();
             }
         }
+
+        public static List<IEntity>>
+
     }
 }
