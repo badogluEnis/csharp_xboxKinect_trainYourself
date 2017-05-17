@@ -25,7 +25,7 @@ namespace Trainyourself.Pages
         Calibration cal = new Calibration();
 
         public int counter;
-        public bool WarUnten = false;
+        public bool WarUnten;
 
         private KinectProvider _kinectProvider = new KinectProvider();
 
@@ -35,9 +35,9 @@ namespace Trainyourself.Pages
         {
             InitializeComponent();
             Image.Source = _kinectProvider._colorBitmap;
-            timer.Interval = 3000;
-            timer.Start();
+            timer.Interval = 1000;
             timer.Tick += TimerOnTick;
+            timer.Start();
             _kinectProvider.PositionChanged += SkeletonChanged;
 
       
@@ -59,10 +59,15 @@ namespace Trainyourself.Pages
             ShoulderRightY = skeleton.Joints[JointType.ShoulderRight].Position.Y;
             ShoulderRightZ = skeleton.Joints[JointType.ShoulderRight].Position.Z;
 
-            cal.Calibrate(skeleton);
-
-            CheckCount();
-            CheckUp();
+            if (cal.IsCalibrated)
+            {
+                CheckCount(skeleton);
+                CheckUp(skeleton);
+            }
+            else
+            {
+                cal.Calibrate(skeleton);
+            }
         }
 
         private void QuitButton_OnClick(object sender, RoutedEventArgs e)
@@ -72,21 +77,23 @@ namespace Trainyourself.Pages
             timer.Stop();
         }
 
-        public void CheckCount()
+        public void CheckCount(Skeleton skeleton)
         {
-            if (ShoulderRightY < 0.3 && ShoulderLeftY < 0.3 && !WarUnten)
+            if (ShoulderRightY < skeleton.Joints[JointType.HandRight].Position.Y + 0.3 && ShoulderLeftY < skeleton.Joints[JointType.HandLeft].Position.Y + 0.3 && !WarUnten && skeleton.Joints[JointType.HandRight].Position.Y < ShoulderRightX && skeleton.Joints[JointType.HandLeft].Position.Y < ShoulderLeftY)
             {
                 counter = counter + 1;
                 Currentrun.Content = $"Current Run: {counter}";
                 WarUnten = true;
+                Debug.WriteLine("DOWN");
             }
         }
 
-        public void CheckUp()
+        public void CheckUp(Skeleton skeleton)
         {
-            if (ShoulderRightY > 0.4 && ShoulderLeftY > 0.4)
+            if (ShoulderRightY > cal.ShoulderHandDistanceRight - 0.3 && ShoulderLeftY > cal.ShoulderHandDistanceLeft - 0.3)
             {
                 WarUnten = false;
+                Debug.WriteLine("UP");
             }
           
         }      
