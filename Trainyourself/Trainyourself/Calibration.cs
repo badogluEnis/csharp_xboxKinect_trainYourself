@@ -1,19 +1,20 @@
-﻿using Microsoft.Kinect;
+﻿using System.Windows;
+using System.Windows.Media;
+using System.Windows.Navigation;
+using Microsoft.Kinect;
+using Trainyourself.Pages;
 
 namespace Trainyourself
 {
     class Calibration
-    {
-        private const int ARRAY_LENGTH = 101;
-        private const float TOLLERANCE = 0.2f;
+    {private const int ARRAY_LENGTH = 101;
+        private const float TOLLERANCE = 0.4f;
         private const int ARRAY_LENGHT_HALF = 50;
         private float[] ShoulderRightY = new float[ARRAY_LENGTH];
         private float[] ShoulderLeftY = new float[ARRAY_LENGTH];
         private float[] HandRightY = new float[ARRAY_LENGTH];
         private float[] HandLeftY = new float[ARRAY_LENGTH];
         private int i;
-
-       
 
         public float ShoulderHandDistanceRight { get; private set; }
         public float ShoulderHandDistanceLeft { get; private set; }
@@ -23,9 +24,9 @@ namespace Trainyourself
 
         public void Calibrate(Skeleton skeleton)
         {
-            if (IsCalibrated == false)
+            if (!IsCalibrated)
             {
-                if (i < ARRAY_LENGTH - 1)
+                if (i < ARRAY_LENGTH)
                 {
                     FillArray(skeleton);
                 }
@@ -56,21 +57,21 @@ namespace Trainyourself
             float referenceShoulderLeft = ShoulderLeftY[ARRAY_LENGHT_HALF];
             float referenceHandRight = HandRightY[ARRAY_LENGHT_HALF];
             float referenceHandLeft = HandLeftY[ARRAY_LENGHT_HALF];
-            for (int i = 0; i < ARRAY_LENGTH; i++)
+            for (int j = 0; j < ARRAY_LENGTH; j++)
             {
-                if (!(ShoulderRightY[i] < referenceShoulderRight + TOLLERANCE && ShoulderRightY[i] > referenceShoulderRight - TOLLERANCE))
+                if (!(ShoulderRightY[j] < referenceShoulderRight + TOLLERANCE && ShoulderRightY[j] > referenceShoulderRight - TOLLERANCE))
                 {
                     return true;
                 }
-                if (!(ShoulderLeftY[i] < referenceShoulderLeft + TOLLERANCE && ShoulderRightY[i] > referenceShoulderLeft - TOLLERANCE))
+                if (!(ShoulderLeftY[j] < referenceShoulderLeft + TOLLERANCE && ShoulderRightY[j] > referenceShoulderLeft - TOLLERANCE))
                 {
                     return true;
                 }
-                if (!(HandRightY[i] < referenceHandRight + TOLLERANCE && ShoulderRightY[i] > referenceHandRight - TOLLERANCE))
+                if (!(HandRightY[j] < referenceHandRight + TOLLERANCE && ShoulderRightY[j] > referenceHandRight - TOLLERANCE))
                 {
                     return true;
                 }
-                if (!(HandRightY[i] < referenceHandLeft + TOLLERANCE && ShoulderRightY[i] > referenceHandLeft - TOLLERANCE))
+                if (!(HandRightY[j] < referenceHandLeft + TOLLERANCE && ShoulderRightY[j] > referenceHandLeft - TOLLERANCE))
                 {
                     return true;
                 }

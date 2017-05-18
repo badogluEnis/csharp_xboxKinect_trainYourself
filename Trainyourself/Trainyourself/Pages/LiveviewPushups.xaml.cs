@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Drawing;
 using System.Windows;
+using System.Windows.Media;
 using KinectConnection;
 using Microsoft.Kinect;
 
@@ -17,6 +19,8 @@ namespace Trainyourself.Pages
         public float ShoulderRightY;
         public float ShoulderRightZ;
         public float ShoulderLeftZ;
+
+        private const float CRITERIUM = 0.15f;
 
         public float CalibrateLeftShoulderTopY;
         public float CalibrateRightShoulderTopY;
@@ -36,11 +40,10 @@ namespace Trainyourself.Pages
             InitializeComponent();
             Image.Source = _kinectProvider._colorBitmap;
             timer.Interval = 1000;
-            timer.Tick += TimerOnTick;
+            //timer.Tick += TimerOnTick;
             timer.Start();
             _kinectProvider.PositionChanged += SkeletonChanged;
 
-      
         }
 
         private void TimerOnTick(object sender, EventArgs eventArgs)
@@ -59,14 +62,21 @@ namespace Trainyourself.Pages
             ShoulderRightY = skeleton.Joints[JointType.ShoulderRight].Position.Y;
             ShoulderRightZ = skeleton.Joints[JointType.ShoulderRight].Position.Z;
 
+            Debug.WriteLine($"Right Shoulder x: {ShoulderRightX} y: {ShoulderRightY} | Left Shoulder x: {ShoulderLeftX} y: {ShoulderLeftY}");
+            Debug.WriteLine($"Entfernung rechte Schulter: {ShoulderRightZ} | Entfernung linke Schulter: {ShoulderLeftZ}");
+
             if (cal.IsCalibrated)
             {
+                CalLabel.Visibility = Visibility.Hidden;
                 CheckCount(skeleton);
                 CheckUp(skeleton);
             }
             else
             {
                 cal.Calibrate(skeleton);
+                CalLabel.Content = "CALIBRATING";
+                CalLabel.Foreground = new SolidColorBrush(Colors.Orange);
+                CalLabel.Background = new SolidColorBrush(Colors.Black);
             }
         }
 
@@ -79,7 +89,7 @@ namespace Trainyourself.Pages
 
         public void CheckCount(Skeleton skeleton)
         {
-            if (ShoulderRightY < skeleton.Joints[JointType.HandRight].Position.Y + 0.3 && ShoulderLeftY < skeleton.Joints[JointType.HandLeft].Position.Y + 0.3 && !WarUnten && skeleton.Joints[JointType.HandRight].Position.Y < ShoulderRightX && skeleton.Joints[JointType.HandLeft].Position.Y < ShoulderLeftY)
+            if (ShoulderRightY < skeleton.Joints[JointType.HandRight].Position.Y + CRITERIUM && ShoulderLeftY < skeleton.Joints[JointType.HandLeft].Position.Y + CRITERIUM && !WarUnten && skeleton.Joints[JointType.HandRight].Position.Y < ShoulderRightX && skeleton.Joints[JointType.HandLeft].Position.Y < ShoulderLeftY)
             {
                 counter = counter + 1;
                 Currentrun.Content = $"Current Run: {counter}";
@@ -90,7 +100,7 @@ namespace Trainyourself.Pages
 
         public void CheckUp(Skeleton skeleton)
         {
-            if (ShoulderRightY > cal.ShoulderHandDistanceRight - 0.3 && ShoulderLeftY > cal.ShoulderHandDistanceLeft - 0.3)
+            if (ShoulderRightY > cal.ShoulderHandDistanceRight - CRITERIUM && ShoulderLeftY > cal.ShoulderHandDistanceLeft - CRITERIUM)
             {
                 WarUnten = false;
                 Debug.WriteLine("UP");
