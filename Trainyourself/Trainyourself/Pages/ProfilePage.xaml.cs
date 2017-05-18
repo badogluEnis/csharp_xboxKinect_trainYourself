@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Configuration;
+using System.Globalization;
 using System.Windows;
 using System.Windows.Media;
 using DataAccess;
@@ -91,7 +92,7 @@ namespace Trainyourself.Pages
                             double bmi = double.Parse(us.Weight.ToString()) /
                                          (double.Parse(us.Height.ToString()) * double.Parse(us.Height.ToString()));
                             double Round = Math.Round(bmi, 2);
-                            BMIOutput.Text = Convert.ToString(Round);
+                            BMIOutput.Text = Round.ToString(CultureInfo.InvariantCulture);
                             BMIOutput.FontSize = 23;
                             YourHeightLabel.IsReadOnly = true;
                             YourHeightLabel.BorderBrush = Brushes.ForestGreen;

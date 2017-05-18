@@ -1,8 +1,12 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Configuration;
+using System.Diagnostics;
 using System.Windows;
 using System.Windows.Media;
+using DataAccess;
 using KinectConnection;
 using Microsoft.Kinect;
+using Model;
 
 namespace Trainyourself.Pages
 {
@@ -83,7 +87,7 @@ namespace Trainyourself.Pages
         {
             _kinectProvider.Dispose();
             NavigationService.Navigate(new HauptmenuPage());
-            
+
         }
 
         /// <summary>
@@ -92,14 +96,27 @@ namespace Trainyourself.Pages
         /// <param name="skeleton">The skeleton.</param>
         public void CheckCount(Skeleton skeleton)
         {
-            if (ShoulderRightY < skeleton.Joints[JointType.HandRight].Position.Y + CRITERIUMDOWN && 
-                ShoulderLeftY < skeleton.Joints[JointType.HandLeft].Position.Y + CRITERIUMDOWN && 
-                !WarUnten && 
-                skeleton.Joints[JointType.HandRight].Position.Y < ShoulderRightY && 
+            if (ShoulderRightY < skeleton.Joints[JointType.HandRight].Position.Y + CRITERIUMDOWN &&
+                ShoulderLeftY < skeleton.Joints[JointType.HandLeft].Position.Y + CRITERIUMDOWN &&
+                !WarUnten &&
+                skeleton.Joints[JointType.HandRight].Position.Y < ShoulderRightY &&
                 skeleton.Joints[JointType.HandLeft].Position.Y < ShoulderLeftY)
             {
                 Counter = Counter + 1;
                 Currentrun.Content = $"Current Run: {Counter}";
+                using (TrainContext context = new TrainContext())
+                {
+                    UserRepository userRepository = new UserRepository(context);
+                    User user = userRepository.GetById(Int32.Parse(ConfigurationManager.AppSettings["LoggedUserId"]));
+                    if (Counter > user.RecordPushups)
+                    {
+                        user.RecordPushups = Counter;
+                    }
+                    Score score = new Score();
+                    score.UserID = userRepository.GetById(Int32.Parse(ConfigurationManager.AppSettings["LoggedUserId"])).Id;
+                    score.Date = DateTime.Today;
+                    score.Exercise_Id = 1;
+                }
                 WarUnten = true;
                 Debug.WriteLine("DOWN");
             }
@@ -116,7 +133,7 @@ namespace Trainyourself.Pages
                 WarUnten = false;
                 Debug.WriteLine("UP");
             }
-          
-        }      
+
+        }
     }
 }
