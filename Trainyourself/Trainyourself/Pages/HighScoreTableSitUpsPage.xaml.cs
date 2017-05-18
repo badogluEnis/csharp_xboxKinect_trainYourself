@@ -25,27 +25,32 @@ namespace Trainyourself.Pages
         public HighScoreTableSitUpsPage()
         {
             InitializeComponent();
-            filllabels();
+            Filllabels();
         }
-        public void filllabels()
+        public void Filllabels()
         {
             using (TrainContext context = new TrainContext())
             {
                 UserRepository userRepository = new UserRepository(context);
 
-                erstername.Content = "1. " + userRepository.Top4ListPushUps()[0].Name;
-                ersterscore.Text = Convert.ToString(userRepository.Top4ListPushUps()[0].RecordPushups);
+                erstername.Content = "1. " + userRepository.Top4ListSitUps()[0].Name;
+                ersterscore.Text = Convert.ToString(userRepository.Top4ListSitUps()[0].RecordSitups);
 
-                zweitername.Content = "2. " + userRepository.Top4ListPushUps()[1].Name;
-                zweiterscore.Text = Convert.ToString(userRepository.Top4ListPushUps()[1].RecordPushups);
+                zweitername.Content = "2. " + userRepository.Top4ListSitUps()[1].Name;
+                zweiterscore.Text = Convert.ToString(userRepository.Top4ListSitUps()[1].RecordSitups);
 
-                drittertername.Content = "3. " + userRepository.Top4ListPushUps()[2].Name;
-                dritterscore.Text = Convert.ToString(userRepository.Top4ListPushUps()[2].RecordPushups);
+                drittertername.Content = "3. " + userRepository.Top4ListSitUps()[2].Name;
+                dritterscore.Text = Convert.ToString(userRepository.Top4ListSitUps()[2].RecordSitups);
 
-                viertername.Content = "4. " + userRepository.Top4ListPushUps()[3].Name;
-                vierterscore.Text = Convert.ToString(userRepository.Top4ListPushUps()[3].RecordPushups);
+                viertername.Content = "4. " + userRepository.Top4ListSitUps()[3].Name;
+                vierterscore.Text = Convert.ToString(userRepository.Top4ListSitUps()[3].RecordSitups);
             }
 
+        }
+
+        private void Backbutton_OnClick(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new ProfilePage());
         }
     }
 }

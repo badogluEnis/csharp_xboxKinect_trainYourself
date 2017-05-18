@@ -124,7 +124,7 @@
 
         <Label Name="errorHeight" Grid.Column="1" Grid.Row="2" Height="40" Padding="70 0 0 0" Margin="200 0 0 10" Grid.RowSpan="2" FontSize="30" />
         <Label Name="errorWeight" Grid.Column="1" Grid.Row="3" Height="40" Padding="70 0 0 0" Margin="200 30 0 0" Grid.RowSpan="2" FontSize="30" />
-        <Button Style="{StaticResource Buttonsize}" MaxHeight="40" Name="pushupsbutton" MaxWidth="150" Height="auto" Grid.Column="1" Grid.Row="4" Margin="310 0 0 15" Grid.RowSpan="2" Content="Pushups Table" Click="Pushupsbutton_OnClick"/>
+        <Button Style="{StaticResource Buttonsize}" MaxHeight="40" Name="pushupsbutton" MaxWidth="150" Height="auto" Grid.Column="1" Grid.Row="4" Margin="310 0 0 24" Grid.RowSpan="2" Content="Pushups Table" Click="Pushupsbutton_OnClick"/>
         <Button Style="{StaticResource Buttonsize}" MaxHeight="40" Name="situpsbutton" MaxWidth="150" Height="auto" Grid.Column="1" Grid.Row="3" Margin="310 0 0 0" Grid.RowSpan="3" Content="Situps Table" Click="Situpsbutton_OnClicksbutton_OnClick" />
     </Grid>
 </Page>

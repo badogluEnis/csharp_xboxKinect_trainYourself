@@ -25,7 +25,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <Label Grid.Column="1" Grid.Row="0" Margin="0 0 0 0" Content="Push Ups High Score Table"  FontSize="80" Grid.ColumnSpan="5"/>
+        <Label Grid.Column="1" Grid.Row="0" Margin="0 0 0 0" Content="Sit Ups High Score Table"  FontSize="80" Grid.ColumnSpan="5"/>
 
         <Label Grid.Column="1" Grid.Row="1" Height="80" Name="erstername"  FontSize="60" />
         <TextBox Style="{StaticResource Textboxsize}" Height="60" Grid.Column="3" FontSize="50"  Grid.Row="1" Name="ersterscore" IsReadOnly="True"/>
@@ -38,6 +38,7 @@
 
         <Label Grid.Column="1" Grid.Row="4" Height="80" Name="viertername" FontSize="60"/>
         <TextBox IsReadOnly="True" Style="{StaticResource Textboxsize}" Height="60" Grid.Column="3" Grid.Row="4" FontSize="50" Name="vierterscore"/>
-
+        
+        <Button Grid.Column="2" Grid.Row="6" Style="{StaticResource Buttonsize}" Content="Back" Name="Backbutton" Click="Backbutton_OnClick"/>
     </Grid>
 </Page>
