@@ -15,6 +15,8 @@ namespace Trainyourself.Pages
         private float ShoulderRightX;
         private float ShoulderRightY;
 
+        private bool WarUnten;
+
         private Calibration cal =  new Calibration();
 
         private KinectProvider _kinectProvider = new KinectProvider();
@@ -40,6 +42,16 @@ namespace Trainyourself.Pages
         {
             NavigationService.Navigate(new HauptmenuPage());
             _kinectProvider.Stop();
+        }
+
+        private void CheckIfUp()
+        {
+            
+        }
+
+        private void CheckIfDown()
+        {
+            
         }
 
     }

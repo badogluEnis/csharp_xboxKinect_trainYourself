@@ -21,5 +21,6 @@
         </StackPanel>
         <Button Style="{StaticResource Buttonsize}" Name="QuitButton" Grid.Row="1" Content="Quit" Click="QuitButton_OnClick" Margin="563,161,527,96"/>
         <Label Name="CalLabel"  Content="" Grid.Column="0" Margin="650,37,560,136"  FontSize="85" Grid.Row="1"/>
+        <Label Name="InfoLabel" Content="space between you and the Kinect: 3 steps (For Calibrating make 4 steps)." Margin="-440,109,-464,138" Grid.Row="1" FontSize="65"></Label>
     </Grid>
 </Page>
