@@ -10,6 +10,13 @@ namespace Trainyourself.Pages
     /// </summary>
     public partial class LiveviewSitups
     {
+        private float ShoulderLeftX;
+        private float ShoulderLeftY;
+        private float ShoulderRightX;
+        private float ShoulderRightY;
+
+        private Calibration cal =  new Calibration();
+
         private KinectProvider _kinectProvider = new KinectProvider();
 
         public LiveviewSitups()
@@ -26,7 +33,7 @@ namespace Trainyourself.Pages
             float ShoulderRightX = skeleton.Joints[JointType.ShoulderRight].Position.X;
             float ShoulderRightY = skeleton.Joints[JointType.ShoulderRight].Position.Y;
 
-            Debug.WriteLine($"Right Shoulder x: {ShoulderRightX} y: {ShoulderRightY} \n Left Shoulder x: {ShoulderLeftX} y: {ShoulderLeftY}");
+
         }
 
         private void QuitButton_OnClick(object sender, RoutedEventArgs e)

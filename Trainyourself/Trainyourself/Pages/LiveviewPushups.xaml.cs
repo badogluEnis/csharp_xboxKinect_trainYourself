@@ -1,6 +1,4 @@
-﻿using System;
-using System.Diagnostics;
-using System.Drawing;
+﻿using System.Diagnostics;
 using System.Windows;
 using System.Windows.Media;
 using KinectConnection;
@@ -11,6 +9,8 @@ namespace Trainyourself.Pages
     /// <summary>
     /// Interaction logic for LiveviewPushups.xaml
     /// </summary>
+    /// <seealso cref="System.Windows.Controls.Page" />
+    /// <seealso cref="System.Windows.Markup.IComponentConnector" />
     public partial class LiveviewPushups
     {
         public float ShoulderLeftX;
@@ -19,46 +19,33 @@ namespace Trainyourself.Pages
         public float ShoulderRightY;
         public float ShoulderRightZ;
         public float ShoulderLeftZ;
-        private float ShoulderHandDistanceRightPushups;
-        private float ShoulderHandDistanceLeftPushups;
 
-        private const float CRITERIUMDOWN = 0.20f;
+        private const float CRITERIUMDOWN = 0.24f;
         private const float CRITERIUMUP = 0.18f;
 
-        public float CalibrateLeftShoulderTopY;
-        public float CalibrateRightShoulderTopY;
-        public float CalibrateRightShoulderBottomY;
-        public float CalibrateLeftShoulderBottomY;
         Calibration cal = new Calibration();
 
-        public int counter;
+        public int Counter;
         public bool WarUnten;
 
         private KinectProvider _kinectProvider = new KinectProvider();
 
-        System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
-
+        /// <summary>
+        /// Initializes a new instance of the <see cref="LiveviewPushups"/> class.
+        /// </summary>
         public LiveviewPushups()
         {
             InitializeComponent();
             Image.Source = _kinectProvider._colorBitmap;
-            timer.Interval = 1000;
-            //timer.Tick += TimerOnTick;
-            timer.Start();
             _kinectProvider.PositionChanged += SkeletonChanged;
 
         }
 
-        
-
-        private void TimerOnTick(object sender, EventArgs eventArgs)
-        {
-            
-            Debug.WriteLine($"Right Shoulder x: {ShoulderRightX} y: {ShoulderRightY} | Left Shoulder x: {ShoulderLeftX} y: {ShoulderLeftY}");
-            Debug.WriteLine($"Entfernung rechte Schulter: {ShoulderRightZ} | Entfernung linke Schulter: {ShoulderLeftZ}");
-        }
-
-
+        /// <summary>
+        /// Skeletons the changed.
+        /// </summary>
+        /// <param name="sender">The sender.</param>
+        /// <param name="skeleton">The skeleton.</param>
         private void SkeletonChanged(object sender, Skeleton skeleton)
         {
             ShoulderLeftX = skeleton.Joints[JointType.ShoulderLeft].Position.X;
@@ -68,14 +55,6 @@ namespace Trainyourself.Pages
             ShoulderRightY = skeleton.Joints[JointType.ShoulderRight].Position.Y;
             ShoulderRightZ = skeleton.Joints[JointType.ShoulderRight].Position.Z;
 
-            Debug.WriteLine($"Right Shoulder y: {ShoulderRightY}");
-            Debug.WriteLine($"Left Shoulder y: {ShoulderLeftY}");
-
-            Debug.WriteLine($"Rechte Hand: {skeleton.Joints[JointType.HandRight].Position.Y}");
-            Debug.WriteLine($"Linke Hand: {skeleton.Joints[JointType.HandLeft].Position.Y}");
-
-            Debug.WriteLine($"RIGHT DISTANCE: {cal.ShoulderHandDistanceRight}");
-            Debug.WriteLine($"LEFT HAND :{cal.ShoulderHandDistanceLeft}");
 
             if (cal.IsCalibrated)
             {
@@ -93,16 +72,24 @@ namespace Trainyourself.Pages
             }
         }
 
-        
 
+
+        /// <summary>
+        /// Handles the OnClick event of the QuitButton control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void QuitButton_OnClick(object sender, RoutedEventArgs e)
         {
             _kinectProvider.Dispose();
-            timer.Stop();
             NavigationService.Navigate(new HauptmenuPage());
             
         }
 
+        /// <summary>
+        /// Checks if the User made a Unit so it can count up.
+        /// </summary>
+        /// <param name="skeleton">The skeleton.</param>
         public void CheckCount(Skeleton skeleton)
         {
             if (ShoulderRightY < skeleton.Joints[JointType.HandRight].Position.Y + CRITERIUMDOWN && 
@@ -111,13 +98,17 @@ namespace Trainyourself.Pages
                 skeleton.Joints[JointType.HandRight].Position.Y < ShoulderRightY && 
                 skeleton.Joints[JointType.HandLeft].Position.Y < ShoulderLeftY)
             {
-                counter = counter + 1;
-                Currentrun.Content = $"Current Run: {counter}";
+                Counter = Counter + 1;
+                Currentrun.Content = $"Current Run: {Counter}";
                 WarUnten = true;
                 Debug.WriteLine("DOWN");
             }
         }
 
+        /// <summary>
+        /// Checks up.
+        /// </summary>
+        /// <param name="skeleton">The skeleton.</param>
         public void CheckUp(Skeleton skeleton)
         {
             if (ShoulderRightY > cal.ShoulderHandDistanceRight - CRITERIUMUP && ShoulderLeftY > cal.ShoulderHandDistanceLeft - CRITERIUMUP)
@@ -127,18 +118,5 @@ namespace Trainyourself.Pages
             }
           
         }      
-               
-/*        public void CalibrateTop(Skeleton skeleton)
-        {
-            CalibrateLeftShoulderTopY = skeleton.Joints[JointType.ShoulderLeft].Position.Y;
-            CalibrateRightShoulderTopY = skeleton.Joints[JointType.ShoulderRight].Position.Y;
-        }
-
-        public void CalibrateBottom(Skeleton skeleton)
-        {
-            CalibrateLeftShoulderBottomY = skeleton.Joints[JointType.ShoulderLeft].Position.Y;
-            CalibrateRightShoulderBottomY = skeleton.Joints[JointType.ShoulderRight].Position.Y;
-        }
-*/
     }
 }
