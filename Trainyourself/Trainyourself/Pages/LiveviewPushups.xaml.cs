@@ -22,7 +22,8 @@ namespace Trainyourself.Pages
         private float ShoulderHandDistanceRightPushups;
         private float ShoulderHandDistanceLeftPushups;
 
-        private const float CRITERIUM = 0.12f;
+        private const float CRITERIUMDOWN = 0.20f;
+        private const float CRITERIUMUP = 0.18f;
 
         public float CalibrateLeftShoulderTopY;
         public float CalibrateRightShoulderTopY;
@@ -45,13 +46,14 @@ namespace Trainyourself.Pages
             //timer.Tick += TimerOnTick;
             timer.Start();
             _kinectProvider.PositionChanged += SkeletonChanged;
-            ShoulderHandDistanceRightPushups = cal.ShoulderHandDistanceRight - 0.15f;
-            ShoulderHandDistanceLeftPushups = cal.ShoulderHandDistanceLeft - 0.15f;
 
         }
 
+        
+
         private void TimerOnTick(object sender, EventArgs eventArgs)
         {
+            
             Debug.WriteLine($"Right Shoulder x: {ShoulderRightX} y: {ShoulderRightY} | Left Shoulder x: {ShoulderLeftX} y: {ShoulderLeftY}");
             Debug.WriteLine($"Entfernung rechte Schulter: {ShoulderRightZ} | Entfernung linke Schulter: {ShoulderLeftZ}");
         }
@@ -66,8 +68,14 @@ namespace Trainyourself.Pages
             ShoulderRightY = skeleton.Joints[JointType.ShoulderRight].Position.Y;
             ShoulderRightZ = skeleton.Joints[JointType.ShoulderRight].Position.Z;
 
-            Debug.WriteLine($"Right Shoulder x: {ShoulderRightX} y: {ShoulderRightY} | Left Shoulder x: {ShoulderLeftX} y: {ShoulderLeftY}");
-            Debug.WriteLine($"Entfernung rechte Schulter: {ShoulderRightZ} | Entfernung linke Schulter: {ShoulderLeftZ}");
+            Debug.WriteLine($"Right Shoulder y: {ShoulderRightY}");
+            Debug.WriteLine($"Left Shoulder y: {ShoulderLeftY}");
+
+            Debug.WriteLine($"Rechte Hand: {skeleton.Joints[JointType.HandRight].Position.Y}");
+            Debug.WriteLine($"Linke Hand: {skeleton.Joints[JointType.HandLeft].Position.Y}");
+
+            Debug.WriteLine($"RIGHT DISTANCE: {cal.ShoulderHandDistanceRight}");
+            Debug.WriteLine($"LEFT HAND :{cal.ShoulderHandDistanceLeft}");
 
             if (cal.IsCalibrated)
             {
@@ -85,16 +93,23 @@ namespace Trainyourself.Pages
             }
         }
 
+        
+
         private void QuitButton_OnClick(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new HauptmenuPage());
-            _kinectProvider.Stop();
+            _kinectProvider.Dispose();
             timer.Stop();
+            NavigationService.Navigate(new HauptmenuPage());
+            
         }
 
         public void CheckCount(Skeleton skeleton)
         {
-            if (ShoulderRightY < skeleton.Joints[JointType.HandRight].Position.Y + CRITERIUM && ShoulderLeftY < skeleton.Joints[JointType.HandLeft].Position.Y + CRITERIUM && !WarUnten && skeleton.Joints[JointType.HandRight].Position.Y < ShoulderRightX && skeleton.Joints[JointType.HandLeft].Position.Y < ShoulderLeftY)
+            if (ShoulderRightY < skeleton.Joints[JointType.HandRight].Position.Y + CRITERIUMDOWN && 
+                ShoulderLeftY < skeleton.Joints[JointType.HandLeft].Position.Y + CRITERIUMDOWN && 
+                !WarUnten && 
+                skeleton.Joints[JointType.HandRight].Position.Y < ShoulderRightY && 
+                skeleton.Joints[JointType.HandLeft].Position.Y < ShoulderLeftY)
             {
                 counter = counter + 1;
                 Currentrun.Content = $"Current Run: {counter}";
@@ -105,7 +120,7 @@ namespace Trainyourself.Pages
 
         public void CheckUp(Skeleton skeleton)
         {
-            if (ShoulderRightY > ShoulderHandDistanceRightPushups - CRITERIUM && ShoulderLeftY > ShoulderHandDistanceLeftPushups - CRITERIUM)
+            if (ShoulderRightY > cal.ShoulderHandDistanceRight - CRITERIUMUP && ShoulderLeftY > cal.ShoulderHandDistanceLeft - CRITERIUMUP)
             {
                 WarUnten = false;
                 Debug.WriteLine("UP");

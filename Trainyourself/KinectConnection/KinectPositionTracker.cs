@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Windows;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -6,7 +7,7 @@ using Microsoft.Kinect;
 
 namespace KinectConnection
 {
-    public class KinectProvider
+    public class KinectProvider : IDisposable
     {
         private KinectSensor _sensor;
         private const int SKELETON_COUNT = 6;
@@ -142,6 +143,12 @@ namespace KinectConnection
                         0);
                 }
             }
+        }
+
+        public void Dispose()
+        {
+            Stop();
+            _sensor?.Dispose();
         }
     }
 }

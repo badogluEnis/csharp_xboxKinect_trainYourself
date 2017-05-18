@@ -46,8 +46,8 @@ namespace Trainyourself
 
         private void CalculateShoulderHandDistance()
         {
-            ShoulderHandDistanceRight = ShoulderRightY[ARRAY_LENGHT_HALF] - HandRightY[ARRAY_LENGHT_HALF];
-            ShoulderHandDistanceLeft = ShoulderLeftY[ARRAY_LENGHT_HALF] - HandLeftY[ARRAY_LENGHT_HALF];
+            ShoulderHandDistanceRight = ShoulderRightY[ARRAY_LENGHT_HALF] - HandRightY[ARRAY_LENGHT_HALF] - 0.05f;
+            ShoulderHandDistanceLeft = ShoulderLeftY[ARRAY_LENGHT_HALF] - HandLeftY[ARRAY_LENGHT_HALF] - 0.05f;
         }
 
         private bool CheckArraysForMoves()
