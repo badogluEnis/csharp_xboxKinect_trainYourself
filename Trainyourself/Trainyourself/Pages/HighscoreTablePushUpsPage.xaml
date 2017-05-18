@@ -24,18 +24,20 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+        
+        <Label Grid.Column="1" Grid.Row="0" Margin="0 0 0 0" Content="Push Ups High Score Table"  FontSize="80" Grid.ColumnSpan="5"/>
+        
+        <Label Grid.Column="1" Grid.Row="1" Height="80" Name="erstername"  FontSize="60" />
+        <TextBox Style="{StaticResource Textboxsize}" Height="60" Grid.Column="3" FontSize="50"  Grid.Row="1" Name="ersterscore" IsReadOnly="True"/>
 
-        <Label Grid.Column="1" Grid.Row="1" Height="80" Name="erstername"/>
-        <TextBox Style="{StaticResource Textboxsize}" Height="60" Grid.Column="3" Grid.Row="1" Name="ersterscore"/>
+        <Label Grid.Column="1" Grid.Row="2" Height="80" Name="zweitername" FontSize="60"/>
+        <TextBox Style="{StaticResource Textboxsize}" Height="60" Grid.Column="3" Grid.Row="2" FontSize="50" Name="zweiterscore" IsReadOnly="True"/>
 
-        <Label Grid.Column="1" Grid.Row="2" Height="80" Name="zweitername"/>
-        <TextBox Style="{StaticResource Textboxsize}" Height="60" Grid.Column="3" Grid.Row="2" Name="zweiterscore"/>
+        <Label Grid.Column="1" Grid.Row="3" Height="80" Name="drittertername" FontSize="60"/>
+        <TextBox Style="{StaticResource Textboxsize}" Height="60" Grid.Column="3" Grid.Row="3" FontSize="50" Name="dritterscore" IsReadOnly="True"/>
 
-        <Label Grid.Column="1" Grid.Row="3" Height="80" Name="drittertername"/>
-        <TextBox Style="{StaticResource Textboxsize}" Height="60" Grid.Column="3" Grid.Row="3" Name="dritterscore"/>
-
-        <Label Grid.Column="1" Grid.Row="4" Height="80" Name="viertername"/>
-        <TextBox Style="{StaticResource Textboxsize}" Height="60" Grid.Column="3" Grid.Row="4" Name="vierterscore"/>
+        <Label Grid.Column="1" Grid.Row="4" Height="80" Name="viertername" FontSize="60"/>
+        <TextBox IsReadOnly="True" Style="{StaticResource Textboxsize}" Height="60" Grid.Column="3" Grid.Row="4" FontSize="50" Name="vierterscore"/>
 
     </Grid>
 </Page>

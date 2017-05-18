@@ -150,5 +150,15 @@ namespace Trainyourself.Pages
         {
             if (NavigationService != null) NavigationService.Navigate(new HauptmenuPage());
         }
+
+        private void Pushupsbutton_OnClick(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Highscore());
+        }
+
+        private void Situpsbutton_OnClicksbutton_OnClick(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new HighScoreTableSitUpsPage());
+        }
     }
 }

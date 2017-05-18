@@ -4,7 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       mc:Ignorable="d" 
-      d:DesignHeight="690.223" d:DesignWidth="1299.302"
+      d:DesignHeight="1190.223" d:DesignWidth="1599.302"
       Title="ProfilePage">
 
     <Grid Style="{StaticResource BackgroundGrid}">
@@ -119,11 +119,12 @@
                 <Label Style="{StaticResource FontColor}"  Margin="110 0 0 0" Padding="25 0 0 0" Content="over 40" FontSize="25"/>
             </StackPanel>
         </StackPanel>
-       
+
         <Button Style="{StaticResource Buttonsize}" Content="Back" Click="Button_Click" MaxHeight="40"  MaxWidth="150" Grid.Column="1" Height="Auto" Grid.Row="5" Margin="330,0,20,0" />
 
         <Label Name="errorHeight" Grid.Column="1" Grid.Row="2" Height="40" Padding="70 0 0 0" Margin="200 0 0 10" Grid.RowSpan="2" FontSize="30" />
         <Label Name="errorWeight" Grid.Column="1" Grid.Row="3" Height="40" Padding="70 0 0 0" Margin="200 30 0 0" Grid.RowSpan="2" FontSize="30" />
-       
+        <Button Style="{StaticResource Buttonsize}" MaxHeight="40" Name="pushupsbutton" MaxWidth="150" Height="auto" Grid.Column="1" Grid.Row="4" Margin="310 0 0 15" Grid.RowSpan="2" Content="Pushups Table" Click="Pushupsbutton_OnClick"/>
+        <Button Style="{StaticResource Buttonsize}" MaxHeight="40" Name="situpsbutton" MaxWidth="150" Height="auto" Grid.Column="1" Grid.Row="3" Margin="310 0 0 0" Grid.RowSpan="3" Content="Situps Table" Click="Situpsbutton_OnClicksbutton_OnClick" />
     </Grid>
 </Page>

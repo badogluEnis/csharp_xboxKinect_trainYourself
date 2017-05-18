@@ -89,7 +89,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\HighscoreTable.xaml">
+    <Page Include="Pages\HighscoreTablePushUpsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\HighScoreTableSitUpsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -126,8 +130,11 @@
     <Compile Include="Pages\HauptmenuPage.xaml.cs">
       <DependentUpon>HauptmenuPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\HighscoreTable.xaml.cs">
-      <DependentUpon>HighscoreTable.xaml</DependentUpon>
+    <Compile Include="Pages\HighscoreTablePushUpsPage.xaml.cs">
+      <DependentUpon>HighscoreTablePushUpsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\HighScoreTableSitUpsPage.xaml.cs">
+      <DependentUpon>HighScoreTableSitUpsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\LiveviewSitups.xaml.cs">
       <DependentUpon>LiveviewSitups.xaml</DependentUpon>
