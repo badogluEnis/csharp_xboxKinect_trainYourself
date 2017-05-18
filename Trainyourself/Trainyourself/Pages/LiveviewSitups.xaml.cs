@@ -35,7 +35,8 @@ namespace Trainyourself.Pages
             float ShoulderRightX = skeleton.Joints[JointType.ShoulderRight].Position.X;
             float ShoulderRightY = skeleton.Joints[JointType.ShoulderRight].Position.Y;
 
-
+            CheckIfDown();
+            CheckIfUp();
         }
 
         private void QuitButton_OnClick(object sender, RoutedEventArgs e)
@@ -46,12 +47,18 @@ namespace Trainyourself.Pages
 
         private void CheckIfUp()
         {
-            
+            if (ShoulderLeftY > 0.30 && ShoulderRightY > 0.30)
+            {
+                WarUnten = false;
+                Debug.WriteLine("UP");
+            }
         }
 
         private void CheckIfDown()
         {
-            
+            //counter +1
+            WarUnten = true;
+            Debug.WriteLine("Down");
         }
 
     }

@@ -1,5 +1,4 @@
-using System.Collections.Generic;
-using System.Data.Entity;
+﻿using System.Collections.Generic;
 using System.Linq;
 using Model;
 
@@ -10,6 +9,7 @@ namespace DataAccess
         public UserRepository(TrainContext context) : base(context)
         {
         }
+
         public List<User> Top4ListPushUps()
         {
             return Context.Users.OrderByDescending(u => u.RecordPushups).Take(4).ToList();
