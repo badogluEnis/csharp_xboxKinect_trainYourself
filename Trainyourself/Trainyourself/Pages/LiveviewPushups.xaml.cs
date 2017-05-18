@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Configuration;
+using System.Data.Entity;
 using System.Diagnostics;
 using System.Windows;
 using System.Windows.Media;
@@ -87,6 +88,18 @@ namespace Trainyourself.Pages
         {
             _kinectProvider.Dispose();
             NavigationService.Navigate(new HauptmenuPage());
+            Score score = new Score();
+            using (TrainContext context = new TrainContext())
+            {   
+                UserRepository userRepository = new UserRepository(context);
+                score.UserID = userRepository.GetById(Int32.Parse(ConfigurationManager.AppSettings["LoggedUserId"])).Id;
+                score.Date = DateTime.Now.Date;
+                score.Exercise_Id = 1;
+                score.Score1 = Counter.ToString();
+                context.Scores.Add(score);
+                context.SaveChanges();
+            }
+           
 
         }
 
@@ -108,14 +121,18 @@ namespace Trainyourself.Pages
                 {
                     UserRepository userRepository = new UserRepository(context);
                     User user = userRepository.GetById(Int32.Parse(ConfigurationManager.AppSettings["LoggedUserId"]));
-                    if (Counter > user.RecordPushups)
+                    if (user.RecordPushups == null)
                     {
                         user.RecordPushups = Counter;
                     }
-                    Score score = new Score();
-                    score.UserID = userRepository.GetById(Int32.Parse(ConfigurationManager.AppSettings["LoggedUserId"])).Id;
-                    score.Date = DateTime.Today;
-                    score.Exercise_Id = 1;
+                    if (Counter > user.RecordPushups )
+                    {
+                        user.RecordPushups = Counter;
+                    }
+
+                    context.Users.Attach(user);
+                    context.Entry(user).State = EntityState.Modified;
+                    context.SaveChanges();
                 }
                 WarUnten = true;
                 Debug.WriteLine("DOWN");
