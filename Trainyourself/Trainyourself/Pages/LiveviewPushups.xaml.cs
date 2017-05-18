@@ -19,8 +19,10 @@ namespace Trainyourself.Pages
         public float ShoulderRightY;
         public float ShoulderRightZ;
         public float ShoulderLeftZ;
+        private float ShoulderHandDistanceRightPushups;
+        private float ShoulderHandDistanceLeftPushups;
 
-        private const float CRITERIUM = 0.15f;
+        private const float CRITERIUM = 0.12f;
 
         public float CalibrateLeftShoulderTopY;
         public float CalibrateRightShoulderTopY;
@@ -43,6 +45,8 @@ namespace Trainyourself.Pages
             //timer.Tick += TimerOnTick;
             timer.Start();
             _kinectProvider.PositionChanged += SkeletonChanged;
+            ShoulderHandDistanceRightPushups = cal.ShoulderHandDistanceRight - 0.15f;
+            ShoulderHandDistanceLeftPushups = cal.ShoulderHandDistanceLeft - 0.15f;
 
         }
 
@@ -73,10 +77,11 @@ namespace Trainyourself.Pages
             }
             else
             {
-                cal.Calibrate(skeleton);
                 CalLabel.Content = "CALIBRATING";
                 CalLabel.Foreground = new SolidColorBrush(Colors.Orange);
                 CalLabel.Background = new SolidColorBrush(Colors.Black);
+                cal.Calibrate(skeleton);
+
             }
         }
 
@@ -100,7 +105,7 @@ namespace Trainyourself.Pages
 
         public void CheckUp(Skeleton skeleton)
         {
-            if (ShoulderRightY > cal.ShoulderHandDistanceRight - CRITERIUM && ShoulderLeftY > cal.ShoulderHandDistanceLeft - CRITERIUM)
+            if (ShoulderRightY > ShoulderHandDistanceRightPushups - CRITERIUM && ShoulderLeftY > ShoulderHandDistanceLeftPushups - CRITERIUM)
             {
                 WarUnten = false;
                 Debug.WriteLine("UP");
