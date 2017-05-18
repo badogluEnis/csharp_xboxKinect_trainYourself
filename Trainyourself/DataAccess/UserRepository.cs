@@ -11,6 +11,15 @@ namespace DataAccess
         public UserRepository(TrainContext context) : base(context)
         {
         }
+        public List<User> Top4ListPushUps()
+        {
+            return Context.Users.OrderByDescending(u => u.RecordPushups).Take(4).ToList();
+        }
+
+        public List<User> Top4ListSitUps()
+        {
+            return Context.Users.OrderByDescending(u => u.RecordSitups).Take(4).ToList();
+        }
 
         public bool CheckLogin(string email, string password)
         {
@@ -38,7 +47,8 @@ namespace DataAccess
             }
         }
 
-        public static List<IEntity>>
+
+
 
     }
 }
