@@ -33,7 +33,7 @@ namespace Model
 
         public int? RecordPushups { get; set; }
 
-        public int? RecordSquats { get; set; }
+        public int? RecordSitups { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public ICollection<Score> Scores { get; set; }

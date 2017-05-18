@@ -36,7 +36,7 @@ namespace Trainyourself.Pages
                 erstername.Content = "1. " + userRepository.Top4ListPushUps()[0].Name;
                 ersterscore.Text = Convert.ToString(userRepository.Top4ListPushUps()[0].RecordPushups);
 
-                zweitername.Content = "2. " + userRepository.Top4ListPushUps()()[1].Name;
+                zweitername.Content = "2. " + userRepository.Top4ListPushUps()[1].Name;
                 zweiterscore.Text = Convert.ToString(userRepository.Top4ListPushUps()[1].RecordPushups);
 
                 drittertername.Content = "3. " + userRepository.Top4ListPushUps()[2].Name;
