@@ -27,12 +27,15 @@ Jeder kennt dieses Problem, man ist voll in einer Übung drin und man verzählt 
 
 ## Fazit
 
-Ein kleines Fazit von jedem der Projektmitarbeiter mit einem Besonderen Augenmerk auf die folgenden Punkte:
+Ein kleines Fazit in Form eines QnA von jedem Projekt Mitarbeiter:
 
+Enis Badoglu
 * Funktioniert die Endlösung wie geplant?
+Die Endlösung funktioniert besser als wir uns vorgestellt haben. Meiner Meinung haben wir uns übertroffen
 * Bist du mit dem Projektablauf zufrieden?
+Ja . Ich empfund die Planung und den Ablauf des Projekts sehr angenehm.
 * Was würdest du beim nächsten Mal anders machen?
-* etc.
+Ich würde einen anderen Partner wählen. Nein Spass. Ich denke nicht, dass ich was grosses änderen würde ich fand den Aufbau, die Durchführung, die Realisierung, die Planung und die Projektmanagement Methode sehr gut.
 
 ### Altin Hani
 
