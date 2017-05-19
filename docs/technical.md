@@ -42,7 +42,24 @@ Die Button grössen und Textbox grössen haben wir auch vordefiniert.
   ...
   
   ### Klassendiagramm
-  ...
+  
+  ### Trainyourself
+  
+  ![image](https://cloud.githubusercontent.com/assets/25527030/26237733/a3dad57e-3c76-11e7-86cd-cbe44b3a8e14.png)
+
+  ### Model
+  
+  ![image](https://cloud.githubusercontent.com/assets/25527030/26237942/5cb13278-3c77-11e7-8466-df4b71c08b84.png)
+  
+  ### KinectConnection 
+  
+  ![image](https://cloud.githubusercontent.com/assets/25527030/26237986/80a2c386-3c77-11e7-88bf-041c18ba9679.png)
+
+  ### DataAcces
+  
+  ![image](https://cloud.githubusercontent.com/assets/25527030/26238027/a8261a8e-3c77-11e7-81e1-fde3f1c946cc.png)
+  
+  
   
   
   ## Design
