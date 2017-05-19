@@ -12,7 +12,7 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <Label Style="{StaticResource FontColor}"  Content="Push-Ups" Grid.Column="0" Margin="650 0 0 0"  FontSize="85"/>
+        <Label Style="{StaticResource FontColor}"  Content="Push-Ups" Grid.Column="0" Margin="766,0,-116,0"  FontSize="85"/>
         <Image Name="Image" Grid.Column="1" Grid.Row="0" Margin="0 150 0 0" Width="1120"/>
 
         <StackPanel Orientation="Vertical" Grid.Row="1" Margin="0 105 0 0">
@@ -20,7 +20,7 @@
             <Label Style="{StaticResource FontColor}" Name="Currentrun"  Content="" FontSize="75" Margin="0,0,44,0"/>
         </StackPanel>
         <Button Style="{StaticResource Buttonsize}" Name="QuitButton" Grid.Row="1" Content="Quit" Click="QuitButton_OnClick" Margin="563,161,527,96"/>
-        <Label Name="CalLabel"  Content="" Grid.Column="0" Margin="650,37,560,136"  FontSize="85" Grid.Row="1"/>
-        <Label Name="InfoLabel" Content="space between you and the Kinect: 3 steps (For Calibrating make 4 steps)." Margin="-440,109,-464,138" Grid.Row="1" FontSize="65"></Label>
+        <Label Name="CalLabel"  Content="" Grid.Column="0" Margin="563,0,562,173"  FontSize="85" Grid.Row="1"/>
+        <Label Name="InfoLabel" Content="space between you and the Kinect: 3 steps (For Calibrating make 4 steps)." Margin="476,105,409,168" Grid.Row="1" FontSize="30" Background="White"></Label>
     </Grid>
 </Page>

@@ -78,7 +78,7 @@ namespace Trainyourself.Pages
         }
 
 
-
+         
         /// <summary>
         /// Handles the OnClick event of the QuitButton control.
         /// </summary>

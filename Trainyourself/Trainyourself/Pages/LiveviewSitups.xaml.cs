@@ -56,6 +56,10 @@ namespace Trainyourself.Pages
 
         private void CheckIfDown()
         {
+            if (ShoulderLeftY < 0.30 && ShoulderRightY < 0.30)
+            {
+                
+            }
             //counter +1
             WarUnten = true;
             Debug.WriteLine("Down");
