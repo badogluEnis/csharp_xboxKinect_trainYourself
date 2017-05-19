@@ -35,6 +35,9 @@ namespace Trainyourself.Pages
             float ShoulderRightX = skeleton.Joints[JointType.ShoulderRight].Position.X;
             float ShoulderRightY = skeleton.Joints[JointType.ShoulderRight].Position.Y;
 
+            Debug.WriteLine($"Right: {ShoulderRightY}");
+            Debug.WriteLine($"Left: {ShoulderLeftY}");
+
             CheckIfDown();
             CheckIfUp();
         }
@@ -42,12 +45,12 @@ namespace Trainyourself.Pages
         private void QuitButton_OnClick(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new HauptmenuPage());
-            _kinectProvider.Stop();
+            _kinectProvider.Dispose();
         }
 
         private void CheckIfUp()
         {
-            if (ShoulderLeftY > 0.30 && ShoulderRightY > 0.30)
+            if (ShoulderRightY > 0.50)
             {
                 WarUnten = false;
                 Debug.WriteLine("UP");
@@ -56,13 +59,13 @@ namespace Trainyourself.Pages
 
         private void CheckIfDown()
         {
-            if (ShoulderLeftY < 0.30 && ShoulderRightY < 0.30)
+            if (ShoulderRightY < 0.40)
             {
-                
+                //counter +1
+                WarUnten = true;
+                Debug.WriteLine("Down");
             }
-            //counter +1
-            WarUnten = true;
-            Debug.WriteLine("Down");
+
         }
 
     }
