@@ -31,11 +31,11 @@ Ein kleines Fazit in Form eines QnA von jedem Projekt Mitarbeiter:
 
 Enis Badoglu
 * Funktioniert die Endlösung wie geplant?
-** Die Endlösung funktioniert besser als wir uns vorgestellt haben. Meiner Meinung haben wir uns übertroffen
+ Die Endlösung funktioniert besser als wir uns vorgestellt haben. Meiner Meinung haben wir uns übertroffen
 * Bist du mit dem Projektablauf zufrieden?
-** Ja . Ich empfund die Planung und den Ablauf des Projekts sehr angenehm.
+ Ja . Ich empfund die Planung und den Ablauf des Projekts sehr angenehm.
 * Was würdest du beim nächsten Mal anders machen?
-** Ich würde einen anderen Partner wählen. Nein Spass. Ich denke nicht, dass ich was grosses änderen würde ich fand den Aufbau, die Durchführung, die Realisierung, die Planung und die Projektmanagement Methode sehr gut.
+ Ich würde einen anderen Partner wählen. Nein Spass. Ich denke nicht, dass ich was grosses änderen würde ich fand den Aufbau, die Durchführung, die Realisierung, die Planung und die Projektmanagement Methode sehr gut.
 
 ### Altin Hani
 
