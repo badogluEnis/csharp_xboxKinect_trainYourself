@@ -49,7 +49,7 @@ namespace Trainyourself.Pages
                 RecordPushups.Text = us.RecordPushups.ToString();
                 RecordSitUps.Text = us.RecordSitups.ToString();
 
-               userRepository.GetAVGForPushUps(Int16.Parse(ConfigurationManager.AppSettings["LoggedUserId"]));
+               //userRepository.GetAVGForPushUps(Int16.Parse(ConfigurationManager.AppSettings["LoggedUserId"]));
                 
             }
         }

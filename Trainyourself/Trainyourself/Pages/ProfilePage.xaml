@@ -115,8 +115,8 @@
                 <Label Style="{StaticResource FontColor}"  Margin="85 0 0 0" Padding="25 0 0 0" Content="35 - 39.9" FontSize="25"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="0 0 0 15">
-                <Label Style="{StaticResource FontColor}"  Padding="15 0 0 0" Content="Underweight" FontSize="25"/>
-                <Label Style="{StaticResource FontColor}"  Margin="110 0 0 0" Padding="25 0 0 0" Content="over 40" FontSize="25"/>
+                <Label Style="{StaticResource FontColor}"  Padding="15 0 0 0" Content="Go to the Doctor" FontSize="25"/>
+                <Label Style="{StaticResource FontColor}"  Margin="68 0 0 0" Padding="25 0 0 0" Content="over 40" FontSize="25"/>
             </StackPanel>
         </StackPanel>
 
