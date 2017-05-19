@@ -11,10 +11,31 @@
   
   
   ### Code Style
-  ...
+Wir haben uns dazu entschieden nach jeder Methode eine Zeile Abstand zu lassen. Die Einrückungen werden nach c-Sharp Standard geregelt
+
+
+![image](https://cloud.githubusercontent.com/assets/25527030/26235717/1503a76c-3c6d-11e7-972e-2745ae7e1ea1.png)
   
+Zwischen den Kommentaren und der Funktion darf kein Zeilen Abstand erfolgen. 
   
-  
+![image](https://cloud.githubusercontent.com/assets/25527030/26236187/52d6b2c6-3c6f-11e7-96a5-65b45e35730e.png)
+
+Im WPF schliessen alle Elemente sich selber. (< />)
+
+![image](https://cloud.githubusercontent.com/assets/25527030/26236514/fab300d4-3c70-11e7-8a1d-bd3ebe3196bf.png)
+
+Für den Hintergrund wurde ein Style definiert. 
+
+![image](https://cloud.githubusercontent.com/assets/25527030/26236565/468b7162-3c71-11e7-9f01-92b61820a3f0.png)
+
+Die Button grössen und Textbox grössen haben wir auch vordefiniert.
+
+![image](https://cloud.githubusercontent.com/assets/25527030/26237284/caec0676-3c74-11e7-819d-1108ca2811ec.png)
+
+![image](https://cloud.githubusercontent.com/assets/25527030/26237297/dac9be1c-3c74-11e7-846e-a69fe5edddc3.png)
+
+
+
   ## Architektur
     
   ### Genereller Aufbau der Applikation
