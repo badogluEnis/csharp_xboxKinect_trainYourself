@@ -18,32 +18,68 @@ namespace Trainyourself.Pages
     /// <seealso cref="System.Windows.Markup.IComponentConnector" />
     public partial class LiveviewPushups
     {
+        /// <summary>
+        /// The shoulder left x
+        /// </summary>
         public float ShoulderLeftX;
+        /// <summary>
+        /// The shoulder left y
+        /// </summary>
         public float ShoulderLeftY;
+        /// <summary>
+        /// The shoulder right x
+        /// </summary>
         public float ShoulderRightX;
+        /// <summary>
+        /// The shoulder right y
+        /// </summary>
         public float ShoulderRightY;
+        /// <summary>
+        /// The shoulder right z
+        /// </summary>
         public float ShoulderRightZ;
+        /// <summary>
+        /// The shoulder left z
+        /// </summary>
         public float ShoulderLeftZ;
 
+        /// <summary>
+        /// The criteriumdown
+        /// </summary>
         private const float CRITERIUMDOWN = 0.24f;
+        /// <summary>
+        /// The criteriumup
+        /// </summary>
         private const float CRITERIUMUP = 0.18f;
 
+        /// <summary>
+        /// The cal
+        /// </summary>
         Calibration cal = new Calibration();
 
+        /// <summary>
+        /// The counter
+        /// </summary>
         public int Counter;
+        /// <summary>
+        /// The war unten
+        /// </summary>
         public bool WarUnten;
 
+        /// <summary>
+        /// The kinect provider
+        /// </summary>
         private KinectProvider _kinectProvider = new KinectProvider();
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="LiveviewPushups"/> class.
+        /// Initializes a new instance of the <see cref="LiveviewPushups" /> class.
         /// </summary>
         public LiveviewPushups()
         {
             InitializeComponent();
             Image.Source = _kinectProvider._colorBitmap;
             _kinectProvider.PositionChanged += SkeletonChanged;
-
+            setHighscore();
         }
 
         /// <summary>
@@ -78,12 +114,12 @@ namespace Trainyourself.Pages
         }
 
 
-         
+
         /// <summary>
         /// Handles the OnClick event of the QuitButton control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs" /> instance containing the event data.</param>
         private void QuitButton_OnClick(object sender, RoutedEventArgs e)
         {
             _kinectProvider.Dispose();
@@ -149,6 +185,16 @@ namespace Trainyourself.Pages
             {
                 WarUnten = false;
                 Debug.WriteLine("UP");
+            }
+
+        }
+        public void setHighscore()
+        {
+            using (TrainContext context = new TrainContext())
+            {
+                UserRepository userRepository = new UserRepository(context);
+                User user = userRepository.GetById(Int32.Parse(ConfigurationManager.AppSettings["LoggerUserId"]));
+                Record.Content = user.RecordPushups;
             }
 
         }

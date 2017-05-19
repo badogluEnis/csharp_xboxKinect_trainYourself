@@ -11,14 +11,22 @@ namespace Trainyourself.Pages
     /// <summary>
     /// Interaction logic for ProfilePage.xaml
     /// </summary>
+    /// <seealso cref="System.Windows.Controls.Page" />
+    /// <seealso cref="System.Windows.Markup.IComponentConnector" />
     public partial class ProfilePage
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ProfilePage"/> class.
+        /// </summary>
         public ProfilePage()
         {
             InitializeComponent();
             Setemptylabels();
         }
 
+        /// <summary>
+        /// Setemptylabelses this instance.
+        /// </summary>
         public void Setemptylabels()
         {
             using (TrainContext context = new TrainContext())
@@ -40,23 +48,43 @@ namespace Trainyourself.Pages
             }
         }
 
+        /// <summary>
+        /// Handles the OnClick event of the Backbutton control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void Backbutton_OnClick(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new HauptmenuPage());
         }
 
+        /// <summary>
+        /// Handles the OnClick event of the YourHeightEdit control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void YourHeightEdit_OnClick(object sender, RoutedEventArgs e)
         {
             YourHeightLabel.IsReadOnly = false;
             YourHeightLabel.BorderBrush = Brushes.Blue;
         }
 
+        /// <summary>
+        /// Handles the OnClicknClick event of the YourWeightEdit control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void YourWeightEdit_OnClicknClick(object sender, RoutedEventArgs e)
         {
             YourWeightLabel.IsReadOnly = false;
             YourWeightLabel.BorderBrush = Brushes.Blue;
         }
 
+        /// <summary>
+        /// Handles the OnClick event of the SavebuttonHeight control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void SavebuttonHeight_OnClick(object sender, RoutedEventArgs e)
         {
             if (string.IsNullOrEmpty(YourHeightLabel.Text.Trim()))
@@ -103,6 +131,11 @@ namespace Trainyourself.Pages
             }
         }
 
+        /// <summary>
+        /// Handles the OnClick event of the SavebuttonWeight_OnClickttonWeight control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void SavebuttonWeight_OnClickttonWeight_OnClick(object sender, RoutedEventArgs e)
         {
             if (string.IsNullOrEmpty(YourWeightLabel.Text.Trim()))
@@ -147,16 +180,31 @@ namespace Trainyourself.Pages
             }
         }
 
+        /// <summary>
+        /// Handles the Click event of the Button control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             if (NavigationService != null) NavigationService.Navigate(new HauptmenuPage());
         }
 
+        /// <summary>
+        /// Handles the OnClick event of the Pushupsbutton control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void Pushupsbutton_OnClick(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Highscore());
         }
 
+        /// <summary>
+        /// Handles the OnClick event of the Situpsbutton_OnClicksbutton control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void Situpsbutton_OnClicksbutton_OnClick(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new HighScoreTableSitUpsPage());

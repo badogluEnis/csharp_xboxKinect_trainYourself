@@ -14,18 +14,18 @@ namespace Trainyourself.Pages
     public partial class SigninPage 
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SigninPage"/> class.
+        /// Initializes a new instance of the <see cref="SigninPage" /> class.
         /// </summary>
         public SigninPage()
         {
             InitializeComponent();
         }
-        
+
         /// <summary>
         /// Handles the OnClick event of the SignIn control and shows the error.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs" /> instance containing the event data.</param>
         private void SignIn_OnClick(object sender, RoutedEventArgs e)
         {
             using (TrainContext context = new TrainContext())
@@ -60,12 +60,17 @@ namespace Trainyourself.Pages
         /// Handles the OnClick event of the NotRegistered control and navigate to the register page.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs" /> instance containing the event data.</param>
         private void NotRegistered_OnClick(object sender, RoutedEventArgs e)
         {
             if (NavigationService != null) NavigationService.Navigate(new RegisterPage());
         }
 
+        /// <summary>
+        /// Handles the OnClick event of the QuitButton control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void QuitButton_OnClick(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();

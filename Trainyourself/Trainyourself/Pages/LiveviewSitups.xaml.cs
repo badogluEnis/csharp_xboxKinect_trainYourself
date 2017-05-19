@@ -1,33 +1,73 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Configuration;
+using System.Diagnostics;
 using System.Windows;
+using DataAccess;
 using KinectConnection;
 using Microsoft.Kinect;
+using Model;
 
 namespace Trainyourself.Pages
 {
     /// <summary>
     /// Interaction logic for Liveview.xaml
     /// </summary>
+    /// <seealso cref="System.Windows.Controls.Page" />
+    /// <seealso cref="System.Windows.Markup.IComponentConnector" />
     public partial class LiveviewSitups
     {
+        /// <summary>
+        /// The shoulder left x
+        /// </summary>
         private float ShoulderLeftX;
+        /// <summary>
+        /// The shoulder left y
+        /// </summary>
         private float ShoulderLeftY;
+        /// <summary>
+        /// The shoulder right x
+        /// </summary>
         private float ShoulderRightX;
+        /// <summary>
+        /// The shoulder right y
+        /// </summary>
         private float ShoulderRightY;
 
+        /// <summary>
+        /// The counter
+        /// </summary>
+        public int counter;
+        /// <summary>
+        /// The war unten
+        /// </summary>
         private bool WarUnten;
 
-        private Calibration cal =  new Calibration();
+        /// <summary>
+        /// The cal
+        /// </summary>
+        private Calibration cal = new Calibration();
 
+        /// <summary>
+        /// The kinect provider
+        /// </summary>
         private KinectProvider _kinectProvider = new KinectProvider();
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="LiveviewSitups"/> class.
+        /// </summary>
         public LiveviewSitups()
         {
             InitializeComponent();
             Image.Source = _kinectProvider._colorBitmap;
-           _kinectProvider.PositionChanged += SkeletonChanged;
+            _kinectProvider.PositionChanged += SkeletonChanged;
+            setHighscore();
         }
 
+        /// <summary>
+        /// Skeletons the changed.
+        /// </summary>
+        /// <param name="sender">The sender.</param>
+        /// <param name="skeleton">The skeleton.</param>
         private void SkeletonChanged(object sender, Skeleton skeleton)
         {
             float ShoulderLeftX = skeleton.Joints[JointType.ShoulderLeft].Position.X;
@@ -42,12 +82,20 @@ namespace Trainyourself.Pages
             CheckIfUp();
         }
 
+        /// <summary>
+        /// Handles the OnClick event of the QuitButton control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void QuitButton_OnClick(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new HauptmenuPage());
             _kinectProvider.Dispose();
         }
 
+        /// <summary>
+        /// Checks if up.
+        /// </summary>
         private void CheckIfUp()
         {
             if (ShoulderRightY > 0.50)
@@ -57,13 +105,47 @@ namespace Trainyourself.Pages
             }
         }
 
+        /// <summary>
+        /// Checks if down.
+        /// </summary>
         private void CheckIfDown()
         {
             if (ShoulderRightY < 0.40)
             {
-                //counter +1
+                counter += 1;
+
+                Currentrun.Content = Currentrun.Content = $"Current Run: {counter}";
+
+                using (TrainContext context = new TrainContext())
+                {
+                    UserRepository userRepository = new UserRepository(context);
+                    User user = userRepository.GetById(Int32.Parse(ConfigurationManager.AppSettings["LoggerUserId"]));
+                    if (user.RecordSitups == null)
+                    {
+                        user.RecordSitups = counter;
+                    }
+                    if (counter > user.RecordSitups)
+                    {
+                        user.RecordSitups = counter;
+                    }
+
+                }
                 WarUnten = true;
                 Debug.WriteLine("Down");
+            }
+
+        }
+
+        /// <summary>
+        /// Sets the highscore.
+        /// </summary>
+        public void setHighscore()
+        {
+            using (TrainContext context = new TrainContext())
+            {
+                UserRepository userRepository = new UserRepository(context);
+                User user = userRepository.GetById(Int32.Parse(ConfigurationManager.AppSettings["LoggerUserId"]));
+                Record.Content = user.RecordSitups;
             }
 
         }

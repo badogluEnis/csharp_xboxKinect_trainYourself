@@ -70,7 +70,7 @@ namespace Trainyourself.Pages
             set { Passwortrep = value; }
         }
         /// <summary>
-        /// Initializes a new instance of the <see cref="RegisterPage"/> class.
+        /// Initializes a new instance of the <see cref="RegisterPage" /> class.
         /// </summary>
         public RegisterPage()
         {
@@ -92,6 +92,13 @@ namespace Trainyourself.Pages
 
         }
 
+        /// <summary>
+        /// Determines whether [is email valid] [the specified emailaddress].
+        /// </summary>
+        /// <param name="emailaddress">The emailaddress.</param>
+        /// <returns>
+        ///   <c>true</c> if [is email valid] [the specified emailaddress]; otherwise, <c>false</c>.
+        /// </returns>
         public bool IsEmailValid(string emailaddress)
         {
             try
@@ -110,7 +117,7 @@ namespace Trainyourself.Pages
         /// Handles the Click event of the Button control.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs" /> instance containing the event data.</param>
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             string name = Vornameinput1.Text;
@@ -160,6 +167,11 @@ namespace Trainyourself.Pages
             }
         }
 
+        /// <summary>
+        /// Handles the OnClick event of the QuitButton control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void QuitButton_OnClick(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new SigninPage());

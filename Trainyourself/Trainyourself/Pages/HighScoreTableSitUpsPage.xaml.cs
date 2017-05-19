@@ -20,13 +20,21 @@ namespace Trainyourself.Pages
     /// <summary>
     /// Interaction logic for HighScoreTableSitUpsPage.xaml
     /// </summary>
+    /// <seealso cref="System.Windows.Controls.Page" />
+    /// <seealso cref="System.Windows.Markup.IComponentConnector" />
     public partial class HighScoreTableSitUpsPage : Page
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="HighScoreTableSitUpsPage"/> class.
+        /// </summary>
         public HighScoreTableSitUpsPage()
         {
             InitializeComponent();
             Filllabels();
         }
+        /// <summary>
+        /// Filllabelses this instance.
+        /// </summary>
         public void Filllabels()
         {
             using (TrainContext context = new TrainContext())
@@ -48,6 +56,11 @@ namespace Trainyourself.Pages
 
         }
 
+        /// <summary>
+        /// Handles the OnClick event of the Backbutton control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void Backbutton_OnClick(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new ProfilePage());

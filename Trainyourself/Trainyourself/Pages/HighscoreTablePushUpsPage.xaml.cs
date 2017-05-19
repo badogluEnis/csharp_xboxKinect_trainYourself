@@ -20,13 +20,21 @@ namespace Trainyourself.Pages
     /// <summary>
     /// Interaction logic for Highscore.xaml
     /// </summary>
+    /// <seealso cref="System.Windows.Controls.Page" />
+    /// <seealso cref="System.Windows.Markup.IComponentConnector" />
     public partial class Highscore : Page
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Highscore"/> class.
+        /// </summary>
         public Highscore()
         {
             InitializeComponent();
             filllabels();
         }
+        /// <summary>
+        /// Filllabelses this instance.
+        /// </summary>
         public void filllabels()
         {
             using (TrainContext context = new TrainContext())
@@ -48,6 +56,11 @@ namespace Trainyourself.Pages
 
         }
 
+        /// <summary>
+        /// Handles the OnClick event of the Backbutton control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void Backbutton_OnClick(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new ProfilePage());

@@ -6,22 +6,68 @@ using Trainyourself.Pages;
 
 namespace Trainyourself
 {
+    /// <summary>
+    /// 
+    /// </summary>
     class Calibration
     {private const int ARRAY_LENGTH = 101;
+        /// <summary>
+        /// The tollerance
+        /// </summary>
         private const float TOLLERANCE = 0.4f;
+        /// <summary>
+        /// The array lenght half
+        /// </summary>
         private const int ARRAY_LENGHT_HALF = 50;
+        /// <summary>
+        /// The shoulder right y
+        /// </summary>
         private float[] ShoulderRightY = new float[ARRAY_LENGTH];
+        /// <summary>
+        /// The shoulder left y
+        /// </summary>
         private float[] ShoulderLeftY = new float[ARRAY_LENGTH];
+        /// <summary>
+        /// The hand right y
+        /// </summary>
         private float[] HandRightY = new float[ARRAY_LENGTH];
+        /// <summary>
+        /// The hand left y
+        /// </summary>
         private float[] HandLeftY = new float[ARRAY_LENGTH];
+        /// <summary>
+        /// The i
+        /// </summary>
         private int i;
 
+        /// <summary>
+        /// Gets the shoulder hand distance right.
+        /// </summary>
+        /// <value>
+        /// The shoulder hand distance right.
+        /// </value>
         public float ShoulderHandDistanceRight { get; private set; }
+        /// <summary>
+        /// Gets the shoulder hand distance left.
+        /// </summary>
+        /// <value>
+        /// The shoulder hand distance left.
+        /// </value>
         public float ShoulderHandDistanceLeft { get; private set; }
+        /// <summary>
+        /// Gets a value indicating whether this instance is calibrated.
+        /// </summary>
+        /// <value>
+        ///   <c>true</c> if this instance is calibrated; otherwise, <c>false</c>.
+        /// </value>
         public bool IsCalibrated { get; private set; }
 
-        
 
+
+        /// <summary>
+        /// Calibrates the specified skeleton.
+        /// </summary>
+        /// <param name="skeleton">The skeleton.</param>
         public void Calibrate(Skeleton skeleton)
         {
             if (!IsCalibrated)
@@ -44,12 +90,19 @@ namespace Trainyourself
             
         }
 
+        /// <summary>
+        /// Calculates the shoulder hand distance.
+        /// </summary>
         private void CalculateShoulderHandDistance()
         {
             ShoulderHandDistanceRight = ShoulderRightY[ARRAY_LENGHT_HALF] - HandRightY[ARRAY_LENGHT_HALF] - 0.05f;
             ShoulderHandDistanceLeft = ShoulderLeftY[ARRAY_LENGHT_HALF] - HandLeftY[ARRAY_LENGHT_HALF] - 0.05f;
         }
 
+        /// <summary>
+        /// Checks the arrays for moves.
+        /// </summary>
+        /// <returns></returns>
         private bool CheckArraysForMoves()
         {
 
@@ -79,6 +132,10 @@ namespace Trainyourself
             return false;
         }
 
+        /// <summary>
+        /// Fills the array.
+        /// </summary>
+        /// <param name="skeleton">The skeleton.</param>
         private void FillArray(Skeleton skeleton)
         {
                 ShoulderRightY[i] = skeleton.Joints[JointType.ShoulderRight].Position.Y;
@@ -88,6 +145,9 @@ namespace Trainyourself
                 i++;
         }
 
+        /// <summary>
+        /// Clears the array.
+        /// </summary>
         private void ClearArray()
         {
             ShoulderRightY = new float[ARRAY_LENGTH];

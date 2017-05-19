@@ -46,7 +46,7 @@ namespace Trainyourself.Pages
             set { height = value; }
         }
         /// <summary>
-        /// Initializes a new instance of the <see cref="MoreinformationPage"/> class.
+        /// Initializes a new instance of the <see cref="MoreinformationPage" /> class.
         /// </summary>
         /// <param name="user">The user.</param>
         public MoreinformationPage(User user)
@@ -104,6 +104,13 @@ namespace Trainyourself.Pages
             return true;
         }
 
+        /// <summary>
+        /// Determines whether the specified string contains comma.
+        /// </summary>
+        /// <param name="String">The string.</param>
+        /// <returns>
+        ///   <c>true</c> if the specified string contains comma; otherwise, <c>false</c>.
+        /// </returns>
         public bool ContainsComma(string String)
         {
             return String.Contains(",");
@@ -113,7 +120,7 @@ namespace Trainyourself.Pages
         /// Handles the Click event of the Button control and updates the weight and height in the database.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs" /> instance containing the event data.</param>
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
@@ -138,6 +145,11 @@ namespace Trainyourself.Pages
 
         }
 
+        /// <summary>
+        /// Handles the OnClick event of the Quit control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void Quit_OnClick(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
