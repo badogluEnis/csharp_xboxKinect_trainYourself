@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Configuration;
 using System.Globalization;
+using System.Linq;
 using System.Windows;
 using System.Windows.Media;
 using DataAccess;
@@ -44,7 +46,11 @@ namespace Trainyourself.Pages
                 double Round = Math.Round(bmi, 2);
                 BMIOutput.Text = Convert.ToString(Round);
                 BMIOutput.FontSize = 23;
+                RecordPushups.Text = us.RecordPushups.ToString();
+                RecordSitUps.Text = us.RecordSitups.ToString();
 
+               userRepository.GetAVGForPushUps(Int16.Parse(ConfigurationManager.AppSettings["LoggedUserId"]));
+                
             }
         }
 
