@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\Da
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KinectConnection", "KinectConnection\KinectConnection.csproj", "{DA5AD8FD-84A6-4B24-B7DB-76022592BF19}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CordinateDisplayer", "test\CordinateDisplayer.csproj", "{270527BA-BF02-4CFD-AC57-6E747F567C79}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,10 +33,6 @@ Global
 		{DA5AD8FD-84A6-4B24-B7DB-76022592BF19}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA5AD8FD-84A6-4B24-B7DB-76022592BF19}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA5AD8FD-84A6-4B24-B7DB-76022592BF19}.Release|Any CPU.Build.0 = Release|Any CPU
-		{270527BA-BF02-4CFD-AC57-6E747F567C79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{270527BA-BF02-4CFD-AC57-6E747F567C79}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{270527BA-BF02-4CFD-AC57-6E747F567C79}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{270527BA-BF02-4CFD-AC57-6E747F567C79}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
