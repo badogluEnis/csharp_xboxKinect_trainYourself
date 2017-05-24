@@ -29,6 +29,14 @@ Jeder kennt dieses Problem, man ist voll in einer Übung drin und man verzählt 
 
 Ein kleines Fazit in Form eines QnA von jedem Projekt Mitarbeiter:
 
+Altin Hani
+* Funktioniert die Endlösung wie geplant?
+ Das Design und die Funkionen gefallen mir sehr, wir haben uns sehr angestrengt um unser Programm so Benutzerfreundlich wie möglich zu machen. 
+ * Bist du mit dem Projektablauf zufrieden?
+ Die Planungsphase konnten wir bei diesem Projekt schneller und effizienter durchführen. Was dazu geführt hat, dass wir mehr Zeit hatten uns um die Details zu kümmern. 
+ * Was Würdest du beim nächsten Mal anders machen?
+ Ich würde noch eine weitere Übung hinzu nehmen. Damit es unseren Usern nicht langweillig wird. Beim nächsten mal würde ich noch die Spracherkennung versuchen einzubauen, dies hat mich sehr interessiert aber aus Zeitlichem Mangel konnten wir uns diesen Wunsch nicht erfüllen.
+ 
 Enis Badoglu
 * Funktioniert die Endlösung wie geplant?
  Die Endlösung funktioniert besser als wir uns vorgestellt haben. Meiner Meinung haben wir uns übertroffen
@@ -36,6 +44,7 @@ Enis Badoglu
  Ja . Ich empfand die Planung und den Ablauf des Projekts sehr angenehm.
 * Was würdest du beim nächsten Mal anders machen?
  Ich denke nicht, dass ich was grosses änderen würde ich fand den Aufbau, die Durchführung, die Realisierung, die Planung und die Projektmanagement Methode sehr gut.
+
 
 ### Altin Hani
 
