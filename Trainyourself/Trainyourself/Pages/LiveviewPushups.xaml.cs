@@ -131,7 +131,7 @@ namespace Trainyourself.Pages
                 score.UserID = userRepository.GetById(Int32.Parse(ConfigurationManager.AppSettings["LoggedUserId"])).Id;
                 score.Date = DateTime.Now.Date;
                 score.Exercise_Id = 1;
-                score.Score1 = Counter.ToString();
+                score.Score1 = Counter;
                 context.Scores.Add(score);
                 context.SaveChanges();
             }

@@ -26,8 +26,7 @@ namespace Model
                 .HasForeignKey(e => e.Exercise_Id);
 
             modelBuilder.Entity<Score>()
-                .Property(e => e.Score1)
-                .IsUnicode(false);
+                .Property(e => e.Score1);
 
             modelBuilder.Entity<User>()
                 .Property(e => e.Lastname)

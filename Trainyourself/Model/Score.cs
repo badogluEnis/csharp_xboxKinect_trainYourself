@@ -12,8 +12,7 @@ namespace Model
         public int? UserID { get; set; }
 
         [Column("Score")]
-        [StringLength(50)]
-        public string Score1 { get; set; }
+        public int Score1 { get; set; }
 
         [Column(TypeName = "date")]
         public DateTime? Date { get; set; }
