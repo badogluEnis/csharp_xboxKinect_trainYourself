@@ -29,7 +29,7 @@ Jeder kennt dieses Problem, man ist voll in einer Übung drin und man verzählt 
 
 #### Ein kleines Fazit in Form eines QnA von jedem Projekt Mitarbeiter:
 
-Altin Hani
+##### Altin Hani
 
 * Funktioniert die Endlösung wie geplant?
 
@@ -43,7 +43,7 @@ Die Planungsphase konnten wir bei diesem Projekt schneller und effizienter durch
 
 Ich würde noch eine weitere Übung hinzu nehmen. Damit es unseren Usern nicht langweillig wird. Beim nächsten mal würde ich noch die Spracherkennung versuchen einzubauen, dies hat mich sehr interessiert aber aus Zeitlichem Mangel konnten wir uns diesen Wunsch nicht erfüllen.
  
-Enis Badoglu
+##### Enis Badoglu
 
 * Funktioniert die Endlösung wie geplant?
 
@@ -57,11 +57,18 @@ Ja . Ich empfand die Planung und den Ablauf des Projekts sehr angenehm.
 
 Ich denke nicht, dass ich was grosses änderen würde ich fand den Aufbau, die Durchführung, die Realisierung, die Planung und die Projektmanagement Methode sehr gut.
 
+## Arbeitsaufteilung:
+#### Altin Hani
 
-### Altin Hani
 
-Guiarbeiten, Logik, Datenaustausch mit Kinect
 
-### Enis Badoglu
+* Design
+* Gui
+* Logik("Code Behind")
+* Datenaustausch mit Kinect 
 
-Datenbankenhandling, Logik, Tracking des Skellets
+#### Enis Badoglu
+
+* Datenbankhanddling 
+* Logik("Code Behind")
+* Tracking des Skellets
