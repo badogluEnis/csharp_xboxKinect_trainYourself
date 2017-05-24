@@ -20,6 +20,8 @@
             <Label Style="{StaticResource FontColor}" Name="Record" Content="" FontSize="75" Width="auto" Margin="0,0,840,0"/>
             <Label Style="{StaticResource FontColor}" Name="Currentrun"  Content="" FontSize="75" Margin="0,0,44,0"/>
         </StackPanel>
-        <Button Style="{StaticResource Buttonsize}" Name="QuitButton" Grid.Row="1" Content="Quit" Click="QuitButton_OnClick"/>
+        <Button Style="{StaticResource Buttonsize}" Name="QuitButton" Grid.Row="1" Content="Quit" Click="QuitButton_OnClick" Margin="545,162,545,123"/>
+        <Label Name="InfoLabel" Content="space between you and the Kinect: 3 steps (For Calibrating make 4 steps)." Margin="476,105,273,168" Grid.Row="1" FontSize="30" Width="auto" Background="White"></Label>
+
     </Grid>
 </Page>
