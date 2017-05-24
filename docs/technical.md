@@ -45,17 +45,33 @@ Die Button grössen und Textbox grössen haben wir auch vordefiniert.
   
   ### Trainyourself
   
+  * In diesem Projekt ist das ganze GUI vorhanden.
+  * Jede GUI Seite hat einen Code behind.
+  * Wir haben hir sehr viel mit Events gearbeitet. 
+  * in den Klassen Livesitup/Livepushups werden die ganzen Messungen durgefürt um zu schauen ob ein Situp/Pushup gemacht wurde.
+  * In der Klasse Calibartion wird die höhe von Hand zu Schulter gemessen, mit dieser werden dann die Situps berechnet. 
+  
   ![image](https://cloud.githubusercontent.com/assets/25527030/26237733/a3dad57e-3c76-11e7-86cd-cbe44b3a8e14.png)
 
   ### Model
+  
+  * Die Klassen Score, User und Exercise sind gleichzeitig auch Tabellen in unserer Datenbank mit den jeweiligen Attributen. 
+  * Diese Klassen wurden uns bei der Verbindung zur Datenbank von C-Sharp erstellt.
   
   ![image](https://cloud.githubusercontent.com/assets/25527030/26237942/5cb13278-3c77-11e7-8466-df4b71c08b84.png)
   
   ### KinectConnection 
   
+  * Hier stellen wir die Verbindung zur Kineckt her.
+  * Es wir auch die Kamera aktiviert.
+  * Die Sensoren um die einzelnen Punkte zu tracken werden hier eingeschaltet.
+  
   ![image](https://cloud.githubusercontent.com/assets/25527030/26237986/80a2c386-3c77-11e7-88bf-041c18ba9679.png)
 
   ### DataAcces
+  
+  * Die von uns am meisten gebrauchte Klasse hier ist das UserRepository, hier haben wir alle Sql "Querys" geschrieben.(alle Querys wurden mit Linq geschrieben)
+  * Die Klasse UserRepository eerbt von der Abstakten Klassen AbstractRepository, welche einige wichtige Funktion beinhaltet( Add, Delete, GetById etc.) 
   
   ![image](https://cloud.githubusercontent.com/assets/25527030/26238027/a8261a8e-3c77-11e7-81e1-fde3f1c946cc.png)
   
