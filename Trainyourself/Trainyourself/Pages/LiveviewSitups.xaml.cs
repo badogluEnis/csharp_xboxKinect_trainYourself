@@ -119,14 +119,16 @@ namespace Trainyourself.Pages
                 using (TrainContext context = new TrainContext())
                 {
                     UserRepository userRepository = new UserRepository(context);
-                    User user = userRepository.GetById(Int32.Parse(ConfigurationManager.AppSettings["LoggerUserId"]));
+                    User user = userRepository.GetById(Int32.Parse(ConfigurationManager.AppSettings["LoggedUserId"]));
                     if (user.RecordSitups == null)
                     {
                         user.RecordSitups = counter;
+                        Record.Content = $"Record: {user.RecordSitups}";
                     }
                     if (counter > user.RecordSitups)
                     {
                         user.RecordSitups = counter;
+                        Record.Content = $"Record: {user.RecordSitups}";
                     }
 
                 }
@@ -144,11 +146,12 @@ namespace Trainyourself.Pages
             using (TrainContext context = new TrainContext())
             {
                 UserRepository userRepository = new UserRepository(context);
-                User user = userRepository.GetById(Int32.Parse(ConfigurationManager.AppSettings["LoggerUserId"]));
-                Record.Content = user.RecordSitups;
+                User user = userRepository.GetById(Int32.Parse(ConfigurationManager.AppSettings["LoggedUserId"]));
+                Record.Content = $"Record: {user.RecordSitups}" ;
             }
 
         }
 
     }
+
 }

@@ -126,7 +126,7 @@ namespace Trainyourself.Pages
             NavigationService.Navigate(new HauptmenuPage());
             Score score = new Score();
             using (TrainContext context = new TrainContext())
-            {   
+            {
                 UserRepository userRepository = new UserRepository(context);
                 score.UserID = userRepository.GetById(Int32.Parse(ConfigurationManager.AppSettings["LoggedUserId"])).Id;
                 score.Date = DateTime.Now.Date;
@@ -135,7 +135,7 @@ namespace Trainyourself.Pages
                 context.Scores.Add(score);
                 context.SaveChanges();
             }
-           
+
 
         }
 
@@ -160,10 +160,12 @@ namespace Trainyourself.Pages
                     if (user.RecordPushups == null)
                     {
                         user.RecordPushups = Counter;
+                        Record.Content = $"Record: {user.RecordPushups}";
                     }
-                    if (Counter > user.RecordPushups )
+                    if (Counter > user.RecordPushups)
                     {
                         user.RecordPushups = Counter;
+                        Record.Content = $"Record: {user.RecordPushups}";
                     }
 
                     context.Users.Attach(user);
@@ -188,13 +190,14 @@ namespace Trainyourself.Pages
             }
 
         }
+
         public void setHighscore()
         {
             using (TrainContext context = new TrainContext())
             {
                 UserRepository userRepository = new UserRepository(context);
-                User user = userRepository.GetById(Int32.Parse(ConfigurationManager.AppSettings["LoggerUserId"]));
-                Record.Content = user.RecordPushups;
+                User user = userRepository.GetById(Int32.Parse(ConfigurationManager.AppSettings["LoggedUserId"]));
+                Record.Content = $"Record: {user.RecordPushups}";
             }
 
         }
