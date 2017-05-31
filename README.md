@@ -9,7 +9,8 @@ Jeder kennt dieses Problem, man ist voll in einer Übung drin und man verzählt 
 
 * [Altin Hani](https://github.com/xahanix) (Scrum Master , Team Member)
 * [Enis Badoglu](https://github.com/badogluEnis) (Team Member)
-
+* [Samuel Wicky](https://github.com/soxyl) (Product Owner) 
+* [Yves Peissard](https://github.com/)
 ## Dokumentation
 
 * [Benutzerhandbuch](docs/usermanual.md)
