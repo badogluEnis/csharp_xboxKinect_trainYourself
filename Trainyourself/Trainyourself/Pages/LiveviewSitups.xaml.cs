@@ -91,6 +91,18 @@ namespace Trainyourself.Pages
         {
             NavigationService.Navigate(new HauptmenuPage());
             _kinectProvider.Dispose();
+
+            Score score = new Score();
+            using (TrainContext context = new TrainContext())
+            {
+                UserRepository userRepository = new UserRepository(context);
+                score.UserID = userRepository.GetById(Int32.Parse(ConfigurationManager.AppSettings["LoggedUserId"])).Id;
+                score.Date = DateTime.Now.Date;
+                score.Exercise_Id = 2;
+                score.Score1 = counter;
+                context.Scores.Add(score);
+                context.SaveChanges();
+            }
         }
 
         /// <summary>

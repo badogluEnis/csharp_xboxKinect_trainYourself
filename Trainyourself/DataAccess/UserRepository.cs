@@ -68,9 +68,15 @@ namespace DataAccess
             return Context.Users.Any(u => u.Email == mail);
         }
 
-        //public List<string> GetAVGForPushUps(int id)
-        //{
-        //    return Context.Scores.Where(s => s.UserID == id).Select(score => score.Score1).ToList();
-        //}
+        public List<int> GetAVGForPushUps(int id)
+        {
+            return Context.Scores.Where(s => s.UserID == id && s.Exercise_Id == 1).Select(score => score.Score1).ToList();
+        }
+
+        public List<int> GetAVGForSitUps(int id)
+        {
+            return Context.Scores.Where(s => s.UserID == id && s.Exercise_Id == 2).Select(score => score.Score1).ToList();
+        }
+
     }
 }
