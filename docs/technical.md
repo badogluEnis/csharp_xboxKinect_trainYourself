@@ -108,12 +108,12 @@ Die Button grösse und Textbox grösse haben wir auch vordefiniert.
   Wie vorher in der Dokumentation erwähnt, haben wir in unserem Projekt eine Kinect eingebaut. In diesem Teil der Doku werden wir alles   was in unserem Projekt mit der Kinect zu tun hat, dokumentieren und festhalten.
   
   ### Die Kamera in der Liveview
-  In der Live View sieht man einen Livestrem von sich selber beim Übungen machen.
+  In der Live View sieht man ein Livebild von sich selber. So kann man sich beim Übungen machen selber zuschauen.
   
  ##### Wie haben wir es gemacht?
-  Wir haben im Designer ein Image Paltziert welches wir im Code behind per Namen ansprechen. Wir bekommen von der Kineckt ein Bild in    Binär, dieser Binärcode wird in einem Array abgespeichert. Danach wird eine Writable Bitmap hergestellt und in diese der verher   gefüllte Array übertragen. Vorher wird noch der "Zeilenumbruch" festegelegt, damit das Programm weiss wo es den Binär Code trennen muss. Es wird immer wieder diese Writable Bitmap in unser Image geladen. 
+ Beispiel mit dem getracktem Skellet(funktioniert beim Livebild genau gleich einfach mit bilder): 
   
-  
+  ![trainyourself1](https://cloud.githubusercontent.com/assets/25528700/26634868/34a267e8-4618-11e7-9933-908f06531720.jpg)
   
   
   #### [Zurück](../README.md)
