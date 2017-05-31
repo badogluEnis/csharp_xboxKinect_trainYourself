@@ -111,9 +111,11 @@ Die Button grösse und Textbox grösse haben wir auch vordefiniert.
   In der Live View sieht man ein Livebild von sich selber. So kann man sich beim Übungen machen selber zuschauen.
   
  ##### Wie haben wir es gemacht?
- Beispiel mit dem getracktem Skellet(funktioniert beim Livebild genau gleich einfach mit bilder): 
+ Beispiel mit dem Skellet, welches getrackt wird(funktioniert beim Livebild genau gleich einfach mit bilder): 
   
   ![trainyourself1](https://cloud.githubusercontent.com/assets/25528700/26634868/34a267e8-4618-11e7-9933-908f06531720.jpg)
+  
+  Klicke [hier](https://msdn.microsoft.com/en-us/library/17sde2xt(v=vs.90).aspx) um zur Dokumentation von Events und Delegates zu geraten. 
   
   
   #### [Zurück](../README.md)
