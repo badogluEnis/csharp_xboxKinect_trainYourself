@@ -37,7 +37,11 @@ Die Button grössen und Textbox grössen haben wir auch vordefiniert.
 
 
   ## Architektur
-    
+  
+  ### Sequenzdiagramm
+  * [1.Sequenzdiagramm](img/1.Sequenzdiagramm.png)
+  * [2.Sequenzdiagramm](img/2.Sequenzdiagramm.png)
+      
   ### Genereller Aufbau der Applikation
   ...
   
@@ -89,10 +93,6 @@ Die Button grössen und Textbox grössen haben wir auch vordefiniert.
   * [Liveview Push-Ups](img/liveview.png)
   * [Liveview Sit-Ups](img/liveview2.png)
   * [Profil](img/profile.png)
-  
-  
-  ### Sequenzdiagramm
-  Unser aktuelles Sequenzdiagramm finden sie [hier](img/sd_tys.PNG).
   
   ## Datenbank und Entity Framework
   In unserem Projekt haben wir auch eine Datenbank integriert. Um Userdaten sowie auch Trainingsfortschritte zu speichern.
