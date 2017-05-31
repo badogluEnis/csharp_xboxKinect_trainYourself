@@ -4,19 +4,18 @@
   
   
   ### Setup
-  Dieses Projekt wurde auf Windows 7 Enterprise Service Pack 1 mit Visual Studio 2015 Professional (Verison 14.0.25431.01 Update 3) programmiert. 
+Dieses Projekt wurde auf Windows 7 Enterprise Service Pack 1 mit Visual Studio 2015 Professional (Version 14.0.25431.01 Update 3) programmiert. 
   
   Folgende Gadgets werden verwendet:
   Kinect v1
   
   
   ### Code Style
-Wir haben uns dazu entschieden nach jeder Methode eine Zeile Abstand zu lassen. Die Einrückungen werden nach c-Sharp Standard geregelt
-
+Wir haben uns dazu entschieden, nach jeder Methode eine Zeile Abstand zu lassen. Die Einrückungen werden nach C-Sharp Standard geregelt.
 
 ![image](https://cloud.githubusercontent.com/assets/25527030/26235717/1503a76c-3c6d-11e7-972e-2745ae7e1ea1.png)
   
-Zwischen den Kommentaren und der Funktion darf kein Zeilen Abstand erfolgen. 
+Zwischen den Kommentaren und der Funktion dürfen keine Zeilen Abstand erfolgen. 
   
 ![image](https://cloud.githubusercontent.com/assets/25527030/26236187/52d6b2c6-3c6f-11e7-96a5-65b45e35730e.png)
 
@@ -28,7 +27,7 @@ Für den Hintergrund wurde ein Style definiert.
 
 ![image](https://cloud.githubusercontent.com/assets/25527030/26236565/468b7162-3c71-11e7-9f01-92b61820a3f0.png)
 
-Die Button grössen und Textbox grössen haben wir auch vordefiniert.
+Die Button grösse und Textbox grösse haben wir auch vordefiniert.
 
 ![image](https://cloud.githubusercontent.com/assets/25527030/26237284/caec0676-3c74-11e7-819d-1108ca2811ec.png)
 
@@ -49,19 +48,19 @@ Die Button grössen und Textbox grössen haben wir auch vordefiniert.
   
   ### Trainyourself
   
-  * In diesem Projekt ist das ganze GUI vorhanden.
-  * Jede GUI Seite hat einen Code behind.
-  * Wir haben hir sehr viel mit Events gearbeitet. 
-  * in den Klassen Livesitup/Livepushups werden die ganzen Messungen durgefürt um zu schauen ob ein Situp/Pushup gemacht wurde.
-  * In der Klasse Calibartion wird die höhe von Hand zu Schulter gemessen, mit dieser werden dann die Situps berechnet. 
-  
+ * In diesem Projekt ist das ganze GUI vorhanden.
+* Jede GUI-Seite hat einen Code behind.
+* Wir haben hier sehr viel mit Events gearbeitet. 
+* in den Klassen Livesitup/Livepushups werden die ganzen Messungen durchgeführt um zu schauen, ob ein Situp/Pushup gemacht wurde.
+* In der Klasse Kalibartion wird die höhe von Hand zu Schulter gemessen, mit dieser werden dann die Situps berechnet. 
+
   ![image](https://cloud.githubusercontent.com/assets/25527030/26237733/a3dad57e-3c76-11e7-86cd-cbe44b3a8e14.png)
 
   ### Model
   
-  * Die Klassen Score, User und Exercise sind gleichzeitig auch Tabellen in unserer Datenbank mit den jeweiligen Attributen. 
-  * Diese Klassen wurden uns bei der Verbindung zur Datenbank von C-Sharp erstellt.
-  
+* Die Klassen Score, User und Exercice sind gleichzeitig auch Tabellen in unserer Datenbank mit den jeweiligen Attributen. 
+* Diese Klassen wurden uns bei der Verbindung zur Datenbank von C-Sharp erstellt.
+
   ![image](https://cloud.githubusercontent.com/assets/25527030/26237942/5cb13278-3c77-11e7-8466-df4b71c08b84.png)
   
   ### KinectConnection 
@@ -74,9 +73,9 @@ Die Button grössen und Textbox grössen haben wir auch vordefiniert.
 
   ### DataAcces
   
-  * Die von uns am meisten gebrauchte Klasse hier ist das UserRepository, hier haben wir alle Sql "Querys" geschrieben.(alle Querys wurden mit Linq geschrieben)
-  * Die Klasse UserRepository eerbt von der Abstakten Klassen AbstractRepository, welche einige wichtige Funktion beinhaltet( Add, Delete, GetById etc.) 
-  
+ * Die von uns am meisten gebrauchte Klasse hier ist das UserRepository, hier haben wir alle Sql "Querys" geschrieben.(alle Querys wurden mit Linq geschrieben)
+* Die Klasse UserRepository erbt von der abstakten Klassen AbstractRepository, welche einige wichtige Funktion beinhaltet( Add, Delete, GetById etc.) 
+
   ![image](https://cloud.githubusercontent.com/assets/25527030/26238027/a8261a8e-3c77-11e7-81e1-fde3f1c946cc.png)
   
   
