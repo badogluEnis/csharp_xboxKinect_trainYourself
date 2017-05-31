@@ -20,7 +20,7 @@ Jeder kennt dieses Problem, man ist voll in einer Übung drin und man verzählt 
 
 1. Angemessen Dokumentiert
 2. Testprotokolle vorhanden und ausgefüllt
-3. Von einem User, welcher nicht bei uns im team ist, gestestet
+3. Von einem User, welcher nicht bei uns im team ist oder einem Teammember gestestet
 4. Alle Methoden/Funktionen müssen Kommentiert sein.
 
 
