@@ -27,7 +27,7 @@ Jeder kennt dieses Problem, man ist voll in einer Übung drin und man verzählt 
 
 ## Fazit
 
-#### Ein kleines Fazit in Form eines QnA von jedem Projekt Mitarbeiter:
+#### Das Fazit in Form eines QnA von jedem Projekt Mitarbeiter:
 
 ##### Altin Hani
 
