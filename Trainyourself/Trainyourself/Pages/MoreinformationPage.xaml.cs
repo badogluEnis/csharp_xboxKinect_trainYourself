@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Globalization;
 using System.Windows;
 using System.Windows.Controls;
 using DataAccess;
@@ -97,8 +96,6 @@ namespace Trainyourself.Pages
                 return false;
             }
 
-            string weight2 = Convert.ToString(weight1, CultureInfo.InvariantCulture);
-            string height2 = Convert.ToString(height1, CultureInfo.InvariantCulture);
 
 
             return true;

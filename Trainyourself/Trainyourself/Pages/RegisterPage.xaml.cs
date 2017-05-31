@@ -103,7 +103,7 @@ namespace Trainyourself.Pages
         {
             try
             {
-                MailAddress m = new MailAddress(emailaddress);
+                new MailAddress(emailaddress);
                 return true;
             }
             catch (FormatException )
@@ -174,7 +174,7 @@ namespace Trainyourself.Pages
         /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void QuitButton_OnClick(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new SigninPage());
+            if (NavigationService != null) NavigationService.Navigate(new SigninPage());
         }
     }
 }

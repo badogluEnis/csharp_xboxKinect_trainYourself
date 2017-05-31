@@ -1,17 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using DataAccess;
 using Model;
 
@@ -22,7 +10,7 @@ namespace Trainyourself.Pages
     /// </summary>
     /// <seealso cref="System.Windows.Controls.Page" />
     /// <seealso cref="System.Windows.Markup.IComponentConnector" />
-    public partial class Highscore : Page
+    public partial class Highscore
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Highscore"/> class.
@@ -30,12 +18,12 @@ namespace Trainyourself.Pages
         public Highscore()
         {
             InitializeComponent();
-            filllabels();
+            Filllabels();
         }
         /// <summary>
         /// Filllabelses this instance.
         /// </summary>
-        public void filllabels()
+        public void Filllabels()
         {
             using (TrainContext context = new TrainContext())
             {
@@ -63,7 +51,7 @@ namespace Trainyourself.Pages
         /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void Backbutton_OnClick(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new ProfilePage());
+            if (NavigationService != null) NavigationService.Navigate(new ProfilePage());
         }
     }
 }

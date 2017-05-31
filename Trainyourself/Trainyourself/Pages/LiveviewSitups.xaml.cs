@@ -60,7 +60,7 @@ namespace Trainyourself.Pages
             InitializeComponent();
             Image.Source = _kinectProvider._colorBitmap;
             _kinectProvider.PositionChanged += SkeletonChanged;
-            setHighscore();
+            SetHighscore();
         }
 
         /// <summary>
@@ -89,7 +89,7 @@ namespace Trainyourself.Pages
         /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void QuitButton_OnClick(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new HauptmenuPage());
+            if (NavigationService != null) NavigationService.Navigate(new HauptmenuPage());
             _kinectProvider.Dispose();
 
             Score score = new Score();
@@ -153,7 +153,7 @@ namespace Trainyourself.Pages
         /// <summary>
         /// Sets the highscore.
         /// </summary>
-        public void setHighscore()
+        public void SetHighscore()
         {
             using (TrainContext context = new TrainContext())
             {

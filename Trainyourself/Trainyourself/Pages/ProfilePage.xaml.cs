@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Configuration;
 using System.Globalization;
 using System.Linq;
@@ -43,13 +42,13 @@ namespace Trainyourself.Pages
                 YourWeightLabel.Text = Convert.ToString(us.Weight);
                 YourWeightLabel.FontSize = 23;
                 double bmi = double.Parse(us.Weight.ToString()) / (double.Parse(us.Height.ToString()) * double.Parse(us.Height.ToString()));
-                double Round = Math.Round(bmi, 2);
-                BMIOutput.Text = Convert.ToString(Round);
+                double round = Math.Round(bmi, 2);
+                BMIOutput.Text = Convert.ToString(round, CultureInfo.InvariantCulture);
                 BMIOutput.FontSize = 23;
                 RecordPushups.Text = us.RecordPushups.ToString();
                 RecordSitUps.Text = us.RecordSitups.ToString();
-                AveragePushUps.Text = userRepository.GetAVGForPushUps(Int16.Parse(ConfigurationManager.AppSettings["LoggedUserId"])).Average().ToString();
-                AverageSitUps.Text =  userRepository.GetAVGForSitUps(Int16.Parse(ConfigurationManager.AppSettings["LoggedUserId"])).Average().ToString();
+                AveragePushUps.Text = userRepository.GetAVGForPushUps(Int16.Parse(ConfigurationManager.AppSettings["LoggedUserId"])).Average().ToString(CultureInfo.InvariantCulture);
+                AverageSitUps.Text =  userRepository.GetAVGForSitUps(Int16.Parse(ConfigurationManager.AppSettings["LoggedUserId"])).Average().ToString(CultureInfo.InvariantCulture);
 
             }
         }
@@ -61,7 +60,7 @@ namespace Trainyourself.Pages
         /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void Backbutton_OnClick(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new HauptmenuPage());
+            if (NavigationService != null) NavigationService.Navigate(new HauptmenuPage());
         }
 
         /// <summary>
@@ -125,8 +124,8 @@ namespace Trainyourself.Pages
 
                             double bmi = double.Parse(us.Weight.ToString()) /
                                          (double.Parse(us.Height.ToString()) * double.Parse(us.Height.ToString()));
-                            double Round = Math.Round(bmi, 2);
-                            BMIOutput.Text = Round.ToString(CultureInfo.InvariantCulture);
+                            double round = Math.Round(bmi, 2);
+                            BMIOutput.Text = round.ToString(CultureInfo.InvariantCulture);
                             BMIOutput.FontSize = 23;
                             YourHeightLabel.IsReadOnly = true;
                             YourHeightLabel.BorderBrush = Brushes.ForestGreen;
@@ -174,8 +173,8 @@ namespace Trainyourself.Pages
                             us.Weight = Convert.ToDouble(YourWeightLabel.Text);
                             userRepository.Update(us);
                             double bmi = double.Parse(us.Weight.ToString()) / (double.Parse(us.Height.ToString()) * double.Parse(us.Height.ToString()));
-                            double Round = Math.Round(bmi, 2);
-                            BMIOutput.Text = Convert.ToString(Round);
+                            double round = Math.Round(bmi, 2);
+                            BMIOutput.Text = Convert.ToString(round, CultureInfo.InvariantCulture);
                             BMIOutput.FontSize = 23;
                         }
                     }
@@ -203,7 +202,7 @@ namespace Trainyourself.Pages
         /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void Pushupsbutton_OnClick(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Highscore());
+            if (NavigationService != null) NavigationService.Navigate(new Highscore());
         }
 
         /// <summary>
@@ -213,7 +212,7 @@ namespace Trainyourself.Pages
         /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void Situpsbutton_OnClicksbutton_OnClick(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new HighScoreTableSitUpsPage());
+            if (NavigationService != null) NavigationService.Navigate(new HighScoreTableSitUpsPage());
         }
     }
 }

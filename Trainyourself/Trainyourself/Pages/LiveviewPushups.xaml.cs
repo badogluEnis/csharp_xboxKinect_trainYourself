@@ -79,7 +79,7 @@ namespace Trainyourself.Pages
             InitializeComponent();
             Image.Source = _kinectProvider._colorBitmap;
             _kinectProvider.PositionChanged += SkeletonChanged;
-            setHighscore();
+            SetHighscore();
         }
 
         /// <summary>
@@ -123,7 +123,7 @@ namespace Trainyourself.Pages
         private void QuitButton_OnClick(object sender, RoutedEventArgs e)
         {
             _kinectProvider.Dispose();
-            NavigationService.Navigate(new HauptmenuPage());
+            if (NavigationService != null) NavigationService.Navigate(new HauptmenuPage());
             Score score = new Score();
             using (TrainContext context = new TrainContext())
             {
@@ -191,7 +191,7 @@ namespace Trainyourself.Pages
 
         }
 
-        public void setHighscore()
+        public void SetHighscore()
         {
             using (TrainContext context = new TrainContext())
             {
@@ -199,7 +199,6 @@ namespace Trainyourself.Pages
                 User user = userRepository.GetById(Int32.Parse(ConfigurationManager.AppSettings["LoggedUserId"]));
                 Record.Content = $"Record: {user.RecordPushups}";
             }
-
         }
     }
 }
