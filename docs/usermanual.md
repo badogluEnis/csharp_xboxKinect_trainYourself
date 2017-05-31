@@ -27,7 +27,7 @@
 
 ---
 
-#### Sie werden zu einer weiteren Seite weitergeleitet bei der Sie Ihre Grösse und ihr Gewicht angeben müssen.
+#### Sie werden zu einer weiteren Seite weitergeleitet bei der Sie Ihre Grösse und Ihr Gewicht angeben müssen.
 
 #### Danach können Sie auf Register drücken.
 
@@ -37,19 +37,18 @@
 
 #### Sie können sich über die Startseite mit der vorher angegebenen E-Mail und dem Passwort. 
 
-#### E-Mail(Schwarzer Pfeil) Passwort(Roter Pfeil)
-
+#### E-Mail (schwarzer Pfeil) Passwort (roter Pfeil)
 ![image](https://cloud.githubusercontent.com/assets/25527030/26150333/45b6b50e-3afe-11e7-9416-89dce568e9d3.png)
 
 ---
 
-#### Nachdem Sie sich angemeldet haben, kommen Sie auf unsere Startseite. Hier können Sie sich entscheiden wenn Sie auf Ihr Profile gehen möchten drücken Sie auf My Profile(Schwarzer Pfeil). Falls Sie eine Rumpfbeuge Session machen wollen, müssen Sie auf das Rumpfbeugen bild drücken(Roter Pfeil). Wenn Sie Lust auf eine Liegestütz Session haben müssen Sie auf das Liegestütz Bild drücken(Grüner Pfeil). Wollen Sie sich abmelden? Einfach auf Logout drücken(Blauer Pfeil).
+#### Nachdem Sie sich angemeldet haben, kommen Sie auf unsere Startseite. Hier können Sie sich entscheiden wenn Sie auf Ihr Profile gehen möchten drücken Sie auf My Profile(Schwarzer Pfeil). Falls Sie eine Rumpfbeuge Session machen wollen, müssen Sie auf das Rumpfbeugen bild drücken(roter Pfeil). Wenn Sie Lust auf eine Liegestütz Session haben, müssen Sie auf das Liegestützbild drücken(Grüner Pfeil). Wollen Sie sich abmelden? Einfach auf Log-out drücken(Blauer Pfeil).
 
 ![image](https://cloud.githubusercontent.com/assets/25527030/26151152/bf6d9658-3b01-11e7-9f7f-64a7be1e9775.png)
 
 ---
 
-#### Wenn Sie auf Ihrem Profil sind, können Sie Ihre Grösse(Schwarzer Pfeil) und Ihr Gewicht(Roter Pfeil) ändern. Dazu sehen Sie auf dieser Seite Ihren Body Mass Index und Ihren Record. 
+#### Wenn Sie auf Ihrem Profil sind, können Sie Ihre Grösse(schwarzer Pfeil) und Ihr Gewicht(roter Pfeil) ändern. Dazu sehen Sie auf dieser Seite Ihren Body Mass Index und Ihren Record. 
 
 ![image](https://cloud.githubusercontent.com/assets/25527030/26151475/5fc73c52-3b03-11e7-8f45-a6e096f366ed.png)
 
