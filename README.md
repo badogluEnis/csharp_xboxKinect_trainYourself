@@ -55,13 +55,20 @@ Ich denke nicht, dass ich was grosses ändern würde ich, fand den Aufbau, die D
 ## Arbeitsaufteilung:
 #### Altin Hani
 
-* Design
-* Gui
-* Logik("Code Behind")
-* Datenaustausch mit Kinect 
+* Mockups erstellt.
+* Styles für Gui Elemente erstellt.
+* Gui Elemente positioniert/formatiert.
+* User Registrierung ermöglicht.
+* User Anmeldung ermöglicht.
+* Kamera übertragung geregelt.
+* Datenbank aktualisierung(Counter,Rekord,Neue Grösse, Neues Gewicht).
 
 #### Enis Badoglu
 
-* Datenbankhanddling 
-* Logik("Code Behind")
-* Tracking des Skellets
+* Datenbankverbindung.
+* Fehlende Datenbank Funktionen erstellt. 
+* Gui Elemente gestaltet(Save/Edit Button).
+* Kalibrierung.
+* Skelett messungen.
+* Abstand zu Kineckt geregelt.
+* Situps/pushups zählen, bei gewünschter bewegung, ermöglicht.
