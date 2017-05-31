@@ -1,5 +1,7 @@
 # Testkonzept
 
+#### Positiv Tests
+
 Abschnitt            | Inhalt
 ---------------------|--------
 ID                   | T-1
@@ -11,6 +13,83 @@ Testperson           | Enis Badoglu
 Getestet am          | 10. Mai 2017
 Resultat             | Der Test war erfolgreich, dass erwartete Resultat trifft zu.
 Kommentar (Optional) | -
+
+Abschnitt            | Inhalt
+---------------------|--------
+ID                   | T-2
+Getestete User Story | [#2](https://github.com/ICT-BBC/stu-inf-2016-be-trainyourself/issues/2)
+Vorbedingungen       | Der Benutzer ist registriert
+Ablauf               | 1. Der Benutzer Meldet sich mit den zuvor registrierten Accountdaten an.
+Erwartetes Resultat  | Die Anmeldung ist erfolgreich, weil ihm keine Fehlermeldung angezeigt wird.
+Testperson           | Altin Hani 
+Getestet am          | 10.Mai.2017
+Resultat             | Ich konnte mich problemlos anmelden
+Kommentar (Optional) | -
+
+Abschnitt            | Inhalt
+---------------------|--------
+ID                   | T-3
+Getestete User Story | [#26](https://github.com/ICT-BBC/stu-inf-2016-be-trainyourself/issues/26)
+Vorbedingungen       | Der Benutzer hat das Programm offen, hat sich registriert und ist angemeldet.
+Ablauf               | 1. Der Benutzer geht im Hauptmenu auf My Profile und drückt dort auf den edit button, gibt seine neuen Daten ein und drückt dann auf den Speichern button.
+Erwartetes Resultat  | Die neu eingegebenen Daten werden in der Datebank aktualisiert. 
+Testperson           | Flavio Lang
+Getestet am          | 10. Mai 2017
+Resultat             | Der Test war erfolgreich.
+Kommentar (Optional) | -
+
+Abschnitt            | Inhalt
+---------------------|--------
+ID                   | T-4
+Getestete User Story | [#34](https://github.com/ICT-BBC/stu-inf-2016-be-trainyourself/issues/34)
+Vorbedingungen       | Der Benutzer hat sich angemeldet und befindet sich im Hauptmenu.
+Ablauf               | 1. Der Benutzer klickt Hauptmenu auf Sit-Ups
+Erwartetes Resultat  | Das Programm öffnet die Sit-Up page und es wird die [Liveview](img/liveview.png) dargestellt.
+Testperson           | Enis Badoglu
+Getestet am          | 31.Mai 2017
+Resultat             | Die Liveview wurde erfolgreich geöffnet und ich konnte mich selber sehen.
+Kommentar (Optional) |
+
+Abschnitt            | Inhalt
+---------------------|--------
+ID                   | T-5
+Getestete User Story | [#38](https://github.com/ICT-BBC/stu-inf-2016-be-trainyourself/issues/38)
+Vorbedingungen       | Der Benutzer hat das Programm gestartet
+Ablauf               | 1. Der Benutzer fängt an sich zu registrieren. Sobald er auf die Zweite Seite der Registrierung kommt probiert er in den eingabefelder Kommazahlen zu benutzen. 
+Erwartetes Resultat  | Die Registrierung verläuft erfolgreich und der User ist wieder auf dem Startscreen.
+Testperson           | Enis Badoglu
+Getestet am          | 31. Mai 2017
+Resultat             | Der Test war erfolgreich.
+Kommentar (Optional) | -
+
+Abschnitt            | Inhalt
+---------------------|--------
+ID                   | T-6
+Getestete User Story | [#16](https://github.com/ICT-BBC/stu-inf-2016-be-trainyourself/issues/16)
+Vorbedingungen       | Der Benutzer hat das Programm gestartet und sich eingeloggt.
+Ablauf               | 1. Der Benutzer geht auf die Liegestüzen. Er lässt das Programm klaibireren und macht danach Liegestützen. 
+Erwartetes Resultat  | Der Counter geht hoch, sobald der User eine Liegestütze gemacht hat.
+Testperson           | Enis Badoglu
+Getestet am          | 31. Mai 2017
+Resultat             | Der Test war erfolgreich.
+Kommentar (Optional) | -
+
+Abschnitt            | Inhalt
+---------------------|--------
+ID                   | T-7
+Getestete User Story | [#15](https://github.com/ICT-BBC/stu-inf-2016-be-trainyourself/issues/15) [#18](https://github.com/ICT-BBC/stu-inf-2016-be-trainyourself/issues/15) 
+Vorbedingungen       | Der Benutzer hat das Programm gestartet und sich eingeloggt.
+Ablauf               | 1. Der Benutzer geht auf die Liegestüzen. Er lässt das Programm klaibireren und macht danach Liegestützen. 
+Erwartetes Resultat  | Der erreichte Wert wird in der Datenbank mit dem richtigen Datum gespeichert.
+Testperson           | Enis Badoglu
+Getestet am          | 31. Mai 2017
+Resultat             | Der Test war erfolgreich.
+Kommentar (Optional) | Da der Durchschnitt der bisher gemachten Pushups/Situps in my profile erhöht/gesenkt wurde kann ich davon ausgehen(ohne in die Datenbank zu schauen), dass der Test funktioniert hat.
+
+
+
+
+#### Negativ Tests
 
 Abschnitt            | Inhalt
 ---------------------|--------
@@ -38,18 +117,6 @@ Kommentar (Optional) | -
 
 Abschnitt            | Inhalt
 ---------------------|--------
-ID                   | T-2
-Getestete User Story | [#2](https://github.com/ICT-BBC/stu-inf-2016-be-trainyourself/issues/2)
-Vorbedingungen       | Der Benutzer ist registriert
-Ablauf               | 1. Der Benutzer Meldet sich mit den zuvor registrierten Accountdaten an.
-Erwartetes Resultat  | Die Anmeldung ist erfolgreich, weil ihm keine Fehlermeldung angezeigt wird.
-Testperson           | Altin Hani 
-Getestet am          | 10.Mai.2017
-Resultat             | Ich konnte mich problemlos anmelden
-Kommentar (Optional) | -
-
-Abschnitt            | Inhalt
----------------------|--------
 ID                   | NT-3
 Getestete User Story | [#2](https://github.com/ICT-BBC/stu-inf-2016-be-trainyourself/issues/2)
 Vorbedingungen       | Der Benutzer hat das Programm offen.
@@ -59,31 +126,6 @@ Testperson           | Altin Hani
 Getestet am          | 10.Mai.2017
 Resultat             | Als ich mich anmleden wollte ohne mich vorher registriert zu haen kam eine Fehlermeldung.
 Kommentar (Optional) | -
-
-Abschnitt            | Inhalt
----------------------|--------
-ID                   | T-3
-Getestete User Story | [#26](https://github.com/ICT-BBC/stu-inf-2016-be-trainyourself/issues/26)
-Vorbedingungen       | Der Benutzer hat das Programm offen, hat sich registriert und ist angemeldet.
-Ablauf               | 1. Der Benutzer geht im Hauptmenu auf My Profile und drückt dort auf den edit button, gibt seine neuen Daten ein und drückt dann auf den Speichern button.
-Erwartetes Resultat  | Die neu eingegebenen Daten werden in der Datebank aktualisiert. 
-Testperson           | Flavio Lang
-Getestet am          | 10. Mai 2017
-Resultat             | Der Test war erfolgreich.
-Kommentar (Optional) | -
-
-Abschnitt            | Inhalt
----------------------|--------
-ID                   | T-4
-Getestete User Story | [#34](https://github.com/ICT-BBC/stu-inf-2016-be-trainyourself/issues/34)
-Vorbedingungen       | Der Benutzer hat sich angemeldet und befindet sich im Hauptmenu.
-Ablauf               | 1. Der Benutzer klickt Hauptmenu auf Sit-Ups
-Erwartetes Resultat  | Das Programm öffnet die Sit-Up page und es wird die [Liveview](img/liveview.png) dargestellt.
-Testperson           |
-Getestet am          |
-Resultat             |
-Kommentar (Optional) |
-
 Abschnitt            | Inhalt
 ---------------------|--------
 ID                   | NT-4
@@ -95,7 +137,6 @@ Testperson           | Flavio Lang
 Getestet am          | 10. Mai 2017
 Resultat             | Der Test war erfolgreich.
 Kommentar (Optional) | -
-
 Abschnitt            | Inhalt
 ---------------------|--------
 ID                   | NT-5
@@ -111,28 +152,13 @@ Kommentar (Optional) | -
 
 Abschnitt            | Inhalt
 ---------------------|--------
-ID                   | T-5
-Getestete User Story | [#38](https://github.com/ICT-BBC/stu-inf-2016-be-trainyourself/issues/38)
-Vorbedingungen       | Der Benutzer hat das Programm gestartet
-Ablauf               | 1. Der Benutzer fängt an sich zu registrieren. Sobald er auf die Zweite Seite der Registrierung kommt probiert er in den eingabefelder Kommazahlen zu benutzen. 
-Erwartetes Resultat  | Die Registrierung verläuft erfolgreich und der User ist wieder auf dem Startscreen.
-Testperson           | Enis Badoglu
+ID                   | NT-8
+Getestete User Story | [#32](https://github.com/ICT-BBC/stu-inf-2016-be-trainyourself/issues/32)
+Vorbedingungen       | Der Benutzer hat das Programm gestartet, hat das erste Formular für die Registrierung ausgefüllt und hat auf Continue gedrückt. 
+Ablauf               | 1. Der Benutzer gibt bei der Grösse/Gewicht anstelle einer Zahl einen Buchstaben ein und drückt auf register.
+Erwartetes Resultat  | Es erscheint eine Fehlermeldung welche besagt, dass die Eingaben nur Zahlen sein dürfen.
+Testperson           | Altin Hani
 Getestet am          | 31. Mai 2017
-Resultat             | Der Test war erfolgreich.
-Kommentar (Optional) | -
-
-Abschnitt            | Inhalt
----------------------|--------
-ID                   | T-6
-Getestete User Story | [#16](https://github.com/ICT-BBC/stu-inf-2016-be-trainyourself/issues/16)
-Vorbedingungen       | Der Benutzer hat das Programm gestartet und sich eingeloggt.
-Ablauf               | 1. Der Benutzer geht auf die Liegestüzen. Er lässt das Programm klaibireren und macht danach Liegestützen. 
-Erwartetes Resultat  | Der Counter geht hoch, sobald der User eine Liegestütze gemacht hat.
-Testperson           | Enis Badoglu
-Getestet am          | 31. Mai 2017
-Resultat             | Der Test war erfolgreich.
-Kommentar (Optional) | -
-
-
+Resultat             | Der Test war erfolgreich. Ich konnte die Registrierung nicht abschliessen, solange ich nicht Zahlen verwendet habe.
 
   #### [Zuück](../README.md)
