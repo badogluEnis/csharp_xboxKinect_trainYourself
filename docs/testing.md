@@ -98,24 +98,12 @@ Kommentar (Optional) | -
 
 Abschnitt            | Inhalt
 ---------------------|--------
-ID                   | T-5
-Getestete User Story | [#27](https://github.com/ICT-BBC/stu-inf-2016-be-trainyourself/issues/27)
-Vorbedingungen       | Der Benutzer hat das Programm gestartet und hat einen Account
-Ablauf               | 1. Der Benutzer meldet sich an. 2. Der Benutzer geht auf sein Profil. Der Benutzer drückt auf den Stift Button. Der Benutzer gibt sein neues Gewicht ein. Der Benutzer drückt auf den Speichern Button. 
-Erwartetes Resultat  | Es erscheint ein Gründer Rand um das Eingabefeld. Das neue Gewicht wurde gespeichert und der neue BMI wird direkt ausgerechnet. 
-Testperson           | Altin Hani
-Getestet am          | 19. Mai 2017
-Resultat             | Der Test war erfolgreich.
-Kommentar (Optional) | Der Grüne Rand sorgt für klarheit, dass die Änderung erfolgreich war. 
-
-Abschnitt            | Inhalt
----------------------|--------
 ID                   | NT-5
-Getestete User Story | [#27](https://github.com/ICT-BBC/stu-inf-2016-be-trainyourself/issues/27)
+Getestete User Story | [#26](https://github.com/ICT-BBC/stu-inf-2016-be-trainyourself/issues/26)
 Vorbedingungen       | Der Benutzer hat das Programm gestartet
 Ablauf               | Der Benutzer hat das Programm gestartet und hat einen Account
-Ablauf               | 1. Der Benutzer meldet sich an. 2. Der Benutzer geht auf sein Profil. Der Benutzer drückt auf den Stift Button. Der Benutzer gibt sein neues Gewicht und dazu noch einen Buchstaben. Der Benutzer drückt auf den Speichern Button. 
-Erwartetes Resultat  | Es erscheint eine Fehlermeldung welche den User hinweist, dass er nur Zahlen eingeben darf.
+Ablauf               | 1. Der Benutzer meldet sich an. 2. Der Benutzer geht auf sein Profil. Der Benutzer drückt auf den Button, welcher wie ein stift aussieht. Der Benutzer lässt das Eingabefeld leer. Der Benutzer drückt auf den Speichern Button. 
+Erwartetes Resultat  | Es erscheint eine Fehlermeldung welche den User hinweist, dass die Eingafelder nicht leer sein dürfen.
 Testperson           | Altin Hani
 Getestet am          | 19. Mai 2017
 Resultat             | Der Test war erfolgreich.
@@ -123,14 +111,25 @@ Kommentar (Optional) | -
 
 Abschnitt            | Inhalt
 ---------------------|--------
-ID                   | NT-6
-Getestete User Story | [#27](https://github.com/ICT-BBC/stu-inf-2016-be-trainyourself/issues/27)
+ID                   | T-5
+Getestete User Story | [#38](https://github.com/ICT-BBC/stu-inf-2016-be-trainyourself/issues/38)
 Vorbedingungen       | Der Benutzer hat das Programm gestartet
-Ablauf               | Der Benutzer hat das Programm gestartet und hat einen Account
-Ablauf               | 1. Der Benutzer meldet sich an. 2. Der Benutzer geht auf sein Profil. Der Benutzer drückt auf den Stift Button. Der Benutzer lässt das Eingabefeld leer. Der Benutzer drückt auf den Speichern Button. 
-Erwartetes Resultat  | Es erscheint eine Fehlermeldung welche den User hinweist, dass die Eingafelder nicht leer sein dürfen.
-Testperson           | Altin Hani
-Getestet am          | 19. Mai 2017
+Ablauf               | 1. Der Benutzer fängt an sich zu registrieren. Sobald er auf die Zweite Seite der Registrierung kommt probiert er in den eingabefelder Kommazahlen zu benutzen. 
+Erwartetes Resultat  | Die Registrierung verläuft erfolgreich und der User ist wieder auf dem Startscreen.
+Testperson           | Enis Badoglu
+Getestet am          | 31. Mai 2017
+Resultat             | Der Test war erfolgreich.
+Kommentar (Optional) | -
+
+Abschnitt            | Inhalt
+---------------------|--------
+ID                   | T-6
+Getestete User Story | [#16](https://github.com/ICT-BBC/stu-inf-2016-be-trainyourself/issues/16)
+Vorbedingungen       | Der Benutzer hat das Programm gestartet und sich eingeloggt.
+Ablauf               | 1. Der Benutzer geht auf die Liegestüzen. Er lässt das Programm klaibireren und macht danach Liegestützen. 
+Erwartetes Resultat  | Der Counter geht hoch, sobald der User eine Liegestütze gemacht hat.
+Testperson           | Enis Badoglu
+Getestet am          | 31. Mai 2017
 Resultat             | Der Test war erfolgreich.
 Kommentar (Optional) | -
 
