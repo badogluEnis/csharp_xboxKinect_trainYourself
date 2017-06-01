@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Configuration;
+using System.Data.Entity;
 using System.Diagnostics;
 using System.Windows;
 using DataAccess;
@@ -89,6 +90,7 @@ namespace Trainyourself.Pages
             _kinectProvider.Dispose();
 
             Score score = new Score();
+            User us = new User();
             using (TrainContext context = new TrainContext())
             {
                 UserRepository userRepository = new UserRepository(context);
@@ -98,6 +100,9 @@ namespace Trainyourself.Pages
                 score.Score1 = counter;
                 context.Scores.Add(score);
                 context.SaveChanges();
+            
+                
+                
             }
         }
 
@@ -118,7 +123,7 @@ namespace Trainyourself.Pages
         /// </summary>
         private void CheckIfDown()
         {
-            if (ShoulderRightY < 0.40)
+            if (ShoulderRightY < 0.6)
             {
                 counter += 1;
 
@@ -137,8 +142,11 @@ namespace Trainyourself.Pages
                     {
                         user.RecordSitups = counter;
                         Record.Content = $"Record: {user.RecordSitups}";
+                        
                     }
-
+                    context.Users.Attach(user);
+                    context.Entry(user).State = EntityState.Modified;
+                    context.SaveChanges();
                 }
                 WarUnten = true;
                 Debug.WriteLine("Down");
