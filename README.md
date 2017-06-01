@@ -44,13 +44,13 @@ Ich würde noch eine weitere Übung hinzunehmen. Damit es unseren Usern nicht la
 ##### Enis Badoglu
 
 ###### Funktioniert die Endlösung wie geplant?
-Die Endlösung funktioniert besser als wir uns vorgestellt haben. Meiner Meinung haben wir uns übertroffen.
+Ich bin sehr zufrieden mit unserem Programm. Da wir genug Zeit hatten um auch sehr auf die Details achten zu konnten, gefällt mir das Design sehr gut.
 
 ###### Bist du mit dem Projektablauf zufrieden?
 Ja. Ich empfand die Planung und den Ablauf des Projekts sehr angenehm.
 
 ###### Was würdest du beim nächsten Mal anders machen?
-Ich denke nicht, dass ich was grosses ändern würde ich, fand den Aufbau, die Durchführung, die Realisierung, die Planung und die Projektmanagement Methode sehr gut.
+Ich denke nicht, dass ich was grosses ändern würde. Der Aufbau, die Durchführung, die Realisierung, die Planung und die Projektmanagement Methode haben mit sehr gut gefallen.
 
 
 ## Arbeitsaufteilung:
