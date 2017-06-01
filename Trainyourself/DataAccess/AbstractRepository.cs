@@ -5,11 +5,21 @@ using Model;
 
 namespace DataAccess
 {
+    /// <summary>
+    ///  This is an Abstract Class for the Basic Database requests.
+    /// </summary>
     public abstract class AbstractRepository<TEntity> : IEntityRepository<TEntity> where TEntity : class
     {
 
+        /// <summary>
+        /// The context
+        /// </summary>
         protected readonly TrainContext Context;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AbstractRepository{TEntity}"/> class.
+        /// </summary>
+        /// <param name="context">The context.</param>
         protected AbstractRepository(TrainContext context)
         {
             Context = context;

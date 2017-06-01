@@ -6,7 +6,7 @@ using Model;
 namespace Trainyourself.Pages
 {
     /// <summary>
-    /// Interaction logic for HighScoreTableSitUpsPage.xaml
+    /// Logic for HighScoreTableSitUpsPage.xaml. Gets some Values from Database.
     /// </summary>
     /// <seealso cref="System.Windows.Controls.Page" />
     /// <seealso cref="System.Windows.Markup.IComponentConnector" />
@@ -20,8 +20,9 @@ namespace Trainyourself.Pages
             InitializeComponent();
             Filllabels();
         }
+
         /// <summary>
-        /// Filllabelses this instance.
+        /// Fills the Labels by getting values from Database.
         /// </summary>
         public void Filllabels()
         {
@@ -45,7 +46,7 @@ namespace Trainyourself.Pages
         }
 
         /// <summary>
-        /// Handles the OnClick event of the Backbutton control.
+        /// Handles the OnClick event of the Backbutton control Navigates to Profile Page.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
         /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>

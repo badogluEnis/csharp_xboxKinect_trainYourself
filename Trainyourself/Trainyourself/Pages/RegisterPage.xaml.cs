@@ -8,7 +8,7 @@ using Model;
 namespace Trainyourself.Pages
 {
     /// <summary>
-    /// Interaction logic for RegisterPage.xaml
+    /// Logic for RegisterPage.xaml. Validate Inputfields. Create User in Database.
     /// </summary>
     /// <seealso cref="System.Windows.Controls.Page" />
     /// <seealso cref="System.Windows.Markup.IComponentConnector" />
@@ -93,7 +93,7 @@ namespace Trainyourself.Pages
         }
 
         /// <summary>
-        /// Determines whether [is email valid] [the specified emailaddress].
+        /// Determines whether the email is valid.
         /// </summary>
         /// <param name="emailaddress">The emailaddress.</param>
         /// <returns>
@@ -114,7 +114,7 @@ namespace Trainyourself.Pages
 
 
         /// <summary>
-        /// Handles the Click event of the Button control.
+        /// Handles the Click event of the Button control if every input is Valid then it creates an user. 
         /// </summary>
         /// <param name="sender">The source of the event.</param>
         /// <param name="e">The <see cref="RoutedEventArgs" /> instance containing the event data.</param>
@@ -168,7 +168,7 @@ namespace Trainyourself.Pages
         }
 
         /// <summary>
-        /// Handles the OnClick event of the QuitButton control.
+        /// Handles the OnClick event of the QuitButton control Navigate to Sign in Page.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
         /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>

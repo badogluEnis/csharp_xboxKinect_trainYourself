@@ -6,7 +6,7 @@ using Model;
 namespace DataAccess
 {
     /// <summary>
-    /// 
+    /// The User Repositry Contains Methods, which arent standards(Add,Update,Delete etc). This Class extends from the Abstract Class AbstractRepository 
     /// </summary>
     /// <seealso cref="User" />
     public class UserRepository : AbstractRepository<User>
@@ -59,7 +59,7 @@ namespace DataAccess
         }
 
         /// <summary>
-        /// Checks if email exist.
+        /// Checks if email exist for register.
         /// </summary>
         /// <param name="mail">The mail.</param>
         /// <returns></returns>
@@ -68,15 +68,24 @@ namespace DataAccess
             return Context.Users.Any(u => u.Email == mail);
         }
 
+        /// <summary>
+        /// Gets the average for push ups from Exercise Table.
+        /// </summary>
+        /// <param name="id">The identifier.</param>
+        /// <returns></returns>
         public List<int> GetAVGForPushUps(int id)
         {
             return Context.Scores.Where(s => s.UserID == id && s.Exercise_Id == 1).Select(score => score.Score1).ToList();
         }
 
+        /// <summary>
+        /// Gets the average for sit ups from Exercise Table.
+        /// </summary>
+        /// <param name="id">The identifier.</param>
+        /// <returns></returns>
         public List<int> GetAVGForSitUps(int id)
         {
             return Context.Scores.Where(s => s.UserID == id && s.Exercise_Id == 2).Select(score => score.Score1).ToList();
         }
-
     }
 }

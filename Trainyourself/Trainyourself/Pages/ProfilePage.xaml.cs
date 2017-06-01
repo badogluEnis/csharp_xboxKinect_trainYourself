@@ -10,7 +10,7 @@ using Model;
 namespace Trainyourself.Pages
 {
     /// <summary>
-    /// Interaction logic for ProfilePage.xaml
+    /// Logic for ProfilePage.xaml. Get many Values from the Database and sets the text of inputfields.
     /// </summary>
     /// <seealso cref="System.Windows.Controls.Page" />
     /// <seealso cref="System.Windows.Markup.IComponentConnector" />
@@ -26,16 +26,14 @@ namespace Trainyourself.Pages
         }
 
         /// <summary>
-        /// Setemptylabelses this instance.
+        /// Setemptylabelses gets Values from Database.
         /// </summary>
         public void Setemptylabels()
         {
             using (TrainContext context = new TrainContext())
             {
                 UserRepository userRepository = new UserRepository(context);
-
                 User us = userRepository.GetById(Int16.Parse(ConfigurationManager.AppSettings["LoggedUserId"]));
-
                 Name.Text = us.Name + " " + us.Lastname;
                 YourHeightLabel.Text = Convert.ToString(us.Height);
                 YourHeightLabel.FontSize = 23;
@@ -49,12 +47,11 @@ namespace Trainyourself.Pages
                 RecordSitUps.Text = us.RecordSitups.ToString();
                 AveragePushUps.Text = userRepository.GetAVGForPushUps(Int16.Parse(ConfigurationManager.AppSettings["LoggedUserId"])).Average().ToString(CultureInfo.InvariantCulture);
                 AverageSitUps.Text =  userRepository.GetAVGForSitUps(Int16.Parse(ConfigurationManager.AppSettings["LoggedUserId"])).Average().ToString(CultureInfo.InvariantCulture);
-
             }
         }
 
         /// <summary>
-        /// Handles the OnClick event of the Backbutton control.
+        /// Handles the OnClick event of the Backbutton control Navigate to Hauptmenu.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
         /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
@@ -86,7 +83,7 @@ namespace Trainyourself.Pages
         }
 
         /// <summary>
-        /// Handles the OnClick event of the SavebuttonHeight control.
+        /// Handles the OnClick event of the SavebuttonHeight control Check if the new Values are Valid and then Updates the User.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
         /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
@@ -137,7 +134,7 @@ namespace Trainyourself.Pages
         }
 
         /// <summary>
-        /// Handles the OnClick event of the SavebuttonWeight_OnClickttonWeight control.
+        /// Handles the OnClick event of the SavebuttonWeight_OnClickttonWeight control Check if the new Values are Valid and then Updates the User.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
         /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
@@ -186,7 +183,7 @@ namespace Trainyourself.Pages
         }
 
         /// <summary>
-        /// Handles the Click event of the Button control.
+        /// Handles the Click event of the Button control Navigate to Hauptmenupage.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
         /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
@@ -196,7 +193,7 @@ namespace Trainyourself.Pages
         }
 
         /// <summary>
-        /// Handles the OnClick event of the Pushupsbutton control.
+        /// Handles the OnClick event of the Pushupsbutton control Navigate to Highscore Table of Pushups.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
         /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
@@ -206,7 +203,7 @@ namespace Trainyourself.Pages
         }
 
         /// <summary>
-        /// Handles the OnClick event of the Situpsbutton_OnClicksbutton control.
+        /// Handles the OnClick event of the Situpsbutton_OnClicksbutton control Navigate to Highscore Table of Situps.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
         /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>

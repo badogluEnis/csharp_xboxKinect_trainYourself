@@ -33,21 +33,10 @@ namespace KinectConnection
         public void Init()
         {
             DiscoverSensor();
-
             if (_sensor == null)
             {
                 throw new KinectNotConnectedException();
             }
-
-            //Smooth parameters
-            //var parameters = new TransformSmoothParameters {
-            //    Smoothing = 0.3f,
-            //    Correction = 0.0f,
-            //    Prediction = 0.0f,
-            //    JitterRadius = 1.0f,
-            //    MaxDeviationRadius = 0.5f
-            //};
-
             _sensor.SkeletonStream.Enable(); // optional smooth parameters could be passed
             _sensor.ColorStream.Enable(ColorImageFormat.RgbResolution640x480Fps30);
             _colorPixels = new byte[_sensor.ColorStream.FramePixelDataLength];
@@ -57,12 +46,6 @@ namespace KinectConnection
             _sensor.AllFramesReady += KinectAllFramesReady;
             _sensor.Start();
         }
-
-        public void Stop()
-        {
-            _sensor.Stop();
-        }
-
 
         /// <summary>
         /// Discovers the kinect sensor.
@@ -103,8 +86,6 @@ namespace KinectConnection
             PositionChanged?.Invoke(this, skeleton);
         }
 
-
-
         /// <summary>
         /// Gets the first skeleton detected by the Kinect.
         /// </summary>
@@ -126,6 +107,12 @@ namespace KinectConnection
                 return first;
             }
         }
+
+        /// <summary>
+        /// Check if the Sensor color frames are ready.
+        /// </summary>
+        /// <param name="sender">The sender.</param>
+        /// <param name="e">The <see cref="ColorImageFrameReadyEventArgs"/> instance containing the event data.</param>
         private void SensorColorFrameReady(object sender, ColorImageFrameReadyEventArgs e)
         {
             using (ColorImageFrame colorFrame = e.OpenColorImageFrame())
@@ -145,9 +132,12 @@ namespace KinectConnection
             }
         }
 
+        /// <summary>
+        /// Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources and stops the Sensor.
+        /// </summary>
         public void Dispose()
         {
-            Stop();
+            _sensor.Stop();
             _sensor?.Dispose();
         }
     }

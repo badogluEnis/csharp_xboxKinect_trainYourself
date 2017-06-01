@@ -12,7 +12,7 @@ using Model;
 namespace Trainyourself.Pages
 {
     /// <summary>
-    /// Interaction logic for LiveviewPushups.xaml
+    /// Logic for LiveviewPushups.xaml. Load the Camera to the Image. Works with the Coordinates from the Kinecktsensor. Count for each Pushup. Database Update.
     /// </summary>
     /// <seealso cref="System.Windows.Controls.Page" />
     /// <seealso cref="System.Windows.Markup.IComponentConnector" />
@@ -42,7 +42,6 @@ namespace Trainyourself.Pages
         /// The shoulder left z
         /// </summary>
         public float ShoulderLeftZ;
-
         /// <summary>
         /// The criteriumdown
         /// </summary>
@@ -51,12 +50,10 @@ namespace Trainyourself.Pages
         /// The criteriumup
         /// </summary>
         private const float CRITERIUMUP = 0.18f;
-
         /// <summary>
         /// The cal
         /// </summary>
         Calibration cal = new Calibration();
-
         /// <summary>
         /// The counter
         /// </summary>
@@ -65,7 +62,6 @@ namespace Trainyourself.Pages
         /// The war unten
         /// </summary>
         public bool WarUnten;
-
         /// <summary>
         /// The kinect provider
         /// </summary>
@@ -83,7 +79,7 @@ namespace Trainyourself.Pages
         }
 
         /// <summary>
-        /// Skeletons the changed.
+        /// Gets the Coordinates from the Kinecktsensor. Calibrats.
         /// </summary>
         /// <param name="sender">The sender.</param>
         /// <param name="skeleton">The skeleton.</param>
@@ -116,7 +112,7 @@ namespace Trainyourself.Pages
 
 
         /// <summary>
-        /// Handles the OnClick event of the QuitButton control.
+        /// Handles the OnClick event of the QuitButton control Navigate to Hauptmenupage and creates a new score in the Database.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
         /// <param name="e">The <see cref="RoutedEventArgs" /> instance containing the event data.</param>
@@ -191,6 +187,9 @@ namespace Trainyourself.Pages
 
         }
 
+        /// <summary>
+        /// Sets the highscore.
+        /// </summary>
         public void SetHighscore()
         {
             using (TrainContext context = new TrainContext())

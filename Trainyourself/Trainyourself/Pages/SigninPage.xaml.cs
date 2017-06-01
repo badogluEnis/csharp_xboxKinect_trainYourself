@@ -7,7 +7,7 @@ using Model;
 namespace Trainyourself.Pages
 {
     /// <summary>
-    /// Interaction logic for SigninPage.xaml
+    /// ^Logic for SigninPage.xaml regulated the Sign in.
     /// </summary>
     /// <seealso cref="System.Windows.Controls.Page" />
     /// <seealso cref="System.Windows.Markup.IComponentConnector" />

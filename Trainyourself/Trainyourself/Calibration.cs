@@ -7,7 +7,7 @@ using Trainyourself.Pages;
 namespace Trainyourself
 {
     /// <summary>
-    /// 
+    /// Calibrates the User and gets the Lenght from Shoulder to Hand.
     /// </summary>
     class Calibration
     {private const int ARRAY_LENGTH = 101;

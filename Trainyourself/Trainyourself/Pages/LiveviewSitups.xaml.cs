@@ -10,7 +10,7 @@ using Model;
 namespace Trainyourself.Pages
 {
     /// <summary>
-    /// Interaction logic for Liveview.xaml
+    /// Logic for Liveview.xaml. Loads the Camera to the Image. Count for each Situp. Database Update. 
     /// </summary>
     /// <seealso cref="System.Windows.Controls.Page" />
     /// <seealso cref="System.Windows.Markup.IComponentConnector" />
@@ -32,7 +32,6 @@ namespace Trainyourself.Pages
         /// The shoulder right y
         /// </summary>
         private float ShoulderRightY;
-
         /// <summary>
         /// The counter
         /// </summary>
@@ -41,17 +40,14 @@ namespace Trainyourself.Pages
         /// The war unten
         /// </summary>
         private bool WarUnten;
-
         /// <summary>
         /// The cal
         /// </summary>
         private Calibration cal = new Calibration();
-
         /// <summary>
         /// The kinect provider
         /// </summary>
         private KinectProvider _kinectProvider = new KinectProvider();
-
         /// <summary>
         /// Initializes a new instance of the <see cref="LiveviewSitups"/> class.
         /// </summary>
@@ -64,7 +60,7 @@ namespace Trainyourself.Pages
         }
 
         /// <summary>
-        /// Skeletons the changed.
+        /// Gets the Coordinations from Kineckt Sensor. and Checks if up or down.
         /// </summary>
         /// <param name="sender">The sender.</param>
         /// <param name="skeleton">The skeleton.</param>
@@ -83,7 +79,7 @@ namespace Trainyourself.Pages
         }
 
         /// <summary>
-        /// Handles the OnClick event of the QuitButton control.
+        /// Handles the OnClick event of the QuitButton control Navigate to Hauptmenupage and Creates a new Score in the Database.
         /// </summary>
         /// <param name="sender">The source of the event.</param>
         /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>

@@ -7,7 +7,7 @@ using Model;
 namespace Trainyourself.Pages
 {
     /// <summary>
-    /// Interaction logic for MoreinformationPage.xaml
+    /// Logic for MoreinformationPage.xaml. Validate the 2 Inputfields and Update the User in the Database.
     /// </summary>
     /// <seealso cref="System.Windows.Controls.Page" />
     /// <seealso cref="System.Windows.Markup.IComponentConnector" />
@@ -120,13 +120,7 @@ namespace Trainyourself.Pages
         /// <param name="e">The <see cref="RoutedEventArgs" /> instance containing the event data.</param>
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
-            //double weight = Convert.ToDouble(Weight.Text);
-            //double height = Convert.ToDouble(Height1.Text);
-
-
-
-            if (ValidateDoubleInput(Weight.Text) && ValidateDoubleInput(Height1.Text))
+           if (ValidateDoubleInput(Weight.Text) && ValidateDoubleInput(Height1.Text))
             {
                 using (TrainContext context = new TrainContext())
                 {
@@ -137,9 +131,7 @@ namespace Trainyourself.Pages
                     repository.Update(User);
                     if (NavigationService != null) NavigationService.Navigate(new SigninPage());
                 }
-
             }
-
         }
 
         /// <summary>
