@@ -144,7 +144,9 @@ namespace Trainyourself.Pages
                                     Name = name,
                                     Lastname = lastname,
                                     Email = email,
-                                    Password = password
+                                    Password = password,
+                                    RecordPushups = 0,
+                                    RecordSitups =  0
                                 };
                                 repository.Add(user);
                                 NavigationService?.Navigate(new MoreinformationPage(user));
