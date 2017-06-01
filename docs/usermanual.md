@@ -7,6 +7,21 @@
 * Für die Kineckt müssen Sie die SDK-Version 1.8 herunterladen, diese können Sie [hier herunterladen](https://www.microsoft.com/en-us/download/details.aspx?id=40278)
 * Als Nächstes müssen Sie die Kneckt per USB mit dem Computer verbinden. 
 * Jetzt können Sie Trainyourself starten.
+
+WiCHTIG: Wenn sie Übungen machen wollen, achten sie Stets drauf das die Ki wie folgt eingestellt ist:
+Sie muss gerade nach vorne Schauen.
+
+Nicht so
+![Nicht so](https://cloud.githubusercontent.com/assets/25528700/26670727/14e1c822-46b3-11e7-974e-29a14b45078a.png)
+
+So auch nicht
+![Nicht so](https://cloud.githubusercontent.com/assets/25528700/26670765/3b4ce5a0-46b3-11e7-9262-df85f214671d.png)
+
+So sollte es aussehen
+![So sollte es aussehen](https://cloud.githubusercontent.com/assets/25528700/26670778/47a61a56-46b3-11e7-9689-feaeed77a80e.png)
+
+
+
 ## Funktionsübersicht
 
 #### Auf der Startseite von unserem Programm können Sie, falls Sie noch keinen Account haben, sich registrieren. 
