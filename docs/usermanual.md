@@ -42,18 +42,22 @@
 
 ---
 
-#### Nachdem Sie sich angemeldet haben, kommen Sie auf unsere Startseite. Hier können Sie sich entscheiden wenn Sie auf Ihr Profile gehen möchten drücken Sie auf My Profile(Schwarzer Pfeil). Falls Sie eine Rumpfbeuge Session machen wollen, müssen Sie auf das Rumpfbeugen bild drücken(roter Pfeil). Wenn Sie Lust auf eine Liegestütz Session haben, müssen Sie auf das Liegestützbild drücken(Grüner Pfeil). Wollen Sie sich abmelden? Einfach auf Log-out drücken(Blauer Pfeil).
+#### Nachdem Sie sich angemeldet haben, kommen Sie auf unsere Startseite. Hier können Sie sich entscheiden wenn Sie auf Ihr Profile gehen möchten drücken Sie auf My Profile(Schwarzer Pfeil), falls Sie eine Rumpfbeuge Session machen wollen, müssen Sie auf das Rumpfbeugen bild drücken(roter Pfeil). Wenn Sie Lust auf eine Liegestütz Session haben, müssen Sie auf das Liegestützbild drücken(Grüner Pfeil). Wollen Sie sich abmelden? Einfach auf Log-out drücken(Blauer Pfeil).
 
 ![image](https://cloud.githubusercontent.com/assets/25527030/26151152/bf6d9658-3b01-11e7-9f7f-64a7be1e9775.png)
 
 ---
 
-#### Wenn Sie auf Ihrem Profil sind, können Sie Ihre Grösse(schwarzer Pfeil) und Ihr Gewicht(roter Pfeil) ändern. Dazu sehen Sie auf dieser Seite Ihren Body Mass Index und Ihren Record. 
+#### Wenn Sie auf Ihrem Profil sind, können Sie Ihre Grösse(roter Pfeil) und Ihr Gewicht(grüner Pfeil) ändern. Dazu sehen Sie auf dieser Seite Ihren Body Mass Index und Ihren Record. Falls Sie Die Highscore Tabelle für die Pushups sehen wollen drücken Sie auf Pushups Table(schwarzer Pfeil). Für die Situps Tabelle drücken Sie auf Situps Table(pinker Pfeil). Falls Sie wider zurück zum Hauptmenu wollen dürcken Sie auf Back(giftgründer Pfeil).
 
-![image](https://cloud.githubusercontent.com/assets/25527030/26151475/5fc73c52-3b03-11e7-8f45-a6e096f366ed.png)
+![profilepage](https://cloud.githubusercontent.com/assets/25527030/26667387/3b29c240-46a5-11e7-952e-220037419fed.jpg)
+
 
 ---
 
+#### Falls sie auf eines der beiden Bilder im Hauptmenu gedrückt haben, kommen Sie auf die Live View bei der Sie mit der gewählten Übung anfangen können. Wenn Sie wider auf das Hauptmenu wollen drücken Sie auf Quit(schwarzer Pfeil).
+
+![unbenannt](https://cloud.githubusercontent.com/assets/25527030/26667625/60d88f16-46a6-11e7-80c1-e338e20651da.jpg)
 
 
   #### [Zurück](../README.md)
