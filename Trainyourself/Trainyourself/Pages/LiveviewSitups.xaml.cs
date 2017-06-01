@@ -123,7 +123,7 @@ namespace Trainyourself.Pages
         /// </summary>
         private void CheckIfDown()
         {
-            if (ShoulderRightY < 0.6)
+            if (ShoulderRightY < 0.4 && !WarUnten)
             {
                 counter += 1;
 
