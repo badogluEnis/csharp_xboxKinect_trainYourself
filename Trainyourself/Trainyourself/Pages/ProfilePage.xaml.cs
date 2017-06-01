@@ -45,9 +45,7 @@ namespace Trainyourself.Pages
                 BMIOutput.FontSize = 23;
                 RecordPushups.Text = us.RecordPushups.ToString();
                 RecordSitUps.Text = us.RecordSitups.ToString();
-                AveragePushUps.Text = userRepository.GetAVGForPushUps(Int16.Parse(ConfigurationManager.AppSettings["LoggedUserId"])).Average().ToString(CultureInfo.InvariantCulture);
-                AverageSitUps.Text =  userRepository.GetAVGForSitUps(Int16.Parse(ConfigurationManager.AppSettings["LoggedUserId"])).Average().ToString(CultureInfo.InvariantCulture);
-            }
+             }
         }
 
         /// <summary>

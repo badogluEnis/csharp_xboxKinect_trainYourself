@@ -124,8 +124,8 @@
 
         <Label Name="errorHeight" Grid.Column="1" Grid.Row="2" Height="40" Padding="70 0 0 0" Margin="200 0 0 10" Grid.RowSpan="2" FontSize="30" />
         <Label Name="errorWeight" Grid.Column="1" Grid.Row="3" Height="40" Padding="70 0 0 0" Margin="200 30 0 0" Grid.RowSpan="2" FontSize="30" />
-        <Button Style="{StaticResource Buttonsize}" MaxHeight="40" Name="pushupsbutton" MaxWidth="150" Height="auto" Grid.Column="1" Grid.Row="4" Margin="169,0,194,24" Grid.RowSpan="2" Content="Pushups Table" Click="Pushupsbutton_OnClick"/>
-        <Button Style="{StaticResource Buttonsize}" MaxHeight="40" Name="situpsbutton" MaxWidth="150" Height="auto" Grid.Column="1" Grid.Row="2" Margin="169,134,194,10" Grid.RowSpan="4" Content="Situps Table" Click="Situpsbutton_OnClicksbutton_OnClick" />
+        <Button Style="{StaticResource Buttonsize}" MaxHeight="40" Name="pushupsbutton" MaxWidth="150" Height="auto" Grid.Column="1" Grid.Row="4" Margin="169,0,194,24" Grid.RowSpan="2" Content="Pushup Records" Click="Pushupsbutton_OnClick"/>
+        <Button Style="{StaticResource Buttonsize}" MaxHeight="40" Name="situpsbutton" MaxWidth="150" Height="auto" Grid.Column="1" Grid.Row="2" Margin="169,134,194,10" Grid.RowSpan="4" Content="Situp Records" Click="Situpsbutton_OnClicksbutton_OnClick" />
 
         <StackPanel Grid.Column="0" Grid.Row="5" Margin="0 50 0 0">
             <StackPanel Orientation="Horizontal" >
@@ -133,19 +133,9 @@
                 <TextBox Margin="35 0 0 0" FontSize="26" IsReadOnly="True" Grid.Row="2" Grid.Column="1" BorderThickness="5"  Name ="RecordPushups" Style="{StaticResource Textboxsize}" Height="60" FontWeight="Bold"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" >
-                <Label Content="Push Ups Average" FontSize="45" Style="{StaticResource FontColor}"/>
-                <TextBox Margin="15 0 0 0" FontSize="26" IsReadOnly="True" BorderThickness="5" Name ="AveragePushUps" Style="{StaticResource Textboxsize}" Height="60" FontWeight="Bold"/>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" >
                 <Label Content="Sit Ups Record" FontSize="45" Style="{StaticResource FontColor}"/>
-                <TextBox Margin="85 0 0 0" FontSize="26" IsReadOnly="True" BorderThickness="5" Name ="RecordSitUps" Style="{StaticResource Textboxsize}" Height="60" FontWeight="Bold"/>
+                <TextBox Margin="80 0 0 0" FontSize="26" IsReadOnly="True" BorderThickness="5" Name ="RecordSitUps" Style="{StaticResource Textboxsize}" Height="60" FontWeight="Bold"/>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" >
-                <Label Content="Sit Ups Average" FontSize="45" Style="{StaticResource FontColor}"/>
-                <TextBox Margin="65 0 0 0" FontSize="26" IsReadOnly="True" BorderThickness="5" Name ="AverageSitUps" Style="{StaticResource Textboxsize}" Height="60" FontWeight="Bold"/>
-            </StackPanel>
-
-
         </StackPanel>
     </Grid>
 </Page>
