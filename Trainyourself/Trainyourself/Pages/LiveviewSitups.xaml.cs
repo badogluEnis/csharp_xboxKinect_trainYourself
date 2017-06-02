@@ -111,7 +111,7 @@ namespace Trainyourself.Pages
         /// </summary>
         private void CheckIfUp()
         {
-            if (ShoulderRightY > 0.50)
+            if (ShoulderRightY > 0.5)
             {
                 WarUnten = false;
                 Debug.WriteLine("UP");
@@ -123,7 +123,7 @@ namespace Trainyourself.Pages
         /// </summary>
         private void CheckIfDown()
         {
-            if (ShoulderRightY < 0.4 && !WarUnten)
+            if (ShoulderRightY < 0.15 && !WarUnten)
             {
                 counter += 1;
 
