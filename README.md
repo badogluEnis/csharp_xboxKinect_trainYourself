@@ -59,8 +59,6 @@ Ich denke nicht, dass ich was grosses ändern würde. Der Aufbau, die Durchführ
 * Mockups erstellt.
 * Styles für Gui Elemente erstellt.
 * Gui Elemente positioniert/formatiert.
-* User Registrierung ermöglicht.
-* User Anmeldung ermöglicht.
 * Kamera übertragung geregelt.
 * Datenbank aktualisierung(Counter,Rekord,Neue Grösse, Neues Gewicht).
 
@@ -69,6 +67,8 @@ Ich denke nicht, dass ich was grosses ändern würde. Der Aufbau, die Durchführ
 * Datenbankverbindung.
 * Fehlende Datenbank Funktionen erstellt. 
 * Gui Elemente gestaltet(Save/Edit Button).
+* User-Registrierung implementiert
+* User-Anmeldung implementiert
 * Kalibrierung.
 * Skelett messungen.
 * Abstand zu Kineckt geregelt.
