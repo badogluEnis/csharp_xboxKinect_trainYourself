@@ -1,5 +1,5 @@
 # Trainyourself
-##### Ein Fitnessprogramm, welches Dir beim Sport machen hilft.                                                                         
+##### Ein Fitnessprogramm, welches Dir beim Sport treiben hilft.                                                                         
 Jeder kennt dieses eine Problem, man ist mitten in einer Übung und man verzählt sich. Viele Leute fühlen sich durch das Zählen sehr abgelenkt und genau für diese Personen ist unser Programm perfekt geeignet. Um die Funktionen unseres Projekts zu brauchen, müssen Sie eine Kinect besitzen. Bei unserem Programm können Sie auch einen Account erstellen, bei dem Ihre ganzen Fortschritte gespeichert werden. Wenn Sie mehrere Personen in Ihrem Haushalt sind, können alle Trainyourself brauchen und sich untereinander vergleichen, in der High-Score-Tabelle sind die 5 besten Scores aufgelistet. Sie können direkte Verbesserungen an Ihrer Haltung vornehmen, durch die Kamera Funktion. Sie können mit unserem Programm Rumpfbeugen sowie auch Liegestütze machen. Unser Programm ist auf Englisch, auch wenn man kein Experte in der Englischen Sprache ist, wird man sich in TrainYourself schnell zurecht finden.
 
 
